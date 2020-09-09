@@ -1,88 +1,10 @@
-.wds {
+.nav {
+  position: fixed;
+  top: 0;
+  width: 11em;
+  padding: 1em;
+
   .nav-link {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0.6em 1.7em 0.2em 0.4em;
-    height: 2.1em;
-    background-color: $swg-grey;
-    border-bottom-width: 0;
-    border-radius: 0.2em;
-    margin-right: 0.2em;
-
-    font-weight: bold;
-
-    &:hover {
-      border-bottom-width: 0;
-    }
-
-    &.logo-link {
-      background-color: $swg-dark-grey;
-      img {
-        margin-top: 0.3em;
-        width: 3em;
-      }
-
-      &:hover {
-        background-color: $swg-grey;
-      }
-    }
-
-    &.games-link {
-      background-color: $swg-dark-grey;
-      color: $swg-green;
-
-      &:hover {
-        background-color: $swg-blue;
-      }
-    }
-
-    &.about-link {
-      background-color: $swg-grey;
-      color: $swg-blue;
-
-      &:hover {
-        background-color: $swg-green;
-      }
-    }
-
-    &.jobs-link {
-      background-color: $swg-grey;
-      color: $swg-dark-grey;
-
-      &:hover {
-        color: $swg-red;
-      }
-    }
-
-    &.EN-link {
-      background-color: $swg-blue;
-      color: white;
-
-      &:hover {
-        background-color: $swg-red;
-      }
-    }
-  }
-}
-
-a.huge-link {
-  display: flex;
-  margin: 2em 0;
-  border: 0.3em solid $swg-blue;
-  border-bottom: 0.3em solid $swg-blue;
-  border-radius: 1em;
-  padding: 1.2em 1.8em 1.8em;
-  justify-content: space-between;
-
-  &:hover {
-    color: $swg-green;
-    border: 0.3em solid $swg-green;
-    border-bottom: 0.3em solid $swg-green;
-  }
-
-  .txt {
-    font-size: 6em;
-    line-height: 1;
-    font-weight: bold;
+    margin: 0.5em 0;
   }
 }

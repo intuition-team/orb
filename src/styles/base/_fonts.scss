@@ -1,15 +1,5 @@
 @import "base/mixins";
 
-// @include font-face("Open Sans", "open-sans-regular");
-
-@font-face {
-  font-family: "Signal";
-  font-weight: normal;
-  src: url("/fonts/Signal-ExtraLight-Desktop.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Signal";
-  font-weight: bold;
-  src: url("/fonts/Signal-Bold-Desktop.otf") format("opentype");
-}
+@include font-face("Golos Text", "Golos Text_Regular", 400);
+@include font-face("Golos Text", "Golos Text_DemiBold", 600);
+@include font-face("Golos Text", "Golos Text_Black", 900);
