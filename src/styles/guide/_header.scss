@@ -1,0 +1,32 @@
+header {
+  padding: 1em;
+  display: flex;
+  margin-bottom: 6em;
+
+  .logo {
+    width: 25%;
+
+    .desktop-logo {
+      display: none;
+      border-bottom-width: 0;
+      @media #{$wds__desktop} {
+        display: block;
+        width: 6em;
+      }
+    }
+    .mobile-logo {
+      display: none;
+      border-bottom-width: 0;
+      @media #{$wds__mobile} {
+        display: block;
+        width: 3em;
+      }
+    }
+  }
+
+  .nav {
+    &.main-nav {
+      width: 75%;
+    }
+  }
+}
