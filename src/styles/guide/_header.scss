@@ -9,7 +9,7 @@ header {
     .desktop-logo {
       display: none;
       border-bottom-width: 0;
-      @media #{$wds__desktop} {
+      @media #{$orb__desktop} {
         display: block;
         width: 6em;
       }
@@ -17,7 +17,7 @@ header {
     .mobile-logo {
       display: none;
       border-bottom-width: 0;
-      @media #{$wds__mobile} {
+      @media #{$orb__mobile} {
         display: block;
         width: 3em;
       }

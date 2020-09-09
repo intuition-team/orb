@@ -1,6 +1,11 @@
 $fonts-path: "/fonts";
 $images-path: "/images";
 
+$orb__mobile: "(max-device-width: 767px)";
+$orb__desktop: "(min-device-width: 768px)";
+
+$orb__density: 1.3em !default;
+
 $swg-blue: rgba(4, 85, 251, 1);
 $swg-red: rgba(190, 35, 65, 1);
 $swg-green: rgba(45, 235, 20, 1);
