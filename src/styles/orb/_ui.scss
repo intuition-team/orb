@@ -1,0 +1,38 @@
+.orb {
+  .orb__radiogroup-line {
+    display: flex;
+
+    .option {
+      input {
+        display: none;
+
+        &:checked + label {
+          background-color: var(--accent-color);
+        }
+      }
+
+      label {
+        display: block;
+        padding: 0.3em 0.5em 0.4em;
+        background-color: var(--surface-color);
+
+        &:hover {
+          background-color: var(--surface-hover-color);
+        }
+      }
+
+      &:first-child {
+        label {
+          border-radius: 0.3em 0 0 0.3em;
+          padding-left: 0.8em;
+        }
+      }
+      &:last-child {
+        label {
+          border-radius: 0 0.3em 0.3em 0;
+          padding-right: 0.8em;
+        }
+      }
+    }
+  }
+}
