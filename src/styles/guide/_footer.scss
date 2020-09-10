@@ -1,2 +1,7 @@
 footer {
+  height: 7em;
+
+  @media #{$mobile} {
+    height: auto;
+  }
 }

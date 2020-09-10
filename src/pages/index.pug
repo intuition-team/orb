@@ -22,5 +22,59 @@ block content
       p В министерстве здравоохранения Оренбургской области состоялось совещание по выпуску «Универсальной карты жителя Оренбургской области», организованное региональным министерством цифрового развития и связи. В нем приняли участие вице-губернатор – заместитель председателя Правительства области по социальной политике Татьяна Савинова и министр цифрового развития и связи области Денис Толпейкин.
 
       p В ходе заседания обсуждался опыт внедрения единой карты петербуржца в сфере здравоохранения. 
-
+    section
       h2 Символика Оренбургской области
+    section
+      h2 О дизайн-системе
+      p Дизайн-система представляет собой набор типовых компонентов для интерфейсов и онлайн-публикаций. 
+      p Дизайн система описывает компоненты без привязки к свойствам CSS. Но вы можете подключить css-файл из репозитория <a href="https://github.com/intuition-team/orb">github.com/intuition-team/orb</a>, создать в проекте контейнер-инициализатор с классом .orb и использовать внутри него все описанные классы и теги. 
+      p Для описания свойств элементов используется следующая терминологию:
+      p <em>inset</em> — внутреннее поле элемента (в CSS это padding)
+      p <em>stack</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-top или margin-bottom)
+      p <em>inline</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-right или margin-left)
+      p <em>font 18px / 1.3</em> — шрифт с кеглем 18px и интерлиньяжем 130% от кегля (в CSS это font-size: 18px; line-height: 1.3em)
+      p Основная единица измерения — em. Все значения можно перевести в px, принимая за базовое значение 1em за 20px (по умолчанию) или другое значение в диапазоне от 12px до 28px
+      p Показывать размеры [в em | в px ], 1 em = [20] px
+    section
+      h2 Цветовые схемы
+      p Есть несколько цветовых схем для разных проектов, подразделений и контекстов. Каждая схема — это самостоятельная палитра фирменных цветов, которые используются в интерфейсах и на любых других носителях
+      .color-schemes
+        .color-scheme Степь  
+        .color-scheme Гражданин  
+        .color-scheme Цифра
+        .color-scheme Контраст
+
+    section
+      p Базовая палитра
+      .palette
+        .palette-bar(style="background-color: rgba(255,221,0)") RGB 255 221 0
+        .palette-bar(style="background-color: rgba(255,231,0)") RGB 255 231 0
+        .palette-bar(style="background-color: rgba(255,241,0)") RGB 255 241 0
+        .palette-bar(style="background-color: rgba(255,248,128)") RGB 255 248 128
+      p Расширенная палитра
+      .palette
+        .palette-bar(style="background-color: rgba(20,150,255)") RGB 20 150 255
+        .palette-bar(style="background-color: rgba(94,98,243)") RGB 94 98 243
+        .palette-bar(style="background-color: rgba(115,43,151)") RGB 115 43 151
+        .palette-bar(style="background-color: rgba(245,86,99)") RGB 245 86 99
+        .palette-bar(style="background-color: rgba(46,200,134)") RGB 46 200 134
+        .palette-bar(style="background-color: rgba(70,78,90)") RGB 70 78 90
+        .palette-bar(style="background-color: rgba(40,51,68)") RGB 40 51 68
+
+      p Техническая
+      .palette
+        .palette-bar(style="background-color: rgba(5,5,5); color: grey") text
+        .palette-bar(style="background-color: rgba(200, 0, 0)") code
+        .palette-bar(style="background-color: rgba(0, 100, 240)") link
+        .palette-bar(style="background-color: rgba(0, 220, 0)") hover
+        .palette-bar(style="background-color: rgba(0, 0, 0, 0.3)") disabled
+        .palette-bar(style="background-color: rgba(240, 84, 95)") error
+        .palette-bar(style="background-color: rgba(84, 180, 140)") success
+        .palette-bar(style="background-color: rgba(245,245,245)") surface
+        .palette-bar(style="background-color: rgba(255,221,0)") main
+        .palette-bar(style="background-color: rgba(255, 248, 128)") mark
+        .palette-bar(style="background-color: rgba(255, 255, 255)") background
+
+    section
+      h2 Типографика
+      p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов. Дизайн-система использует три начертания: Regular, DemiBold и Black.

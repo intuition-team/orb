@@ -4,7 +4,30 @@
   width: 11em;
   padding: 1em;
 
+  @media #{$mobile} {
+    position: static;
+    margin: 1em;
+    width: auto;
+    padding: 1em;
+    background-color: var(--surface-color);
+  }
+
   .nav-link {
     margin: 0.5em 0;
+  }
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+
+  .palette-bar {
+    width: 25%;
+    height: 5em;
+    padding: calc(#{$orb__density} * 0.4) calc(#{$orb__density} * 0.5);
+
+    @media #{$mobile} {
+      width: 50%;
+    }
   }
 }

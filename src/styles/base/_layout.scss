@@ -16,28 +16,28 @@ body {
   }
 }
 
-.font-scaling {
-  @media screen and (max-width: 1350px) {
-    font-size: 21px;
-  }
+// .font-scaling {
+//   @media screen and (max-width: 1350px) {
+//     font-size: 21px;
+//   }
 
-  @media screen and (max-width: 1300px) {
-    font-size: 20px;
-  }
+//   @media screen and (max-width: 1300px) {
+//     font-size: 20px;
+//   }
 
-  @media screen and (max-width: 1250px) {
-    font-size: 19px;
-  }
+//   @media screen and (max-width: 1250px) {
+//     font-size: 19px;
+//   }
 
-  @media screen and (max-width: 1200px) {
-    font-size: 18px;
-  }
+//   @media screen and (max-width: 1200px) {
+//     font-size: 18px;
+//   }
 
-  @media #{$mobile} {
-    font-size: 19px;
-    line-height: 1.2;
-  }
-}
+//   @media #{$mobile} {
+//     font-size: 19px;
+//     line-height: 1.2;
+//   }
+// }
 
 .wrapper {
   position: relative;
