@@ -33,23 +33,24 @@ block content
       h2 Символика Оренбургской области
       p (Здесь будут все логотипы)
 
-    section
+    section.orb__top-space-L
       h2 Цветовые схемы
       p Есть несколько цветовых схем для разных проектов, подразделений и контекстов. Каждая схема — это самостоятельная палитра фирменных цветов, которые используются в интерфейсах и на любых других носителях.
       
+    section.orb__top-space-S
       .orb__radiogroup-line.js-color-switch
         .option
-          input(type="radio" id="steppe-option" name="color-switcher" checked)
-          label(for="steppe-option") Степь
+          input(type="radio" id="steppe-color" value="steppe-colors" name="color-switcher" )
+          label(for="steppe-color") Степь
         .option
-          input(type="radio" id="active-option" name="color-switcher")
-          label(for="active-option") Актив
+          input(type="radio" id="active-color" value="active-colors" name="color-switcher")
+          label(for="active-color") Актив
         .option
-          input(type="radio" id="digit-option" name="color-switcher")
-          label(for="digit-option") Цифра
+          input(type="radio" id="digit-color" value="digit-colors" name="color-switcher" checked)
+          label(for="digit-color") Цифра
         .option
-          input(type="radio" id="contrast-option" name="color-switcher")
-          label(for="contrast-option") Контраст
+          input(type="radio" id="contrast-color" value="contrast-colors" name="color-switcher")
+          label(for="contrast-color") Контраст
 
     section
       p Базовая палитра
@@ -63,34 +64,184 @@ block content
       .palette
         .palette-bar(style="background-color: var(--text-color); color: AliceBlue") text
         .palette-bar(style="background-color: var(--link-color); color: AliceBlue") link
-        .palette-bar(style="background-color: var(--link-hover-color)") hover
+        .palette-bar(style="background-color: var(--accent-color)") accent
         
         .palette-bar(style="background-color: var(--error-color)") error
         .palette-bar(style="background-color: var(--success-color)") success
-        //- .palette-bar(style="background-color: rgba(0, 0, 0, 0.3)") disabled
-        //- .palette-bar(style="background-color: rgba(200, 0, 0)") code
         .palette-bar(style="background-color: var(--mark-color)") mark
         .palette-bar(style="background-color: var(--surface-color)") surface
         .palette-bar(style="background-color: var(--background-color)") background
+      p В интерфейсной палитре каждый цвет привязан к определённой функциональному назначени и назван соответственно:
+      ul
+        li <strong>background</strong> — основной цвет фона
+        li <strong>text</strong> — цвет текста
+        li <strong>link</strong> — цвет гиперссылки
+        li <strong>link</strong> — цвет гиперссылки
 
-    section
+
+    section.orb__top-space-L
       h2 Типографика
       p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов. Дизайн-система использует три начертания: Regular, DemiBold и Black.
-      h3 Текст
+
+    section
+      h3 Абзац текста<u>, &lt;p&gt;</u>
+      p «Программа реализуется в целях ускорения технологического развития Российской Федерации, увеличения количества организаций, осуществляющих технологические инновации, создания сквозных цифровых технологий на основе отечественных разработок, внедрения цифровых технологий и платформенных решений, имеющих значительный потенциал коммерциализации»
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 Лидер-абзац<u>, p.orb__text-L</u>
+      p.orb__text-L «Программа реализуется в целях ускорения технологического развития Российской Федерации, увеличения количества организаций, осуществляющих технологические инновации, создания сквозных цифровых технологий на основе отечественных разработок, внедрения цифровых технологий и платформенных решений, имеющих значительный потенциал коммерциализации»
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 Мелкий текст<u>, p.orb__text-S</u>
+      p.orb__text-S «Программа реализуется в целях ускорения технологического развития Российской Федерации, увеличения количества организаций, осуществляющих технологические инновации, создания сквозных цифровых технологий на основе отечественных разработок, внедрения цифровых технологий и платформенных решений, имеющих значительный потенциал коммерциализации»
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 Заголовки
+      h3 <u>&lt;h1&gt;</u>
+      h1 Главный заголовок страницы
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 <u>&lt;h2&gt;</u>
+      h2 Заголовок второго уровня
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 <u>&lt;h3&gt;</u>
+      h3 Заголовок третьего уровня
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 <u>&lt;h4&gt;</u>
+      h4 Заголовок четвёртого уровня
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 <u>&lt;h5&gt;</u>
+      h5 Заголовок пятого уровня
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+      h3 <u>&lt;h6&gt;</u>
+      h6 Заголовок шестого уровня
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+
+    section
+
+    section
+      h3 Плашка<u>, &lt;aside&gt;</u>
       aside
         h3 Конкурс для IT-лидеров, проектов и организаций
         p Фонд содействия инновациям объявил о начале отбора проектов по программе «Старт» в рамках федерального проекта «Цифровые технологии» национальной программы «Цифровая экономика».
-        p Программа реализуется в целях ускорения технологического развития Российской Федерации, увеличения количества организаций, осуществляющих технологические инновации, создания сквозных цифровых технологий на основе отечественных разработок, внедрения цифровых технологий и платформенных решений, имеющих значительный потенциал коммерциализации.
-      h3 Заголовки
+      .props
+        .prop
+          .prop-caption Цвет фона
+          .value accent
+        .prop
+          .prop-caption Цвет текста
+          .value background
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+        .prop.double-width
+          .prop-caption Поля
+          .value.arrow-up.em 0.5
+          .value.arrow-right.em 1.5
+          .value.arrow-down.em 0.5
+          .value.arrow-left.em 1.5
+
       
+    section.orb__top-space-L
+      h2 Базовые интерфейсные компоненты
     section
-      h2 Компоненты
-      h3 Кнопка
+      h3 Кнопка<u>, &lt;button&gt;</u>
+      button Сохранить
+      .props
+        .prop
+          .prop-caption Цвет фона
+          .value accent
+        .prop
+          .prop-caption Цвет текста
+          .value background
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+        .prop.double-width
+          .prop-caption Поля
+          .value.arrow-up.em 0.5
+          .value.arrow-right.em 1.5
+          .value.arrow-down.em 0.5
+          .value.arrow-left.em 1.5
+
+    section
       h3 Чекбокс
       
-      h3 Радиогруппа
+      h3 Радиогруппа<u>, .orb__radiogroup-line</u>
       p Используется для выбора единственного варианта из множества, а также для переключения состояний интерфейса.
-
+    section.orb__top-space-S
       .orb__radiogroup-line
         .option
           input(type="radio" id="v1" name="radiogrout-sample" checked)
@@ -101,8 +252,32 @@ block content
         .option
           input(type="radio" id="v3" name="radiogrout-sample")
           label(for="v3") Третий
+      .props
+        .prop
+          .prop-caption Цвет фона
+          .value accent
+        .prop
+          .prop-caption Цвет текста
+          .value background
+        .prop
+          .prop-caption Размер шрифта
+          .value.em 1
+        .prop
+          .prop-caption Интерлиньяж
+          .value.em 1.3
+        .prop.double-width
+          .prop-caption Поля
+          .value.arrow-up.em 0.5
+          .value.arrow-right.em 1.5
+          .value.arrow-down.em 0.5
+          .value.arrow-left.em 1.5
+
+
     section
       h3 Ввод текста
+
+    section.orb__top-space-L
+      h2 Составные интерфейсные компоненты
 
     section
       h3 Горизонтальное меню с иконками
@@ -175,9 +350,8 @@ block content
           .orb__link-caption Активный гражданин
           .orb__link-text ag.orb.ru
 
-      .orb__button-link
-        a(href="#")
-          .orb__link-text Предложить сервис
+      a.orb__button-link(href="#")
+        .orb__link-text Предложить сервис
 
 
 

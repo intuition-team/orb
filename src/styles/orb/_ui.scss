@@ -1,4 +1,17 @@
 .orb {
+  button {
+    display: inline-block;
+    padding: 0.3em 1em 0.4em;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 0.3em;
+
+    &:hover {
+      filter: saturate(130%);
+    }
+  }
+
   .orb__radiogroup-line {
     display: flex;
 
@@ -8,6 +21,7 @@
 
         &:checked + label {
           background-color: var(--accent-color);
+          color: var(--background-color);
         }
       }
 
@@ -98,7 +112,7 @@
         background-color: var(--surface-hover-color);
 
         figcaption {
-          color: var(--link-hover-color);
+          color: var(--hover-color);
         }
       }
     }

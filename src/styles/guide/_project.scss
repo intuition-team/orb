@@ -32,3 +32,73 @@
     }
   }
 }
+
+.props {
+  margin-top: 1.5em;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  // background: var(--surface-color);
+  // padding: calc(#{$orb__density} * 0.5);
+
+  .prop {
+    width: 9em;
+    margin-bottom: 0.5em;
+
+    &.double-width {
+      width: 18em;
+    }
+
+    .prop-caption {
+      font-size: 0.75em;
+      line-height: 1em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid rgba(var((--text-color-RGB-components)), 0.1);
+      margin-bottom: 0.5em;
+    }
+
+    .value {
+      display: inline-block;
+      margin: 0 0.5em 0.5em 0;
+
+      &.em {
+        &::after {
+          content: "em ";
+        }
+      }
+      &.px {
+        &::after {
+          content: "px ";
+        }
+      }
+
+      &.arrow-up {
+        &::before {
+          content: "↑ ";
+        }
+      }
+      &.arrow-right {
+        &::before {
+          content: "→ ";
+        }
+      }
+      &.arrow-down {
+        &::before {
+          content: "↓ ";
+        }
+      }
+      &.arrow-left {
+        &::before {
+          content: "← ";
+        }
+      }
+    }
+  }
+}
+
+h3 {
+  u {
+    text-decoration: none;
+    color: rgba(var((--text-color-RGB-components)), 0.2);
+  }
+}

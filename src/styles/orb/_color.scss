@@ -1,23 +1,57 @@
-:root {
+:root,
+.steppe-colors {
   --brand-color-1: rgba(248, 212, 206, 1);
   --brand-color-2: rgba(236, 89, 70, 1);
   --brand-color-3: rgba(46, 50, 177, 1);
   --brand-color-4: rgba(0, 5, 66, 1);
 
   --background-color: white;
-  --text-color: rgba(0, 5, 66, 1);
 
-  --surface-color: rgba(248, 212, 206, 0.3);
-  --surface-hover-color: rgba(248, 212, 206, 0.4);
+  --text-color-RGB-components: 0, 5, 66;
+  --text-color: rgb(var(--text-color-RGB-components));
 
-  --main-color: rgba(46, 50, 177, 1);
-  --accent-color: rgba(236, 89, 70, 1);
+  --accent-color-RGB-components: 236, 89, 70;
+  --accent-color: rgb(var(--accent-color-RGB-components));
+
+  --surface-color-RGB-components: 248, 212, 206;
+  --surface-color: rgba(var(--surface-color-RGB-components), 0.3);
+  --surface-hover-color: rgba(var(--surface-color-RGB-components), 0.8);
+
   --mark-color: rgba(255, 230, 0, 1);
 
-  --link-color: rgba(46, 50, 177, 1);
-  --link-underline-color: rgba(46, 50, 177, 0.2);
-  --link-hover-color: rgba(236, 89, 70, 1);
-  --link-underline-hover-color: rgba(236, 89, 70, 0.2);
+  --link-color-RGB-components: 46, 50, 177;
+  --link-color: rgb(var(--link-color-RGB-components));
+  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --hover-color: rgb(var(--accent-color-RGB-components));
+  --underline-hover-color: rgba(var(--accent-color-RGB-components), 0.2);
+
   --success-color: rgba(60, 180, 0, 1);
   --error-color: rgba(180, 0, 60, 1);
+}
+
+.active-colors {
+  --brand-color-1: rgba(240, 240, 240, 1);
+  --brand-color-2: rgba(0, 200, 50, 1);
+  --brand-color-3: rgba(0, 50, 200, 1);
+  --brand-color-4: rgba(15, 15, 15, 1);
+
+  --background-color: white;
+
+  --text-color-RGB-components: 15, 15, 15;
+  --text-color: rgb(var(--text-color-RGB-components));
+
+  --accent-color-RGB-components: 0, 200, 50;
+  --accent-color: rgb(var(--accent-color-RGB-components));
+
+  --surface-color: rgba(240, 240, 240, 0.5);
+  --surface-hover-color: rgba(240, 240, 240, 1);
+
+  --link-color-RGB-components: 0, 50, 200;
+  --link-color: rgb(var(--link-color-RGB-components));
+  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --hover-color: rgb(var(--accent-color-RGB-components));
+  --underline-hover-color: rgba(var(--accent-color-RGB-components), 0.2);
+
+  --success-color: rgba(0, 150, 40, 1);
+  --error-color: rgba(220, 0, 0, 1);
 }
