@@ -1,3 +1,6 @@
+$orb__mobile: "(max-device-width: 767px)";
+$orb__desktop: "(min-device-width: 768px)";
+
 .orb {
   font-size: 20px;
   @include orb__normalize-line-height;
@@ -76,39 +79,42 @@
   }
 
   h1 {
-    font-size: 3.8em;
+    font-size: 4.2em;
     line-height: calc(#{$orb__density} / 1.3);
     margin-bottom: 0.4em;
 
     @media #{$mobile} {
-      font-size: 1.5em;
+      font-size: 2.7em;
     }
   }
 
   h2 {
-    font-size: 2.8em;
+    font-size: 3em;
     line-height: calc(#{$orb__density} / 1.2);
     margin-bottom: 0.5em;
 
     @media #{$mobile} {
-      font-size: 1.9em;
+      font-size: 2.2em;
     }
   }
 
   h3 {
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: calc(#{$orb__density} / 1.1);
     margin-bottom: 0.6em;
 
     @media #{$mobile} {
-      font-size: 1.2em;
+      font-size: 1.6em;
     }
   }
 
   h4 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: $orb__density;
     margin-bottom: 0.6em;
+    @media #{$mobile} {
+      font-size: 1.2em;
+    }
   }
 
   h5 {
@@ -159,22 +165,6 @@
         position: absolute;
         left: 0;
         content: "⋅ ";
-      }
-    }
-
-    &.checked {
-      li {
-        &:before {
-          content: " ";
-          position: absolute;
-          left: 0;
-          top: 0.45em;
-          background-image: url("/assets/images/icon-check-mark.svg");
-          background-size: contain;
-          background-repeat: no-repeat;
-          width: 0.7em;
-          height: 0.7em;
-        }
       }
     }
   }
@@ -271,6 +261,125 @@
 
     &.orb__label-S {
       font-size: 0.9em;
+    }
+  }
+
+  .orb__narrow-text-column {
+    width: 65%;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
+  }
+
+  .orb__grid {
+    margin-top: calc(#{$orb__density} * 1);
+    display: flex;
+    flex-wrap: wrap;
+
+    &.orb__grid-align-bottom {
+      align-items: flex-end;
+    }
+
+    &.orb__grid-size-XXL {
+      .orb__grid-cell {
+        width: calc(100% / 2);
+
+        @media #{$orb__mobile} {
+          width: 100%;
+        }
+      }
+    }
+
+    &.orb__grid-size-XL {
+      .orb__grid-cell {
+        width: calc(100% / 3);
+
+        @media #{$orb__mobile} {
+          width: 100%;
+        }
+      }
+    }
+
+    &.orb__grid-size-L {
+      .orb__grid-cell {
+        width: calc(100% / 4);
+
+        @media #{$orb__mobile} {
+          width: calc(100% / 2);
+        }
+      }
+    }
+
+    &.orb__grid-size-M {
+      .orb__grid-cell {
+        width: calc(100% / 5);
+
+        @media #{$orb__mobile} {
+          width: calc(100% / 3);
+        }
+      }
+    }
+
+    &.orb__grid-size-S {
+      .orb__grid-cell {
+        width: calc(100% / 6);
+
+        @media #{$orb__mobile} {
+          width: calc(100% / 3);
+        }
+      }
+    }
+
+    &.orb__grid-size-XS {
+      .orb__grid-cell {
+        width: calc(100% / 7);
+
+        @media #{$orb__mobile} {
+          width: calc(100% / 4);
+        }
+      }
+    }
+
+    &.orb__grid-size-XXS {
+      .orb__grid-cell {
+        width: calc(100% / 8);
+
+        @media #{$orb__mobile} {
+          width: calc(100% / 4);
+        }
+      }
+    }
+
+    &.orb__grid-inset-L {
+      .orb__grid-cell {
+        padding-right: calc(#{$orb__density} * 2);
+        padding-bottom: calc(#{$orb__density} * 2);
+      }
+    }
+    &.orb__grid-inset-M {
+      .orb__grid-cell {
+        padding-right: calc(#{$orb__density} * 1);
+        padding-bottom: calc(#{$orb__density} * 1);
+      }
+    }
+    &.orb__grid-inset-S {
+      .orb__grid-cell {
+        padding-right: calc(#{$orb__density} * 0.5);
+        padding-bottom: calc(#{$orb__density} * 0.5);
+      }
+    }
+
+    .orb__grid-cell {
+      width: 50%;
+
+      &.orb__grid-cell-align-bottom {
+        align-self: flex-end;
+      }
+
+      @media #{$orb__mobile} {
+        width: 100%;
+      }
     }
   }
 }

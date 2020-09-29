@@ -5,13 +5,13 @@ block content
     .nav-title
       h6 Дизайн-система Оренбургской области
     .nav-link
-      a(href="#symbols") Символика
+      a.js-scroll-link(href="#symbols") Символика
     .nav-link
-      a(href="#colors") Цветовые схемы
+      a.js-scroll-link(href="#colors") Цветовые схемы
     .nav-link
-      a(href="#type") Типографика
+      a.js-scroll-link(href="#type") Типографика
     .nav-link
-      a(href="#components") Компоненты
+      a.js-scroll-link(href="#components") Компоненты
   
   .wrapper.shift-right
     section
@@ -19,36 +19,88 @@ block content
 
     section
       p Дизайн-система представляет собой набор типовых компонентов для интерфейсов и онлайн-публикаций. 
-      p Дизайн система описывает компоненты без привязки к свойствам CSS. Но вы можете подключить css-файл из репозитория <a href="https://github.com/intuition-team/orb">github.com/intuition-team/orb</a>, создать в проекте контейнер-инициализатор с классом .orb и использовать внутри него все описанные классы и теги. 
       aside
+        p Компоненты описаны без прямой привязки к теримнам CSS. Но вы можете подключить css-файл из репозитория <a href="https://github.com/intuition-team/orb">github.com/intuition-team/orb</a>, создать в проекте контейнер-инициализатор с классом .orb и использовать внутри него все описанные классы и теги. В качестве образца HTML-разметки можно брать исходный код этой страницы.
+      //- aside
         p Для описания свойств элементов используется следующая терминология:
         p <em>inset</em> — внутреннее поле элемента (в CSS это padding)
         p <em>stack</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-top или margin-bottom)
         p <em>inline</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-right или margin-left)
         p <em>font 18px / 1.3</em> — шрифт с кеглем 18px и интерлиньяжем 130% от кегля (в CSS это font-size: 18px; line-height: 1.3em)
-      p Основная единица измерения — em. Все значения можно перевести в px, принимая за базовое значение 1em за 20px (по умолчанию) или другое значение в диапазоне от 12px до 28px
-      p Показывать размеры [в em | в px ], 1 em = [20] px
+      p Основная единица измерения — <em>em</em>. Все размеры можно перевести в px, принимая 1&hairsp;em за 20&hairsp;px (по умолчанию) или произвольное значение от 12&hairsp;px до 28&hairsp;px.
 
-    section
+    section.orb__top-space-S
+      .units-selector-container
+        span Показывать размеры в 
+        .orb__radiogroup-line.units-selector
+          .option
+            input(type="radio" id="em-units" value="em" name="units-selector" checked)
+            label(for="em-units") em
+          .option
+            input(type="radio" id="px-units" value="px" name="units-selector")
+            label(for="px-units") px
+        .em-converter
+          span 1 em = 
+          input(type="number" value="20" max="28" min="12")
+          span px
+
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value
+            .em 1
+            .px
+        .prop
+          .prop-caption Интерлиньяж
+          .value
+            .em 1.3
+            .px
+        .prop.double-width
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.5
+            .px
+          .value.arrow-right
+            .em 1.5
+            .px
+          .value.arrow-down
+            .em 0.5
+            .px
+          .value.arrow-left
+            .em 1.5
+            .px
+
+
+    section#symbols
       h2 Символика Оренбургской области
-      p (Здесь будут все логотипы)
+      .orb__grid.orb__grid-align-bottom
+        .orb__grid-cell
+          .crest.emblem
+            figure
+              include /partials/emblem
+              figcaption Цифровой герб Оренбургской области, детализированная версия (черновик)
+        .orb__grid-cell
+          .crest.shield
+            figure
+              include /partials/shield
+              figcaption Цифровой герб Оренбургской области, миниатюрная версия (черновик)
 
-    section.orb__top-space-L
+    section.orb__top-space-L#colors
       h2 Цветовые схемы
       p Есть несколько цветовых схем для разных проектов, подразделений и контекстов. Каждая схема — это самостоятельная палитра фирменных цветов, которые используются в интерфейсах и на любых других носителях.
       
     section.orb__top-space-S
       .orb__radiogroup-line.js-color-switch
         .option
+          input(type="radio" id="digit-color" value="digit-colors" name="color-switcher" checked)
+          label(for="digit-color") Цифра
+        .option
           input(type="radio" id="steppe-color" value="steppe-colors" name="color-switcher" )
           label(for="steppe-color") Степь
         .option
           input(type="radio" id="active-color" value="active-colors" name="color-switcher")
           label(for="active-color") Актив
-        .option
-          input(type="radio" id="digit-color" value="digit-colors" name="color-switcher" checked)
-          label(for="digit-color") Цифра
-        .option
+        //- .option
           input(type="radio" id="contrast-color" value="contrast-colors" name="color-switcher")
           label(for="contrast-color") Контраст
 
@@ -79,7 +131,7 @@ block content
         li <strong>link</strong> — цвет гиперссылки
 
 
-    section.orb__top-space-L
+    section.orb__top-space-L#type
       h2 Типографика
       p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов. Дизайн-система использует три начертания: Regular, DemiBold и Black.
 
@@ -184,6 +236,30 @@ block content
           .value.em 1.3
 
     section
+      h3 Маркер<u>, &lt;mark&gt;</u>
+      p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты: <mark>паспорт</mark> гражданина РФ, <mark>СНИЛС</mark> и <mark>полис ОМС</mark>.
+
+    section
+      h3 Нумерованный список<u>, &lt;ol&gt; &lt;li&gt;</u>
+      .orb__narrow-text-column
+        p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты:
+        ol
+          li Один из документов, удостоверяющих личность гражданина РФ: паспорт гражданина РФ, военный билет или удостоверение личности военнослужащего РФ;
+          li Страховое свидетельство обязательного пенсионного страхования (СНИЛС);
+          li Полис обязательного медицинского страхования (за исключением военнослужащих).
+    section
+      h3 Ненумерованный список<u>, &lt;ul&gt; &lt;li&gt;</u>
+      .orb__narrow-text-column
+        p На Универсальной карте оренбуржца размещаются данные о держателе в электронном и графическом виде:
+        ul
+          li фамилия, имя, отчество;
+          li дата рождения;
+          li паспортные данные;
+          li СНИЛС владельца карты;
+          li номер полиса ОМС ;
+          li фотография владельца карты;
+          li прочие идентификационные данные.
+ 
 
     section
       h3 Плашка<u>, &lt;aside&gt;</u>
@@ -211,7 +287,7 @@ block content
           .value.arrow-left.em 1.5
 
       
-    section.orb__top-space-L
+    section.orb__top-space-L#components
       h2 Базовые интерфейсные компоненты
     section
       h3 Кнопка<u>, &lt;button&gt;</u>
@@ -274,7 +350,9 @@ block content
 
 
     section
-      h3 Ввод текста
+      h3 Ввод текста<u>, input[type=text]</u>
+      .orb__narrow-text-column
+        input(type="text" placeholder="Эл. почта")
 
     section.orb__top-space-L
       h2 Составные интерфейсные компоненты
@@ -352,6 +430,10 @@ block content
 
       a.orb__button-link(href="#")
         .orb__link-text Предложить сервис
+
+    section
+    p C вопросами о дизайн-системе и продуктах Минцифры Оренбургской области вы можете обратиться к помощнику министра Юлии Хрипковой: <a href="mailto:udh@mail.orb.ru">udh@mail.orb.ru</a>
+    p.orb__text-S Сделано <a href="https://intuition.team">с Интуицией</a> в 2020 году
 
 
 
