@@ -100,23 +100,52 @@ block content
 
     section
       p Базовая палитра
-      .palette
-        .palette-bar(style="background-color: var(--brand-color-1)") RGB 248 212 206
-        .palette-bar(style="background-color: var(--brand-color-2)") RGB 236 89 70
-        .palette-bar(style="background-color: var(--brand-color-3); color: AliceBlue") RGB 46 50 177
-        .palette-bar(style="background-color: var(--brand-color-4); color: AliceBlue") RGB 0 5 66
+      .brand-palettes
+        .brand-palette.digit-colors-brand-palette
+          .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
+            .rgb RGB 46 50 177
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-2); color: AliceBlue")
+            .rgb RGB 0 5 66
+            .cmyk CMYK 100 100 100 50
+
+        .brand-palette.steppe-colors-brand-palette.hidden
+          .brand-palette-sample(style="background-color: var(--brand-color-1)")
+            .rgb RGB 248 212 206
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-2)")
+            .rgb RGB 236 89 70
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
+            .rgb RGB 46 50 177
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-4); color: AliceBlue")
+            .rgb RGB 0 5 66
+            .cmyk CMYK 100 100 100 50
+
+        .brand-palette.active-colors-brand-palette.hidden
+          .brand-palette-sample(style="background-color: var(--brand-color-2)")
+            .rgb RGB 236 89 70
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
+            .rgb RGB 46 50 177
+            .cmyk CMYK 100 100 100 50
+          .brand-palette-sample(style="background-color: var(--brand-color-4); color: AliceBlue")
+            .rgb RGB 0 5 66
+            .cmyk CMYK 100 100 100 50
 
       p Интерфейсная
       .palette
-        .palette-bar(style="background-color: var(--text-color); color: AliceBlue") text
-        .palette-bar(style="background-color: var(--link-color); color: AliceBlue") link
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)") text
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)") link
         .palette-bar(style="background-color: var(--accent-color)") accent
+        .palette-bar(style="background-color: var(--hover-color)") hover
         
-        .palette-bar(style="background-color: var(--error-color)") error
+        .palette-bar(style="background-color: var(--error-color); color: var(--text-color)") error
         .palette-bar(style="background-color: var(--success-color)") success
         .palette-bar(style="background-color: var(--mark-color)") mark
         .palette-bar(style="background-color: var(--surface-color)") surface
-        .palette-bar(style="background-color: var(--background-color)") background
+        //- .palette-bar(style="background-color: var(--background-color)") background
       p В интерфейсной палитре каждый цвет привязан к определённой функциональному назначени и назван соответственно:
       ul
         li <strong>background</strong> — основной цвет фона

@@ -1,5 +1,5 @@
 import "../styles/main.scss";
-import $ from "jquery";
+import $, { each } from "jquery";
 
 const ready = function() {
   scrollMagic();
@@ -84,6 +84,17 @@ const ready = function() {
     $(`.color-switch input:radio`)
       .filter(`[value=${newColorScheme}]`)
       .prop("checked", true);
+
+    $(".brand-palette").addClass("hidden");
+    $(`.${newColorScheme}-brand-palette`).removeClass("hidden");
+    // $(".palette-bar").each(function(){
+    //   let colorName = $(this).text();
+    //   var body = document.getElementsByTagname("body");
+    //   let colorValue = getComputedStyle(body).getPropertyValue(`--${colorName}-color`);
+    //   // let colorValue = $(this).get(0).style.getPropertyValue(`--${colorName}-color`);
+    //   console.log(`${colorName} — ${colorValue}`);
+    // });
+
     currentColorScheme = newColorScheme;
   }
 
