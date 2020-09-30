@@ -1,0 +1,53 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 11em;
+  padding: 1em;
+
+  @media #{$mobile} {
+    position: static;
+    margin: 1em;
+    // width: auto;
+    padding: 1em;
+    background-color: var(--surface-color);
+  }
+}
+
+.nav {
+  margin-bottom: 1.5em;
+  .nav-link {
+    margin: 0.5em 0;
+  }
+}
+
+.orb {
+  .sidebar-controls {
+    &.hidden {
+      display: none;
+    }
+
+    @media #{$mobile} {
+      display: none;
+    }
+
+    .sidebar-em-converter {
+      margin-bottom: 0.5em;
+
+      label {
+        display: inline-block;
+        padding: 0.4em 0 0.4em 0.7em;
+        background-color: var(--surface-color);
+        border-radius: 0.3em 0 0 0.3em;
+      }
+      input {
+        width: 4em;
+        top: 0;
+        padding-top: 0.4em;
+        border-radius: 0 0.3em 0.3em 0;
+      }
+      span {
+        padding-top: 0.4em;
+      }
+    }
+  }
+}

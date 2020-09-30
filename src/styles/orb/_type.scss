@@ -39,15 +39,16 @@ $orb__desktop: "(min-device-width: 768px)";
   p {
     margin-top: 0;
     margin-bottom: 0.5em;
+  }
 
-    &.orb__text-L {
-      font-size: 1.3em;
-      @include orb__normalize-line-height;
-    }
-    &.orb__text-S {
-      font-size: 0.85em;
-      @include orb__normalize-line-height;
-    }
+  .orb__text-L {
+    font-size: 1.3em;
+    @include orb__normalize-line-height;
+  }
+
+  .orb__text-S {
+    font-size: 0.85em;
+    @include orb__normalize-line-height;
   }
 
   .orb__lead {
@@ -188,6 +189,7 @@ $orb__desktop: "(min-device-width: 768px)";
     margin-bottom: calc(#{$orb__density} * 0.75);
     background: var(--surface-color);
     padding: calc(#{$orb__density} * 0.75);
+    padding-top: calc(#{$orb__density} * 0.6);
     padding-right: calc(#{$orb__density} * 2);
     border-radius: 0.2em;
   }

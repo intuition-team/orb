@@ -2,63 +2,88 @@ import "../styles/main.scss";
 import $ from "jquery";
 
 const ready = function() {
-  let currentColorScheme = "";
-  let currentGlobalUnits = "";
-  let currentPxInEm = "";
-  let unitsListner;
+  scrollMagic();
+  $(window).scroll(scrollMagic);
+
+  // handle color schemes
+
+  let currentColorScheme;
+  let colorScheme;
 
   if (localStorage.getItem("color-scheme")) {
-    let colorScheme = localStorage.getItem("color-scheme");
-    setColorScheme(colorScheme);
-    $(`.js-color-switch input:radio`)
-      .filter(`[value=${colorScheme}]`)
-      .prop("checked", true);
+    colorScheme = localStorage.getItem("color-scheme");
   } else {
-    currentColorScheme = $(
-      ".js-color-switch input:radio[name=color-switcher]:checked"
+    colorScheme = $(
+      ".main-color-switch input:radio[name=color-switcher]:checked"
     ).val();
   }
+  setColorScheme(colorScheme);
+  $(`.color-switch input:radio`)
+    .filter(`[value=${colorScheme}]`)
+    .prop("checked", true);
+  currentColorScheme = colorScheme;
 
-  if (localStorage.getItem("global-units")) {
-    let globalUnits = localStorage.getItem("global-units");
-    setGlobalUnits(globalUnits);
-    $(`.units-selector input:radio`)
-      .filter(`[value=${globalUnits}]`)
-      .prop("checked", true);
-  } else {
-    currentColorScheme = $(
-      ".units-selector input:radio[name=units-selector]:checked"
-    ).val();
-  }
-
-  if (localStorage.getItem("px-in-em")) {
-    let pxInEm = localStorage.getItem("px-in-em");
-    setPxValues(pxInEm);
-    $(".em-converter input").val(pxInEm);
-  } else {
-    currentPxInEm = $(".em-converter input").val();
-  }
-
-  $(".js-color-switch input:radio").change(function() {
+  $(".color-switch input:radio").change(function() {
     setColorScheme($(this).val());
   });
+
+  // handle units
+
+  let currentGlobalUnits;
+  let currentPxInEm;
+  let unitsListner;
+
+  let globalUnits;
+  if (localStorage.getItem("global-units")) {
+    globalUnits = localStorage.getItem("global-units");
+  } else {
+    globalUnits = $(
+      ".main-units-selector input:radio[name=units-selector]:checked"
+    ).val();
+  }
+  setGlobalUnits(globalUnits);
+  $(`.units-selector input:radio`)
+    .filter(`[value=${globalUnits}]`)
+    .prop("checked", true);
+  currentGlobalUnits = globalUnits; // not sure if this is necessary
 
   $(".units-selector input:radio").change(function() {
     setGlobalUnits($(this).val());
   });
 
-  unitsListner = setInterval(function() {
-    let pxInEm = $(".em-converter input").val();
+  let pxInEm;
+  if (localStorage.getItem("px-in-em")) {
+    pxInEm = localStorage.getItem("px-in-em");
+  } else {
+    pxInEm = $(".main-em-converter input").val();
+  }
+  setPxValues(pxInEm);
+  $(".em-converter input").val(pxInEm);
+  currentPxInEm = pxInEm;
 
-    if (pxInEm != currentPxInEm) {
-      setPxValues(pxInEm);
+  unitsListner = setInterval(function() {
+    let pxInEm1 = $(".main-em-converter input").val();
+    let pxInEm2 = $(".sidebar-em-converter input").val();
+    let pxInEm = 0;
+
+    if (pxInEm1 != currentPxInEm) {
+      pxInEm = pxInEm1;
     }
+    if (pxInEm2 != currentPxInEm) {
+      pxInEm = pxInEm2;
+    }
+    if (pxInEm) setPxValues(pxInEm);
   }, 300);
+
+  // functions
 
   function setColorScheme(newColorScheme) {
     $("body").removeClass(currentColorScheme);
     $("body").addClass(newColorScheme);
     localStorage.setItem("color-scheme", newColorScheme);
+    $(`.color-switch input:radio`)
+      .filter(`[value=${newColorScheme}]`)
+      .prop("checked", true);
     currentColorScheme = newColorScheme;
   }
 
@@ -72,12 +97,14 @@ const ready = function() {
         break;
       case "px":
         $(".em-converter").addClass("visible");
-
         $(".px").show();
         $(".em").hide();
     }
 
     localStorage.setItem("global-units", newGlobalUnits);
+    $(`.units-selector input:radio`)
+      .filter(`[value=${newGlobalUnits}]`)
+      .prop("checked", true);
     currentGlobalUnits = newGlobalUnits;
   }
 
@@ -93,6 +120,7 @@ const ready = function() {
     });
 
     localStorage.setItem("px-in-em", newPxInEm);
+    $(".em-converter input").val(newPxInEm);
     currentPxInEm = newPxInEm;
   }
 
@@ -111,6 +139,28 @@ const ready = function() {
       500
     );
   });
+
+  function scrollMagic() {
+    let unitsSelectorShowPosition = $(".units-selector-breakpoint").offset()
+      .top;
+    let uDelta = $(window).scrollTop() - unitsSelectorShowPosition;
+
+    let colorSwitcherShowPosition = $(".color-switcher-breakpoint").offset()
+      .top;
+    let cDelta = $(window).scrollTop() - colorSwitcherShowPosition;
+
+    if (uDelta >= 0) {
+      $(".unit-control").removeClass("hidden");
+    } else {
+      $(".unit-control").addClass("hidden");
+    }
+
+    if (cDelta >= 0) {
+      $(".color-control").removeClass("hidden");
+    } else {
+      $(".color-control").addClass("hidden");
+    }
+  }
 };
 
 $(document).ready(ready);

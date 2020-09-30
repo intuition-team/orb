@@ -1,18 +1,9 @@
 extends /layouts/main.pug
 
 block content
-  .nav
-    .nav-title
-      h6 Дизайн-система Оренбургской области
-    .nav-link
-      a.js-scroll-link(href="#symbols") Символика
-    .nav-link
-      a.js-scroll-link(href="#colors") Цветовые схемы
-    .nav-link
-      a.js-scroll-link(href="#type") Типографика
-    .nav-link
-      a.js-scroll-link(href="#components") Компоненты
-  
+  .sidebar
+    include /partials/sidebar
+
   .wrapper.shift-right
     section
       h1 Дизайн-система Оренбургской области
@@ -20,7 +11,8 @@ block content
     section
       p Дизайн-система представляет собой набор типовых компонентов для интерфейсов и онлайн-публикаций. 
       aside
-        p Компоненты описаны без прямой привязки к теримнам CSS. Но вы можете подключить css-файл из репозитория <a href="https://github.com/intuition-team/orb">github.com/intuition-team/orb</a>, создать в проекте контейнер-инициализатор с классом .orb и использовать внутри него все описанные классы и теги. В качестве образца HTML-разметки можно брать исходный код этой страницы.
+        p Компоненты описаны в абстрактных терминах без прямой привязки к свойствам CSS. Но образцы компонентов в этом руководстве реализованы на HTML/CSS.
+        p Вы можете подключить файл со стилями из репозитория <a href="https://github.com/intuition-team/orb">github.com/intuition-team/orb</a>, создать в своём проекте контейнер с классом .orb и использовать внутри него описанные классы и теги, а в качестве образца HTML-разметки взять исходный код руководства.
       //- aside
         p Для описания свойств элементов используется следующая терминология:
         p <em>inset</em> — внутреннее поле элемента (в CSS это padding)
@@ -31,18 +23,19 @@ block content
 
     section.orb__top-space-S
       .units-selector-container
-        span Показывать размеры в 
-        .orb__radiogroup-line.units-selector
+        span Показывать размеры в  
+        .orb__radiogroup-line.units-selector.main-units-selector
           .option
             input(type="radio" id="em-units" value="em" name="units-selector" checked)
             label(for="em-units") em
           .option
             input(type="radio" id="px-units" value="px" name="units-selector")
             label(for="px-units") px
-        .em-converter
-          span 1 em = 
+        .em-converter.main-em-converter
+          span 1 em =  
           input(type="number" value="20" max="28" min="12")
-          span px
+          span  px
+      .units-selector-breakpoint
 
       .props
         .prop
@@ -90,7 +83,7 @@ block content
       p Есть несколько цветовых схем для разных проектов, подразделений и контекстов. Каждая схема — это самостоятельная палитра фирменных цветов, которые используются в интерфейсах и на любых других носителях.
       
     section.orb__top-space-S
-      .orb__radiogroup-line.js-color-switch
+      .orb__radiogroup-line.color-switch.main-color-switch
         .option
           input(type="radio" id="digit-color" value="digit-colors" name="color-switcher" checked)
           label(for="digit-color") Цифра
@@ -103,6 +96,7 @@ block content
         //- .option
           input(type="radio" id="contrast-color" value="contrast-colors" name="color-switcher")
           label(for="contrast-color") Контраст
+      .color-switcher-breakpoint
 
     section
       p Базовая палитра

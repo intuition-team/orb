@@ -1,22 +1,3 @@
-.nav {
-  position: fixed;
-  top: 0;
-  width: 11em;
-  padding: 1em;
-
-  @media #{$mobile} {
-    position: static;
-    margin: 1em;
-    // width: auto;
-    padding: 1em;
-    background-color: var(--surface-color);
-  }
-
-  .nav-link {
-    margin: 0.5em 0;
-  }
-}
-
 .palette {
   display: flex;
   flex-wrap: wrap;
@@ -123,22 +104,22 @@ h3 {
 .orb {
   .units-selector {
     display: inline-flex;
-    margin: 0 0.3em;
+
     margin-right: 3em;
   }
 
   .em-converter {
-    display: inline-flex;
-    opacity: 0;
+    display: none;
+    // opacity: 0;
 
     &.visible {
-      opacity: 1;
+      display: inline-flex;
+      // opacity: 1;
     }
 
     input {
       position: relative;
       width: 5em;
-      margin: 0 0.4em;
       top: -0.28em;
     }
   }
