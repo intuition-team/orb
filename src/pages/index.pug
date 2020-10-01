@@ -19,7 +19,7 @@ block content
         p <em>stack</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-top или margin-bottom)
         p <em>inline</em> — вертикальный внешний отступ от элемента или между элементами (в CSS это margin-right или margin-left)
         p <em>font 18px / 1.3</em> — шрифт с кеглем 18px и интерлиньяжем 130% от кегля (в CSS это font-size: 18px; line-height: 1.3em)
-      p Основная единица измерения — <em>em</em>. Все размеры можно перевести в px, принимая 1&hairsp;em за 20&hairsp;px (по умолчанию) или произвольное значение от 12&hairsp;px до 28&hairsp;px.
+      p Основная единица измерения — <em>em</em>. Все размеры можно перевести в px, принимая 1&hairsp;em за 20&hairsp;px (по умолчанию) или произвольное значение от 14&hairsp;px до 24&hairsp;px.
 
     section.orb__top-space-S
       .units-selector-container
@@ -33,7 +33,7 @@ block content
             label(for="px-units") px
         .em-converter.main-em-converter
           span 1 em =  
-          input(type="number" value="20" max="28" min="12")
+          input(type="number" value="20" max="24" min="14")
           span  px
       .units-selector-breakpoint
 
@@ -164,10 +164,14 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em 1
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.3
+            .px
 
     section
       h3 Лидер-абзац<u>, p.orb__text-L</u>
@@ -175,22 +179,28 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 1.3
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
-
+          .value
+            .em 1.3
+            .px
     section
       h3 Мелкий текст<u>, p.orb__text-S</u>
       p.orb__text-S «Программа реализуется в целях ускорения технологического развития Российской Федерации, увеличения количества организаций, осуществляющих технологические инновации, создания сквозных цифровых технологий на основе отечественных разработок, внедрения цифровых технологий и платформенных решений, имеющих значительный потенциал коммерциализации»
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 0.85
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
-
+          .value
+            .em 1.3
+            .px
     section
       h3 Заголовки
       h3 <u>&lt;h1&gt;</u>
@@ -198,10 +208,14 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 4.2
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1
+            .px
 
     section
       h3 <u>&lt;h2&gt;</u>

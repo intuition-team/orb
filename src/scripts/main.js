@@ -120,19 +120,44 @@ const ready = function() {
   }
 
   function setPxValues(newPxInEm) {
-    $(".value").each(function() {
-      let emValue = $(this)
-        .find(".em")
-        .text();
-      let pxValue = Math.floor(emValue * newPxInEm * 10) / 10;
+    $(".props").each(function() {
+      let base = $(this)
+        .find(".base")
+        .text()
+        ? $(this)
+            .find(".base")
+            .text()
+        : "1";
+      console.log(base);
+
       $(this)
-        .find(".px")
-        .text(pxValue);
+        .find(".value")
+        .each(function() {
+          let emValue = $(this)
+            .find(".em")
+            .text();
+
+          if (
+            !$(this)
+              .find(".em")
+              .hasClass("base")
+          ) {
+            emValue *= base;
+          }
+
+          let pxValue = Math.floor(emValue * newPxInEm * 10) / 10;
+
+          $(this)
+            .find(".px")
+            .text(pxValue);
+        });
     });
 
     localStorage.setItem("px-in-em", newPxInEm);
     $(".em-converter input").val(newPxInEm);
     currentPxInEm = newPxInEm;
+
+    $("body").css("font-size", `${newPxInEm}px`);
   }
 
   $(".js-scroll-link").click(function(e) {
