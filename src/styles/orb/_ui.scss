@@ -7,6 +7,11 @@
     color: var(--background-color);
     border-radius: 0.3em;
 
+    &:focus {
+      box-shadow: 0 0 0 5px var(--mark-color);
+      outline: none;
+    }
+
     &:hover {
       background-color: var(--hover-color);
     }
@@ -22,8 +27,12 @@
     color: var(--text-color);
     border-radius: 0.3em;
 
+    &::placeholder {
+      color: var(--text-transparent-color);
+    }
+
     &:focus {
-      box-shadow: 0 0 0 3px var(--mark-color);
+      box-shadow: 0 0 0 5px var(--mark-color);
       outline: none;
     }
   }

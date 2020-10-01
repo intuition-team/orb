@@ -49,16 +49,47 @@
     @media #{$mobile} {
       width: 50%;
     }
+
+    &.half-width {
+      width: 12.5%;
+      @media #{$mobile} {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.font-letter {
+  font-size: 2.5em;
+  line-height: calc(#{$orb__density} / 1.2);
+  margin-bottom: 0.5em;
+
+  &.regular {
+    font-weight: 400;
+  }
+  &.medium {
+    font-weight: 600;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+
+  @media #{$orb__mobile} {
+    font-size: 2.2em;
   }
 }
 
 .props {
   margin-top: 1.5em;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   // background: var(--surface-color);
   // padding: calc(#{$orb__density} * 0.5);
+
+  @media #{$orb__mobile} {
+    display: none;
+  }
 
   .prop {
     width: 10em;

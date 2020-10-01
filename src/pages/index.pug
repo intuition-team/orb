@@ -37,31 +37,7 @@ block content
           span  px
       .units-selector-breakpoint
 
-      .props
-        .prop
-          .prop-caption Размер шрифта
-          .value
-            .em 1
-            .px
-        .prop
-          .prop-caption Интерлиньяж
-          .value
-            .em 1.3
-            .px
-        .prop.double-width
-          .prop-caption Внутренние поля
-          .value.arrow-up
-            .em 0.5
-            .px
-          .value.arrow-right
-            .em 1.5
-            .px
-          .value.arrow-down
-            .em 0.5
-            .px
-          .value.arrow-left
-            .em 1.5
-            .px
+
 
 
     section#symbols
@@ -93,9 +69,6 @@ block content
         .option
           input(type="radio" id="active-color" value="active-colors" name="color-switcher")
           label(for="active-color") Актив
-        //- .option
-          input(type="radio" id="contrast-color" value="contrast-colors" name="color-switcher")
-          label(for="contrast-color") Контраст
       .color-switcher-breakpoint
 
     section
@@ -103,36 +76,36 @@ block content
       .brand-palettes
         .brand-palette.digit-colors-brand-palette
           .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
-            .rgb RGB 46 50 177
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-2); color: AliceBlue")
-            .rgb RGB 0 5 66
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
 
         .brand-palette.steppe-colors-brand-palette.hidden
           .brand-palette-sample(style="background-color: var(--brand-color-1)")
-            .rgb RGB 248 212 206
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-2)")
-            .rgb RGB 236 89 70
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
-            .rgb RGB 46 50 177
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-4); color: AliceBlue")
-            .rgb RGB 0 5 66
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
 
         .brand-palette.active-colors-brand-palette.hidden
           .brand-palette-sample(style="background-color: var(--brand-color-2)")
-            .rgb RGB 236 89 70
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
-            .rgb RGB 46 50 177
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-4); color: AliceBlue")
-            .rgb RGB 0 5 66
-            .cmyk CMYK 100 100 100 50
+            .rgb RGB 255 255 255
+            .cmyk CMYK 0 0 0 0
 
       p Интерфейсная
       .palette
@@ -141,22 +114,110 @@ block content
         .palette-bar(style="background-color: var(--accent-color)") accent
         .palette-bar(style="background-color: var(--hover-color)") hover
         
-        .palette-bar(style="background-color: var(--error-color); color: var(--text-color)") error
-        .palette-bar(style="background-color: var(--success-color)") success
+        .palette-bar.half-width(style="background-color: var(--error-color); color: var(--text-color)") error
+        .palette-bar.half-width(style="background-color: var(--success-color)") success
         .palette-bar(style="background-color: var(--mark-color)") mark
         .palette-bar(style="background-color: var(--surface-color)") surface
-        //- .palette-bar(style="background-color: var(--background-color)") background
+        .palette-bar(style="background-color: var(--background-color)") background
+
       p В интерфейсной палитре каждый цвет привязан к определённой функциональному назначени и назван соответственно:
       ul
-        li <strong>background</strong> — основной цвет фона
+        li <strong>background</strong> — цвет фона
         li <strong>text</strong> — цвет текста
         li <strong>link</strong> — цвет гиперссылки
-        li <strong>link</strong> — цвет гиперссылки
+        li <strong>accent</strong> — цвет для кнопок и других элементов, которые должны быть заметными
+        li <strong>hover</strong> — цвет для подсветки активных элементов при наведении курсора
+        li <strong>error</strong> — цвет для сообщений об ошибках, всегда какой-то оттенок красного
+        li <strong>success</strong> — цвет для сообщений об успешном завершении процесса, всегда какой-то зелёный
+        li <strong>mark</strong> — цвет для смыслового выделения отдельных слов в тексте, обязательно светлый
+        li <strong>surface</strong> — цвет для плашек, обязательно светлый
 
 
     section.orb__top-space-L#type
       h2 Типографика
-      p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов. Дизайн-система использует три начертания: Regular, DemiBold и Black.
+      p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов.
+      p Дизайн-система использует три начертания: Regular, Demibold и Bold.
+      .orb__grid.orb__grid-size-XS
+        .orb__grid-cell
+          .font-letter.bold Аа
+        .orb__grid-cell
+          .font-letter.bold Бб
+        .orb__grid-cell
+          .font-letter.bold Вв
+        .orb__grid-cell
+          .font-letter.bold Гг
+        .orb__grid-cell
+          .font-letter.bold Дд
+        .orb__grid-cell
+          .font-letter.bold Её
+        .orb__grid-cell
+          .font-letter.bold Жж
+        .orb__grid-cell
+          .font-letter.bold Зз
+        .orb__grid-cell
+          .font-letter.bold Ий
+        .orb__grid-cell
+          .font-letter.bold Кк
+        .orb__grid-cell
+          .font-letter.bold Лл
+        .orb__grid-cell
+          .font-letter.bold Мм
+        .orb__grid-cell
+          .font-letter.medium НН
+        .orb__grid-cell
+          .font-letter.medium Оо
+        .orb__grid-cell
+          .font-letter.medium Пп
+        .orb__grid-cell
+          .font-letter.medium Рр
+        .orb__grid-cell
+          .font-letter.medium Сс
+        .orb__grid-cell
+          .font-letter.medium Тт
+        .orb__grid-cell
+          .font-letter.medium Уу
+        .orb__grid-cell
+          .font-letter.medium Фф
+        .orb__grid-cell
+          .font-letter.medium Хх
+        .orb__grid-cell
+          .font-letter.medium Цц
+        .orb__grid-cell
+          .font-letter.medium Чч
+        .orb__grid-cell
+          .font-letter.medium Шш
+        .orb__grid-cell
+          .font-letter.regular Щщ
+        .orb__grid-cell
+          .font-letter.regular Ьъ
+        .orb__grid-cell
+          .font-letter.regular Ыы
+        .orb__grid-cell
+          .font-letter.regular Ээ
+        .orb__grid-cell
+          .font-letter.regular Юю
+        .orb__grid-cell
+          .font-letter.regular Яя
+        .orb__grid-cell
+          .font-letter.regular 1₽
+        .orb__grid-cell
+          .font-letter.regular ×2
+        .orb__grid-cell
+          .font-letter.regular №3
+        .orb__grid-cell
+          .font-letter.regular ↑4
+        .orb__grid-cell
+          .font-letter.regular 5%
+        .orb__grid-cell
+          .font-letter.regular ±6
+        .orb__grid-cell
+          .font-letter.regular §7
+        .orb__grid-cell
+          .font-letter.regular 8*
+        .orb__grid-cell
+          .font-letter.regular 9˚
+        .orb__grid-cell
+          .font-letter.regular 0
 
     section
       h3 Абзац текста<u>, &lt;p&gt;</u>
@@ -216,6 +277,9 @@ block content
           .value
             .em 1
             .px
+        .prop
+          .prop-caption Начертание
+          .value bold
 
     section
       h3 <u>&lt;h2&gt;</u>
@@ -223,10 +287,17 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 3
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.1
+            .px
+        .prop
+          .prop-caption Начертание
+          .value bold
 
     section
       h3 <u>&lt;h3&gt;</u>
@@ -234,10 +305,18 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 2
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.2
+            .px
+        .prop
+          .prop-caption Начертание
+          .value demibold
+
 
     section
       h3 <u>&lt;h4&gt;</u>
@@ -245,10 +324,14 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 1.3
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.3
+            .px
 
     section
       h3 <u>&lt;h5&gt;</u>
@@ -256,10 +339,14 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 1
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.3
+            .px
 
     section
       h3 <u>&lt;h6&gt;</u>
@@ -267,10 +354,19 @@ block content
       .props
         .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 0.8
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.3
+            .px
+        .prop
+          .prop-caption Разрядка
+          .value
+            .em 0.1
+            .px
 
     section
       h3 Маркер<u>, &lt;mark&gt;</u>
@@ -299,29 +395,50 @@ block content
  
 
     section
+      h3 Кнопка-ссылка<u>, .orb__button-link</u>
+      a.orb__button-link(href="#")
+        .orb__link-text Заполнить заявку
+
+
+    section
       h3 Плашка<u>, &lt;aside&gt;</u>
       aside
-        h3 Конкурс для IT-лидеров, проектов и организаций
+        //- h3 Конкурс для IT-лидеров, проектов и организаций
         p Фонд содействия инновациям объявил о начале отбора проектов по программе «Старт» в рамках федерального проекта «Цифровые технологии» национальной программы «Цифровая экономика».
       .props
         .prop
-          .prop-caption Цвет фона
-          .value accent
-        .prop
-          .prop-caption Цвет текста
-          .value background
-        .prop
           .prop-caption Размер шрифта
-          .value.em 1
+          .value
+            .em.base 1
+            .px
         .prop
           .prop-caption Интерлиньяж
-          .value.em 1.3
+          .value
+            .em 1.3
+            .px
+        .prop
+          .prop-caption Цвет фона
+          .value background
+        .prop
+          .prop-caption Скругление
+          .value
+            .em 0.2
+            .px
         .prop.double-width
-          .prop-caption Поля
-          .value.arrow-up.em 0.5
-          .value.arrow-right.em 1.5
-          .value.arrow-down.em 0.5
-          .value.arrow-left.em 1.5
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.75
+            .px
+          .value.arrow-right
+            .em 2.5
+            .px
+          .value.arrow-down
+            .em 1
+            .px
+          .value.arrow-left
+            .em 1
+            .px
+
 
       
     section.orb__top-space-L#components
@@ -331,26 +448,39 @@ block content
       button Сохранить
       .props
         .prop
-          .prop-caption Цвет фона
-          .value accent
+          .prop-caption Размер шрифта
+          .value
+            .em.base 1
+            .px
         .prop
           .prop-caption Цвет текста
           .value background
         .prop
-          .prop-caption Размер шрифта
-          .value.em 1
+          .prop-caption Цвет фона
+          .value accent
         .prop
-          .prop-caption Интерлиньяж
-          .value.em 1.3
+          .prop-caption Скругление
+          .value
+            .em 0.3
+            .px
         .prop.double-width
-          .prop-caption Поля
-          .value.arrow-up.em 0.5
-          .value.arrow-right.em 1.5
-          .value.arrow-down.em 0.5
-          .value.arrow-left.em 1.5
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.3
+            .px
+          .value.arrow-right
+            .em 1
+            .px
+          .value.arrow-down
+            .em 0.4
+            .px
+          .value.arrow-left
+            .em 1
+            .px
+
 
     section
-      h3 Чекбокс
+      //- h3 Чекбокс
       
       h3 Радиогруппа<u>, .orb__radiogroup-line</u>
       p Используется для выбора единственного варианта из множества, а также для переключения состояний интерфейса.
@@ -367,34 +497,83 @@ block content
           label(for="v3") Третий
       .props
         .prop
+          .prop-caption Размер шрифта
+          .value
+            .em.base 1
+            .px
+        .prop.double-width
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.3
+            .px
+          .value.arrow-right
+            .em 1
+            .px
+          .value.arrow-down
+            .em 0.4
+            .px
+          .value.arrow-left
+            .em 1
+            .px
+        .prop
+          .prop-caption Скругление
+          .value
+            .em 0.3
+            .px
+        .prop
           .prop-caption Цвет фона
-          .value accent
+          .value surface
         .prop
           .prop-caption Цвет текста
+          .value text
+        .prop
+          .prop-caption Фон активного пункта
+          .value accent
+        .prop
+          .prop-caption Цвет активного пункта
           .value background
-        .prop
-          .prop-caption Размер шрифта
-          .value.em 1
-        .prop
-          .prop-caption Интерлиньяж
-          .value.em 1.3
-        .prop.double-width
-          .prop-caption Поля
-          .value.arrow-up.em 0.5
-          .value.arrow-right.em 1.5
-          .value.arrow-down.em 0.5
-          .value.arrow-left.em 1.5
+
 
 
     section
-      h3 Ввод текста<u>, input[type=text]</u>
+      h3 Текстовое поле<u>, input[type=text]</u>
       .orb__narrow-text-column
         input(type="text" placeholder="Эл. почта")
-
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value
+            .em.base 1
+            .px
+        .prop.double-width
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.4
+            .px
+          .value.arrow-right
+            .em 0.4
+            .px
+          .value.arrow-down
+            .em 0.45
+            .px
+          .value.arrow-left
+            .em 0.4
+            .px
+        .prop
+          .prop-caption Скругление
+          .value
+            .em 0.3
+            .px
+        .prop
+          .prop-caption Цвет фона
+          .value surface
+        .prop
+          .prop-caption Цвет текста
+          .value text
     section.orb__top-space-L
       h2 Составные интерфейсные компоненты
 
-    section
+    //- section
       h3 Горизонтальное меню с иконками
       .orb__icons-menu
         a(href="#")
@@ -418,7 +597,7 @@ block content
             img(src="/images/icon5.svg")
             figcaption Открытые данные
 
-    section
+    //- section
       h3 Меню из карточек
       .orb__cards-menu
         a(href="#")

@@ -21,6 +21,7 @@
 
   --text-color-RGB-components: 12, 34, 72;
   --text-color: rgb(var(--text-color-RGB-components));
+  --text-transparent-color: rgba(var(--text-color-RGB-components), 0.5);
 
   --accent-color-RGB-components: 0, 100, 220;
   --accent-color: rgb(var(--accent-color-RGB-components));
@@ -62,6 +63,7 @@
   --accent-color: rgb(var(--accent-color-RGB-components));
 
   --surface-color-RGB-components: 248, 212, 206;
+  --surface-opaque-color: rgba(var(--surface-color-RGB-components), 1);
   --surface-color: rgba(var(--surface-color-RGB-components), 0.3);
   --surface-hover-color: rgba(var(--surface-color-RGB-components), 0.8);
 
