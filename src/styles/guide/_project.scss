@@ -206,3 +206,61 @@ h3 {
     }
   }
 }
+
+.logo-plate {
+  padding: 1.5em 2em 2em;
+  display: flex;
+  // justify-content: space-around;
+  background-color: var(--surface-color);
+
+  .logo {
+    width: 50%;
+    display: flex;
+    // margin-right: 3em;
+  }
+
+  .emblem {
+    width: 3.8em;
+    margin-top: 0.2em;
+
+    &.shield {
+      margin-top: 0.7em;
+      width: 1.9em;
+    }
+
+    svg {
+      .st0 {
+        fill: var(--text-color);
+      }
+    }
+  }
+
+  .caption {
+    width: 30%;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  // &.dark {
+  //   background-color: var(--text-color);
+  //   color: var(--accent-color);
+  //   svg {
+  //     .st0 {
+  //       fill: var(--accent-color);
+  //     }
+  //   }
+  // }
+}
+
+.marten {
+  padding-top: 5em;
+
+  svg {
+    margin: 0 -1em;
+  }
+
+  .st0 {
+    fill: var(--text-color);
+  }
+}

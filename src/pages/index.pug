@@ -47,12 +47,23 @@ block content
           .crest.emblem
             figure
               include /partials/emblem
-              figcaption Цифровой герб Оренбургской области, детализированная версия (черновик)
+              figcaption Цифровой герб Оренбургской области, детализированная версия
         .orb__grid-cell
           .crest.shield
             figure
               include /partials/shield
-              figcaption Цифровой герб Оренбургской области, миниатюрная версия (черновик)
+              figcaption Цифровой герб Оренбургской области, миниатюрная версия
+    section
+      .logo-plate
+        .logo
+          .emblem
+            include /partials/emblem
+          .caption Оренбургская<br>область
+        .logo
+          .emblem.shield
+            include /partials/shield
+          .caption Оренбургская<br>область
+
 
     section.orb__top-space-L#colors
       h2 Цветовые схемы
@@ -109,16 +120,29 @@ block content
 
       p Интерфейсная
       .palette
-        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)") text
-        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)") link
-        .palette-bar(style="background-color: var(--accent-color)") accent
-        .palette-bar(style="background-color: var(--hover-color)") hover
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
+          p text
+          p rgb(12, 34, 72)
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
+          p link
+          p rgb(0, 60, 160)
+        .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
+          p accent
+          p rgb(0, 100, 220)
+        .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
+          p hover
+          p rgb(0, 110, 250)
         
-        .palette-bar.half-width(style="background-color: var(--error-color); color: var(--text-color)") error
-        .palette-bar.half-width(style="background-color: var(--success-color)") success
-        .palette-bar(style="background-color: var(--mark-color)") mark
-        .palette-bar(style="background-color: var(--surface-color)") surface
-        .palette-bar(style="background-color: var(--background-color)") background
+        //- .palette-bar.half-width(style="background-color: var(--error-color); color: var(--text-color)") error
+        //- .palette-bar.half-width(style="background-color: var(--success-color)") success
+        //- .palette-bar(style="background-color: var(--mark-color)") mark
+        .palette-bar(style="background-color: var(--surface-color)")
+          p surface
+          p rgba(200, 220, 240, .3)
+
+        .palette-bar(style="background-color: var(--background-color)")
+          p background
+          p rgba(255, 255, 255)
 
       p В интерфейсной палитре каждый цвет привязан к определённой функциональному назначени и назван соответственно:
       ul
@@ -648,6 +672,8 @@ block content
         .orb__link-text Предложить сервис
 
     section
+    figure.marten
+      include /partials/marten
     p C вопросами о дизайн-системе и продуктах Минцифры Оренбургской области вы можете обратиться к помощнику министра Юлии Хрипковой: <a href="mailto:udh@mail.orb.ru">udh@mail.orb.ru</a>
     p.orb__text-S Сделано <a href="https://intuition.team">с Интуицией</a> в 2020 году
 
