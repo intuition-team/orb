@@ -85,8 +85,8 @@ const ready = function() {
       .filter(`[value=${newColorScheme}]`)
       .prop("checked", true);
 
-    $(".brand-palette").addClass("hidden");
-    $(`.${newColorScheme}-brand-palette`).removeClass("hidden");
+    $(".palette").addClass("hidden");
+    $(`.${newColorScheme}-palette`).removeClass("hidden");
     // $(".palette-bar").each(function(){
     //   let colorName = $(this).text();
     //   var body = document.getElementsByTagname("body");

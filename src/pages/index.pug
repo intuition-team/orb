@@ -42,18 +42,23 @@ block content
 
     section#symbols
       h2 Символика Оренбургской области
+      p Цифровой герб Оренбургской области
       .orb__grid.orb__grid-align-bottom
         .orb__grid-cell
           .crest.emblem
             figure
               include /partials/emblem
-              figcaption Цифровой герб Оренбургской области, детализированная версия
+              figcaption Одноцветная версия
+            p 
+              a(href="/images/ORB_digital-emblem-RGB-12-34-72.svg" download) Скачать в формате SVG
         .orb__grid-cell
           .crest.shield
             figure
-              include /partials/shield
-              figcaption Цифровой герб Оренбургской области, миниатюрная версия
-    section
+              img(src="/images/ORB_digital-emblem-colored.svg")
+              figcaption Цветная версия
+            p 
+              a(href="/images/ORB_digital-emblem-CMYK.eps" download) Скачать в формате EPS
+    //- section
       .logo-plate
         .logo
           .emblem
@@ -78,6 +83,9 @@ block content
           input(type="radio" id="steppe-color" value="steppe-colors" name="color-switcher" )
           label(for="steppe-color") Степь
         .option
+          input(type="radio" id="autumn-color" value="autumn-colors" name="color-switcher")
+          label(for="autumn-color") Осень
+        .option
           input(type="radio" id="active-color" value="active-colors" name="color-switcher")
           label(for="active-color") Актив
       .color-switcher-breakpoint
@@ -85,15 +93,15 @@ block content
     section
       p Базовая палитра
       .brand-palettes
-        .brand-palette.digit-colors-brand-palette
+        .palette.brand-palette.digit-colors-palette
           .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
-            .rgb RGB 255 255 255
+            .rgb RGB 12 34 72
             .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-2); color: AliceBlue")
-            .rgb RGB 255 255 255
+            .rgb RGB 6 67 146
             .cmyk CMYK 0 0 0 0
 
-        .brand-palette.steppe-colors-brand-palette.hidden
+        .palette.brand-palette.steppe-colors-palette.hidden
           .brand-palette-sample(style="background-color: var(--brand-color-1)")
             .rgb RGB 255 255 255
             .cmyk CMYK 0 0 0 0
@@ -107,42 +115,141 @@ block content
             .rgb RGB 255 255 255
             .cmyk CMYK 0 0 0 0
 
-        .brand-palette.active-colors-brand-palette.hidden
+        .palette.brand-palette.active-colors-palette.hidden
           .brand-palette-sample(style="background-color: var(--brand-color-2)")
-            .rgb RGB 255 255 255
+            .rgb RGB 0 200 50
             .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
-            .rgb RGB 255 255 255
+            .rgb RGB 0 50 200
             .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-4); color: AliceBlue")
-            .rgb RGB 255 255 255
+            .rgb RGB 15 15 15
+            .cmyk CMYK 0 0 0 0
+
+        .palette.brand-palette.autumn-colors-palette.hidden
+          .brand-palette-sample(style="background-color: var(--brand-color-4)")
+            .rgb RGB 255 215 68
+            .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
+            .rgb RGB 203 92 63
+            .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-2); color: AliceBlue")
+            .rgb RGB 0 74 155
+            .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
+            .rgb RGB 10 48 80
             .cmyk CMYK 0 0 0 0
 
       p Интерфейсная
-      .palette
+      .palette.interface-palette.digit-colors-palette
         .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
-          p text
-          p rgb(12, 34, 72)
+          .caption text
+          .rgb rgb(12, 34, 72)
         .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
-          p link
-          p rgb(0, 60, 160)
+          .caption link
+          .rgb rgb(0, 60, 160)
         .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
-          p accent
-          p rgb(0, 100, 220)
+          .caption accent
+          .rgb rgb(0, 100, 220)
         .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
-          p hover
-          p rgb(0, 110, 250)
+          .caption hover
+          .rgb rgb(0, 110, 250)
         
-        //- .palette-bar.half-width(style="background-color: var(--error-color); color: var(--text-color)") error
+        .palette-bar(style="background-color: var(--error-color); color: var(--text-color)")
+          .caption error
+          .rgb rgba(200, 220, 240, .3)
         //- .palette-bar.half-width(style="background-color: var(--success-color)") success
-        //- .palette-bar(style="background-color: var(--mark-color)") mark
+        .palette-bar(style="background-color: var(--mark-color)")
+          .caption mark
+          .rgb rgba(200, 220, 240, .3)
         .palette-bar(style="background-color: var(--surface-color)")
-          p surface
-          p rgba(200, 220, 240, .3)
+          .caption surface
+          .rgb rgba(200, 220, 240, .3)
 
         .palette-bar(style="background-color: var(--background-color)")
-          p background
-          p rgba(255, 255, 255)
+          .caption background
+          .rgb rgba(255, 255, 255)
+
+      .palette.interface-palette.steppe-colors-palette.hidden
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
+          .caption text
+          .rgb rgb(12, 34, 72)
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
+          .caption link
+          .rgb rgb(0, 60, 160)
+        .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
+          .caption accent
+          .rgb rgb(0, 100, 220)
+        .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
+          .caption hover
+          .rgb rgb(0, 110, 250)
+        
+        .palette-bar.half-width(style="background-color: var(--error-color); color: var(--text-color)") error
+        .palette-bar.half-width(style="background-color: var(--success-color)") success
+        .palette-bar(style="background-color: var(--mark-color)") mark
+        .palette-bar(style="background-color: var(--surface-color)")
+          .caption surface
+          .rgb rgba(200, 220, 240, .3)
+
+        .palette-bar(style="background-color: var(--background-color)")
+          .caption background
+          .rgb rgba(255, 255, 255)
+
+      .palette.interface-palette.active-colors-palette.hidden
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
+          .caption text
+          .rgb rgb(15, 15, 15)
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
+          .caption link
+          .rgb rgb(0, 50, 200)
+        .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
+          .caption accent
+          .rgb rgb(0, 180, 45)
+        .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
+          .caption hover
+          .rgb rgb(0, 200, 50)
+        
+        .palette-bar(style="background-color: var(--error-color); color: var(--background-color)")
+          .caption error
+          .rgb rgba(220, 0, 0)
+        .palette-bar(style="background-color: var(--mark-color)")
+          .caption mark
+          .rgb rgba(255, 230, 100)
+        .palette-bar(style="background-color: var(--surface-color)")
+          .caption surface
+          .rgb rgba(240, 240, 240, .5)
+
+        .palette-bar(style="background-color: var(--background-color)")
+          .caption background
+          .rgb rgba(255, 255, 255)
+
+      .palette.interface-palette.autumn-colors-palette.hidden
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
+          .caption text
+          .rgb rgb(10, 48, 80)
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
+          .caption link
+          .rgb rgb(0, 74, 155)
+        .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
+          .caption accent
+          .rgb rgb(203, 92, 63)
+        .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
+          .caption hover
+          .rgb rgb(215, 152, 45)
+        
+        .palette-bar(style="background-color: var(--error-color); color: var(--background-color)")
+          .caption error
+          .rgb rgba(230, 60, 60)
+        .palette-bar(style="background-color: var(--mark-color)")
+          .caption mark
+          .rgb rgba(255, 215, 68)
+        .palette-bar(style="background-color: var(--surface-color)")
+          .caption surface
+          .rgb rgba(223, 215, 213, .5)
+
+        .palette-bar(style="background-color: var(--background-color)")
+          .caption background
+          .rgb rgba(255, 255, 255)
 
       p В интерфейсной палитре каждый цвет привязан к определённой функциональному назначени и назван соответственно:
       ul
@@ -152,7 +259,7 @@ block content
         li <strong>accent</strong> — цвет для кнопок и других элементов, которые должны быть заметными
         li <strong>hover</strong> — цвет для подсветки активных элементов при наведении курсора
         li <strong>error</strong> — цвет для сообщений об ошибках, всегда какой-то оттенок красного
-        li <strong>success</strong> — цвет для сообщений об успешном завершении процесса, всегда какой-то зелёный
+        //- li <strong>success</strong> — цвет для сообщений об успешном завершении процесса, всегда какой-то зелёный
         li <strong>mark</strong> — цвет для смыслового выделения отдельных слов в тексте, обязательно светлый
         li <strong>surface</strong> — цвет для плашек, обязательно светлый
 

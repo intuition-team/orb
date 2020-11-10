@@ -1,59 +1,68 @@
-.brand-palette {
+.palette {
   display: flex;
   flex-wrap: wrap;
-  margin: 1.5em 0 2em -1.2em;
-
-  @media #{$mobile} {
-    margin: 1em 0 3em 0;
-  }
 
   &.hidden {
     display: none;
   }
 
-  .brand-palette-sample {
-    width: 13em;
-    height: 13em;
-    border-radius: 50%;
-    margin-right: -2em;
-    padding: 3.5em 1.2em;
+  &.brand-palette {
+    margin: 1.5em 0 2em -1.2em;
 
-    .rgb,
-    .cmyk {
-      font-size: 0.9em;
-      @media #{$mobile} {
+    @media #{$mobile} {
+      margin: 1em 0 3em 0;
+    }
+
+    .brand-palette-sample {
+      width: 13em;
+      height: 13em;
+      border-radius: 50%;
+      margin-right: -2em;
+      padding: 3.5em 1.2em;
+
+      .rgb,
+      .cmyk {
         font-size: 0.8em;
+        @media #{$mobile} {
+          font-size: 0.8em;
+        }
+      }
+
+      @media #{$mobile} {
+        width: 12em;
+        height: 12em;
+        margin-right: -1.5em;
+        margin-bottom: -1.5em;
+        padding: 3em 1.5em;
       }
     }
-
-    @media #{$mobile} {
-      width: 12em;
-      height: 12em;
-      margin-right: -1.5em;
-      margin-bottom: -1.5em;
-      padding: 3em 1.5em;
-    }
   }
-}
 
-.palette {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 1em;
+  &.interface-palette {
+    margin-bottom: 1em;
 
-  .palette-bar {
-    width: 25%;
-    height: 5em;
-    padding: calc(#{$orb__density} * 0.4) calc(#{$orb__density} * 0.5);
+    .palette-bar {
+      width: 25%;
+      height: 5em;
+      padding: calc(#{$orb__density} * 0.4) calc(#{$orb__density} * 0.5);
 
-    @media #{$mobile} {
-      width: 50%;
-    }
-
-    &.half-width {
-      width: 12.5%;
       @media #{$mobile} {
-        width: 25%;
+        width: 50%;
+      }
+
+      &.half-width {
+        width: 12.5%;
+        @media #{$mobile} {
+          width: 25%;
+        }
+      }
+
+      .rgb {
+        font-size: 0.8em;
+
+        @media #{$mobile} {
+          font-size: 0.8em;
+        }
       }
     }
   }
@@ -195,16 +204,16 @@ h3 {
 }
 
 .crest {
-  padding-right: 15%;
+  padding-right: 30%;
   .st0 {
     fill: var(--text-color);
   }
 
-  &.shield {
-    svg {
-      width: 40%;
-    }
-  }
+  // &.shield {
+  //   svg {
+  //     width: 40%;
+  //   }
+  // }
 }
 
 .logo-plate {

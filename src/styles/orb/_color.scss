@@ -108,3 +108,41 @@
   --success-color: rgba(0, 150, 40, 1);
   --error-color: rgba(220, 0, 0, 1);
 }
+
+// Актив
+
+.autumn-colors-brand-palette {
+}
+
+.autumn-colors {
+  --brand-color-1: rgb(10, 48, 80);
+  --brand-color-2: rgb(0, 74, 155);
+  --brand-color-3: rgb(203, 92, 63);
+  --brand-color-4: rgb(255, 215, 68);
+
+  --background-color: white;
+
+  --text-color-RGB-components: 10, 48, 80;
+  --text-color: rgb(var(--text-color-RGB-components));
+
+  // --accent-color-RGB-components: 215, 152, 45;
+  --accent-color-RGB-components: 203, 92, 63;
+  --accent-color: rgb(var(--accent-color-RGB-components));
+
+  --surface-color: rgba(223, 215, 213, 0.5);
+  --surface-hover-color: rgba(223, 215, 213, 1);
+
+  --link-color-RGB-components: 0, 74, 155;
+  --link-color: rgb(var(--link-color-RGB-components));
+  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+
+  // --hover-color-RGB-components: 237, 167, 11;
+  --hover-color-RGB-components: 215, 152, 45;
+  --hover-color: rgb(var(--hover-color-RGB-components));
+  --underline-hover-color: rgba(var(--hover-color-RGB-components), 0.2);
+
+  --mark-color: rgba(255, 215, 68, 1);
+
+  --success-color: rgba(0, 150, 40, 1);
+  --error-color: rgba(230, 60, 60, 1);
+}
