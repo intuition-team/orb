@@ -42,22 +42,34 @@ block content
 
     section#symbols
       h2 Символика Оренбургской области
-      p Цифровой герб Оренбургской области
+      h4 Цифровой герб Оренбургской области
+      p Геральдическое описание герба:
+      aside В червленом поле два золотых знамени, сопровожденные вверху украшенным на концах греко-российским крестом (с одной перекладиной в пояс и одной перекладиной в перевязь), а внизу золотым полумесяцем, повернутым рогами вверх и вправо; на полотнище каждого знамени российский орел образца 1856 года; в серебряной главе щита - бегущая лазоревая куница с червлеными глазами и языком.
       .orb__grid.orb__grid-align-bottom
         .orb__grid-cell
-          .crest.emblem
-            figure
-              include /partials/emblem
-              figcaption Одноцветная версия
-            p 
-              a(href="/images/ORB_digital-emblem-RGB-12-34-72.svg" download) Скачать в формате SVG
-        .orb__grid-cell
-          .crest.shield
+          .crest
+            p  Цветная версия:
             figure
               img(src="/images/ORB_digital-emblem-colored.svg")
-              figcaption Цветная версия
-            p 
-              a(href="/images/ORB_digital-emblem-CMYK.eps" download) Скачать в формате EPS
+              figcaption
+                a(href="/images/ORB_digital-emblem-CMYK.eps" download) Скачать в формате EPS
+              
+        .orb__grid-cell
+          .crest
+            p Одноцветная версия:
+            figure
+              include /partials/emblem
+              figcaption 
+                a(href="/images/ORB_digital-emblem-RGB-12-34-72.svg" download) Скачать в формате SVG
+    section
+      p Правила и ограничения
+      ul
+        li Охранное поле при использовании с другими гербами и логотипами — 1/2 ширины
+        li Охранное поле при комбинировании с текстовыми подписями — 1/4 ширины
+        li Одновцветную версию можно красить в любой цвет из любой фирменной палитры, но должен быть хороший контраст
+        li Можно использовать специальную версию без обрамления
+        li Не допускаются непропорциональные искажения, изменения в детализации, не допускается контурная обводка и произвольное использование цвета
+
     //- section
       .logo-plate
         .logo
@@ -68,10 +80,13 @@ block content
           .emblem.shield
             include /partials/shield
           .caption Оренбургская<br>область
+    section
+      h4 Логотип Министерства цифрового развития и связи Оренбургской области
+
 
 
     section.orb__top-space-L#colors
-      h2 Цветовые схемы
+      h2 Цветовые палитры
       p Есть несколько цветовых схем для разных проектов, подразделений и контекстов. Каждая схема — это самостоятельная палитра фирменных цветов, которые используются в интерфейсах и на любых других носителях.
       
     section.orb__top-space-S
@@ -258,10 +273,10 @@ block content
         li <strong>link</strong> — цвет гиперссылки
         li <strong>accent</strong> — цвет для кнопок и других элементов, которые должны быть заметными
         li <strong>hover</strong> — цвет для подсветки активных элементов при наведении курсора
-        li <strong>error</strong> — цвет для сообщений об ошибках, всегда какой-то оттенок красного
+        li <strong>error</strong> — цвет для сообщений об ошибках; нужно использовать какой-то оттенок красного
         //- li <strong>success</strong> — цвет для сообщений об успешном завершении процесса, всегда какой-то зелёный
         li <strong>mark</strong> — цвет для смыслового выделения отдельных слов в тексте, обязательно светлый
-        li <strong>surface</strong> — цвет для плашек, обязательно светлый
+        li <strong>surface</strong> — цвет для плашек, обязательно светлый; для более точной дифференциации интерфейсных слоёв можно использовать градации прозрачности этого цвета — 0.25, 0.5, 0.75, 1
 
 
     section.orb__top-space-L#type
@@ -499,76 +514,7 @@ block content
             .em 0.1
             .px
 
-    section
-      h3 Маркер<u>, &lt;mark&gt;</u>
-      p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты: <mark>паспорт</mark> гражданина РФ, <mark>СНИЛС</mark> и <mark>полис ОМС</mark>.
 
-    section
-      h3 Нумерованный список<u>, &lt;ol&gt; &lt;li&gt;</u>
-      .orb__narrow-text-column
-        p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты:
-        ol
-          li Один из документов, удостоверяющих личность гражданина РФ: паспорт гражданина РФ, военный билет или удостоверение личности военнослужащего РФ;
-          li Страховое свидетельство обязательного пенсионного страхования (СНИЛС);
-          li Полис обязательного медицинского страхования (за исключением военнослужащих).
-    section
-      h3 Ненумерованный список<u>, &lt;ul&gt; &lt;li&gt;</u>
-      .orb__narrow-text-column
-        p На Универсальной карте оренбуржца размещаются данные о держателе в электронном и графическом виде:
-        ul
-          li фамилия, имя, отчество;
-          li дата рождения;
-          li паспортные данные;
-          li СНИЛС владельца карты;
-          li номер полиса ОМС ;
-          li фотография владельца карты;
-          li прочие идентификационные данные.
- 
-
-    section
-      h3 Кнопка-ссылка<u>, .orb__button-link</u>
-      a.orb__button-link(href="#")
-        .orb__link-text Заполнить заявку
-
-
-    section
-      h3 Плашка<u>, &lt;aside&gt;</u>
-      aside
-        //- h3 Конкурс для IT-лидеров, проектов и организаций
-        p Фонд содействия инновациям объявил о начале отбора проектов по программе «Старт» в рамках федерального проекта «Цифровые технологии» национальной программы «Цифровая экономика».
-      .props
-        .prop
-          .prop-caption Размер шрифта
-          .value
-            .em.base 1
-            .px
-        .prop
-          .prop-caption Интерлиньяж
-          .value
-            .em 1.3
-            .px
-        .prop
-          .prop-caption Цвет фона
-          .value background
-        .prop
-          .prop-caption Скругление
-          .value
-            .em 0.2
-            .px
-        .prop.double-width
-          .prop-caption Внутренние поля
-          .value.arrow-up
-            .em 0.75
-            .px
-          .value.arrow-right
-            .em 2.5
-            .px
-          .value.arrow-down
-            .em 1
-            .px
-          .value.arrow-left
-            .em 1
-            .px
 
 
       
@@ -701,12 +647,37 @@ block content
         .prop
           .prop-caption Цвет текста
           .value text
-    section.orb__top-space-L
+
+    section
+      h3 Сообщение об ошибке<u>, .orb__error</u>
+      .orb__narrow-text-column
+        .orb__error
+          h5 Публикация не сохранилась
+          p.orb__text-S Ошибка сервера: 505
+    section.orb__top-space-L#components
       h2 Составные интерфейсные компоненты
+
+    section
+      h3 Горизонтальное меню<u>, .orb__nav</u>
+
+      aside
+        .orb__nav
+          a(href="#") Возможности
+          span(href="#") Партнеры
+          a(href="#") Новости
+          a(href="#") Поддержка
+          a(href="#") Документы
+      aside.orb-dark
+        .orb__nav
+          a(href="#") Возможности
+          span(href="#") Партнеры
+          a(href="#") Новости
+          a(href="#") Поддержка
+          a(href="#") Документы
 
     //- section
       h3 Горизонтальное меню с иконками
-      .orb__icons-menu
+      .orb__icons-nav
         a(href="#")
           figure
             img(src="/images/icon1.svg")
@@ -727,6 +698,80 @@ block content
           figure
             img(src="/images/icon5.svg")
             figcaption Открытые данные
+
+    section.orb__top-space-L
+      h2 Редакционные форматы
+
+    section
+      h3 Плашка<u>, &lt;aside&gt;</u>
+      aside
+        //- h3 Конкурс для IT-лидеров, проектов и организаций
+        p Фонд содействия инновациям объявил о начале отбора проектов по программе «Старт» в рамках федерального проекта «Цифровые технологии» национальной программы «Цифровая экономика».
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value
+            .em.base 1
+            .px
+        .prop
+          .prop-caption Интерлиньяж
+          .value
+            .em 1.3
+            .px
+        .prop
+          .prop-caption Цвет фона
+          .value background
+        .prop
+          .prop-caption Скругление
+          .value
+            .em 0.2
+            .px
+        .prop.double-width
+          .prop-caption Внутренние поля
+          .value.arrow-up
+            .em 0.75
+            .px
+          .value.arrow-right
+            .em 2.5
+            .px
+          .value.arrow-down
+            .em 1
+            .px
+          .value.arrow-left
+            .em 1
+            .px
+
+
+    section
+      h3 Нумерованный список<u>, &lt;ol&gt; &lt;li&gt;</u>
+      .orb__narrow-text-column
+        p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты:
+        ol
+          li Один из документов, удостоверяющих личность гражданина РФ: паспорт гражданина РФ, военный билет или удостоверение личности военнослужащего РФ;
+          li Страховое свидетельство обязательного пенсионного страхования (СНИЛС);
+          li Полис обязательного медицинского страхования (за исключением военнослужащих).
+    section
+      h3 Ненумерованный список<u>, &lt;ul&gt; &lt;li&gt;</u>
+      .orb__narrow-text-column
+        p На Универсальной карте оренбуржца размещаются данные о держателе в электронном и графическом виде:
+        ul
+          li фамилия, имя, отчество;
+          li дата рождения;
+          li паспортные данные;
+          li СНИЛС владельца карты;
+          li номер полиса ОМС ;
+          li фотография владельца карты;
+          li прочие идентификационные данные.
+
+
+    section
+      h3 Маркер<u>, &lt;mark&gt;</u>
+      p Документы, предъявляемые гражданином РФ при оформлении заявления на выпуск карты: <mark>паспорт</mark> гражданина РФ, <mark>СНИЛС</mark> и <mark>полис ОМС</mark>.
+
+
+
+
+
 
     //- section
       h3 Меню из карточек
@@ -751,10 +796,28 @@ block content
           figure
             figcaption Информационная безопасность в органах исполнительной власти Оренбургской области
             img(src="/images/security.svg")
-        //- a(href="#")
-        //-   figure
-        //-     img(src="/images/icon1.svg")
-        //-     figcaption Все проекты
+        a(href="#")
+          figure
+            img(src="/images/icon1.svg")
+            figcaption Все проекты
+
+    section
+      h3 Кнопка-ссылка<u>, .orb__button-link</u>
+      a.orb__button-link(href="#")
+        .orb__link-text Заполнить заявку
+
+    //- section
+      h3 Таблица<u>, &lt;table&gt; &lt;td&gt;</u>
+      table
+        th
+          td 
+          td 
+          td 
+        tr
+          td 
+          td 
+          td 
+
 
     section
       h3 Таблица ссылок
@@ -777,6 +840,9 @@ block content
 
       a.orb__button-link(href="#")
         .orb__link-text Предложить сервис
+
+
+
 
     section
     figure.marten
