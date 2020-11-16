@@ -70,7 +70,7 @@ $orb__desktop: "(min-device-width: 768px)";
   h5,
   h6 {
     margin: 0;
-    font-weight: 600;
+    // font-weight: 600;
 
     mark {
       background: none;
@@ -213,6 +213,10 @@ $orb__desktop: "(min-device-width: 768px)";
     }
     &.orb__figure__S {
       width: 75%;
+    }
+
+    img {
+      width: 100%;
     }
 
     figcaption {

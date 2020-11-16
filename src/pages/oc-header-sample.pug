@@ -1,0 +1,32 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-oc.png" )
+
+block content
+  .top.oc-top.autumn-colors
+    .top-header
+      .logos
+        .orb-emblem
+          include /partials/emblem
+        .project-logo
+          img(src="/images/identity/ORB_OC-logo.svg")
+        .project-caption
+          h1 Карта<br>Оренбуржца
+          
+      .nav-menu
+        .orb__nav
+          a(href="#") Возможности
+          a(href="#") Как получить
+          a(href="#") Партнеры
+          a(href="#") Новости
+          a(href="#") Документы
+  //- img(src="/images/tmp-photo_2020-11-16 11.46.50.jpeg" style="width:100%")
+    
+
+    
+
+
+
+
+      

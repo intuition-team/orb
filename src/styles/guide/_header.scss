@@ -5,3 +5,81 @@ header {
     height: auto;
   }
 }
+
+/// HEADER SAMPLES
+
+.top {
+  background-color: var(--surface-opaque-color);
+
+  .top-header {
+    padding: 1.1em 1.2em;
+    display: flex;
+    justify-content: space-between;
+
+    .logos {
+      display: flex;
+
+      .orb-emblem {
+        width: 3.8em;
+
+        .st0 {
+          fill: var(--text-color);
+        }
+      }
+
+      .project-logo {
+        min-width: 3.8em;
+        margin-left: 1.8em;
+        padding-top: 0.25em;
+        margin-right: 0.6em;
+      }
+
+      .project-caption {
+        h1 {
+          margin: 0;
+          padding-top: 0.1em;
+          font-size: 1.4em;
+          line-height: 0.95;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .top-content {
+    margin-top: 1em;
+    margin-left: 2em;
+    width: 60%;
+    padding: 1.1em 1.2em;
+  }
+}
+
+.oc-top {
+  background-image: url("/images/identity/OC-header-image.png");
+  background-repeat: no-repeat;
+  background-size: 97%;
+  background-position: 50% 80%;
+  height: 28em;
+}
+
+.ag-top {
+  background-image: url("/images/identity/AG-top-image.png");
+  background-repeat: no-repeat;
+  background-size: 63%;
+  background-position: 95% 80%;
+  height: 28em;
+  .logos {
+    .project-logo {
+      width: 4.1em;
+      margin-left: 1.5em;
+      margin-right: 0.4em;
+    }
+    .project-caption {
+      // font-size: ;
+
+      .caption-header {
+        // font-weight: 700;
+      }
+    }
+  }
+}

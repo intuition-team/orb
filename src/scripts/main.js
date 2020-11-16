@@ -177,13 +177,17 @@ const ready = function() {
   });
 
   function scrollMagic() {
-    let unitsSelectorShowPosition = $(".units-selector-breakpoint").offset()
-      .top;
-    let uDelta = $(window).scrollTop() - unitsSelectorShowPosition;
+    let uDelta;
+    let cDelta;
+    if ($(".units-selector-breakpoint").length) {
+      let unitsSelectorShowPosition = $(".units-selector-breakpoint").offset()
+        .top;
+      uDelta = $(window).scrollTop() - unitsSelectorShowPosition;
 
-    let colorSwitcherShowPosition = $(".color-switcher-breakpoint").offset()
-      .top;
-    let cDelta = $(window).scrollTop() - colorSwitcherShowPosition;
+      let colorSwitcherShowPosition = $(".color-switcher-breakpoint").offset()
+        .top;
+      cDelta = $(window).scrollTop() - colorSwitcherShowPosition;
+    }
 
     if (uDelta >= 0) {
       $(".unit-control").removeClass("hidden");

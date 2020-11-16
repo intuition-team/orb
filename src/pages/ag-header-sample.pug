@@ -1,0 +1,32 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-ag.png" )
+  
+block content
+  .top.ag-top.active-colors
+    .top-header
+      .logos
+        .orb-emblem
+          include /partials/emblem
+        .project-logo
+          img(src="/images/identity/ORB_AG-logo.svg")
+        .project-caption
+          h1 Активный гражданин
+          p Оренбургской области
+      .nav-menu
+        .orb__nav
+          a(href="#") Главная страница
+          a(href="#") Карта города
+          a(href="#") Сообщения
+          a(href="#") Личный кабинет
+    .top-content
+      h2 Улучшаем<br>Оренбургскую<br>область<br>каждый день!
+      button Сообщить о проблеме
+
+    
+
+
+
+
+      

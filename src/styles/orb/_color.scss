@@ -8,40 +8,41 @@
 // Цифра
 
 :root,
-.digit-color {
+.digit-colors {
   --brand-color-1: rgba(12, 34, 72, 1);
   --brand-color-2: rgba(6, 67, 146, 1);
   --brand-color-3: rgba(0, 100, 220, 1);
 
-  --background-color-RGB-components: 255, 255, 255;
-  --background-color: rgb(var(--background-color-RGB-components));
+  --background-RGB: 255, 255, 255;
+  --background-color: rgb(var(--background-RGB));
 
-  --text-color-RGB-components: 12, 34, 72;
-  --text-color: rgb(var(--text-color-RGB-components));
-  --text-transparent-color: rgba(var(--text-color-RGB-components), 0.5);
+  --text-RGB: 12, 34, 72;
+  --text-color: rgb(var(--text-RGB));
+  --text-transparent-color: rgba(var(--text-RGB), 0.5);
 
-  --accent-color-RGB-components: 0, 100, 220;
-  --accent-color: rgb(var(--accent-color-RGB-components));
+  --accent-RGB: 0, 100, 220;
+  --accent-color: rgb(var(--accent-RGB));
 
-  --surface-color-RGB-components: 200, 220, 240;
-  --surface-color: rgba(var(--surface-color-RGB-components), 0.3);
-  --surface-hover-color: rgba(var(--surface-color-RGB-components), 0.5);
+  --surface-RGB: 200, 220, 240;
+  --surface-color: rgba(var(--surface-RGB), 0.3);
+  --surface-hover-color: rgba(var(--surface-RGB), 0.5);
+  --surface-opaque-color: rgba(var(--surface-RGB), 1);
 
   --mark-color: rgba(255, 230, 0, 1);
 
-  --link-color-RGB-components: 0, 60, 160;
-  --link-color: rgb(var(--link-color-RGB-components));
-  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --link-RGB: 0, 60, 160;
+  --link-color: rgb(var(--link-RGB));
+  --link-underline-color: rgba(var(--link-RGB), 0.2);
 
-  --hover-color-RGB-components: 0, 110, 250;
-  --hover-color: rgb(var(--hover-color-RGB-components));
-  --underline-hover-color: rgba(var(--hover-color-RGB-components), 0.2);
+  --hover-RGB: 0, 110, 250;
+  --hover-color: rgb(var(--hover-RGB));
+  --underline-hover-color: rgba(var(--hover-RGB), 0.2);
 
   --success-color: rgba(60, 180, 0, 1);
 
-  --error-color-RGB-components: 180, 0, 60;
-  --error-color: rgba(var(--error-color-RGB-components), 1);
-  --error-surface-color: rgba(var(--error-color-RGB-components), 0.1);
+  --error-RGB: 180, 0, 60;
+  --error-color: rgba(var(--error-RGB), 1);
+  --error-surface-color: rgba(var(--error-RGB), 0.1);
 }
 
 // Степь
@@ -52,29 +53,29 @@
   --brand-color-3: rgba(46, 50, 177, 1);
   --brand-color-4: rgba(0, 5, 66, 1);
 
-  --background-color-RGB-components: 255, 255, 255;
-  --background-color: rgb(var(--background-color-RGB-components));
+  --background-RGB: 255, 255, 255;
+  --background-color: rgb(var(--background-RGB));
 
-  --text-color-RGB-components: 0, 5, 66;
-  --text-color: rgb(var(--text-color-RGB-components));
+  --text-RGB: 0, 5, 66;
+  --text-color: rgb(var(--text-RGB));
 
-  --accent-color-RGB-components: 236, 89, 70;
-  --accent-color: rgb(var(--accent-color-RGB-components));
+  --accent-RGB: 236, 89, 70;
+  --accent-color: rgb(var(--accent-RGB));
 
-  --surface-color-RGB-components: 248, 212, 206;
-  --surface-opaque-color: rgba(var(--surface-color-RGB-components), 1);
-  --surface-color: rgba(var(--surface-color-RGB-components), 0.3);
-  --surface-hover-color: rgba(var(--surface-color-RGB-components), 0.8);
+  --surface-RGB: 248, 212, 206;
+  --surface-opaque-color: rgba(var(--surface-RGB), 1);
+  --surface-color: rgba(var(--surface-RGB), 0.3);
+  --surface-hover-color: rgba(var(--surface-RGB), 0.8);
 
   --mark-color: rgba(255, 230, 100, 1);
 
-  --link-color-RGB-components: 46, 50, 177;
-  --link-color: rgb(var(--link-color-RGB-components));
-  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --link-RGB: 46, 50, 177;
+  --link-color: rgb(var(--link-RGB));
+  --link-underline-color: rgba(var(--link-RGB), 0.2);
 
-  --hover-color-RGB-components: 255, 105, 85;
-  --hover-color: rgb(var(--hover-color-RGB-components));
-  --underline-hover-color: rgba(var(--hover-color-RGB-components), 0.2);
+  --hover-RGB: 255, 105, 85;
+  --hover-color: rgb(var(--hover-RGB));
+  --underline-hover-color: rgba(var(--hover-RGB), 0.2);
 
   --success-color: rgba(60, 180, 0, 1);
   --error-color: rgba(180, 0, 60, 1);
@@ -91,31 +92,33 @@
   --brand-color-3: rgba(0, 50, 200, 1);
   --brand-color-4: rgba(15, 15, 15, 1);
 
-  --background-color-RGB-components: 255, 255, 255;
-  --background-color: rgb(var(--background-color-RGB-components));
+  --background-RGB: 255, 255, 255;
+  --background-color: rgb(var(--background-RGB));
 
-  --text-color-RGB-components: 15, 15, 15;
-  --text-color: rgb(var(--text-color-RGB-components));
+  --text-RGB: 15, 15, 15;
+  --text-color: rgb(var(--text-RGB));
 
-  --accent-color-RGB-components: 0, 180, 45;
-  --accent-color: rgb(var(--accent-color-RGB-components));
+  --accent-RGB: 0, 180, 45;
+  --accent-color: rgb(var(--accent-RGB));
 
-  --surface-color: rgba(240, 240, 240, 0.5);
-  --surface-hover-color: rgba(240, 240, 240, 1);
+  --surface-RGB: 240, 240, 240;
+  --surface-color: rgba(var(--surface-RGB), 0.5);
+  --surface-hover-color: rgba(var(--surface-RGB), 1);
+  --surface-opaque-color: rgba(var(--surface-RGB), 1);
 
-  --link-color-RGB-components: 0, 50, 200;
-  --link-color: rgb(var(--link-color-RGB-components));
-  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --link-RGB: 0, 50, 200;
+  --link-color: rgb(var(--link-RGB));
+  --link-underline-color: rgba(var(--link-RGB), 0.2);
 
-  --hover-color-RGB-components: 0, 200, 50;
-  --hover-color: rgb(var(--hover-color-RGB-components));
-  --underline-hover-color: rgba(var(--hover-color-RGB-components), 0.2);
+  --hover-RGB: 0, 200, 50;
+  --hover-color: rgb(var(--hover-RGB));
+  --underline-hover-color: rgba(var(--hover-RGB), 0.2);
 
   --success-color: rgba(0, 150, 40, 1);
   --error-color: rgba(220, 0, 0, 1);
 }
 
-// Актив
+// Осень
 
 .autumn-colors-brand-palette {
 }
@@ -126,33 +129,34 @@
   --brand-color-3: rgb(203, 92, 63);
   --brand-color-4: rgb(255, 215, 68);
 
-  --background-color-RGB-components: 255, 255, 255;
-  --background-color: rgb(var(--background-color-RGB-components));
+  --background-RGB: 255, 255, 255;
+  --background-color: rgb(var(--background-RGB));
 
-  --text-color-RGB-components: 10, 48, 80;
-  --text-color: rgb(var(--text-color-RGB-components));
+  --text-RGB: 10, 48, 80;
+  --text-color: rgb(var(--text-RGB));
 
-  // --accent-color-RGB-components: 215, 152, 45;
-  --accent-color-RGB-components: 203, 92, 63;
-  --accent-color: rgb(var(--accent-color-RGB-components));
+  --accent-RGB: 203, 92, 63;
+  --accent-color: rgb(var(--accent-RGB));
 
-  --surface-color: rgba(223, 215, 213, 0.5);
-  --surface-hover-color: rgba(223, 215, 213, 1);
+  --surface-RGB: 223, 215, 213;
+  --surface-color: rgba(var(--surface-RGB), 0.5);
+  --surface-hover-color: rgba(var(--surface-RGB), 1);
+  --surface-opaque-color: rgba(var(--surface-RGB), 1);
 
-  --link-color-RGB-components: 0, 74, 155;
-  --link-color: rgb(var(--link-color-RGB-components));
-  --link-underline-color: rgba(var(--link-color-RGB-components), 0.2);
+  --link-RGB: 0, 74, 155;
+  --link-color: rgb(var(--link-RGB));
+  --link-underline-color: rgba(var(--link-RGB), 0.2);
 
-  // --hover-color-RGB-components: 237, 167, 11;
-  --hover-color-RGB-components: 215, 152, 45;
-  --hover-color: rgb(var(--hover-color-RGB-components));
-  --underline-hover-color: rgba(var(--hover-color-RGB-components), 0.2);
+  // --hover-RGB: 237, 167, 11;
+  --hover-RGB: 215, 152, 45;
+  --hover-color: rgb(var(--hover-RGB));
+  --underline-hover-color: rgba(var(--hover-RGB), 0.2);
 
   --mark-color: rgba(255, 215, 68, 1);
 
   --success-color: rgba(0, 150, 40, 1);
 
-  --error-color-RGB-components: 230, 60, 60;
-  --error-color: rgba(var(--error-color-RGB-components), 1);
-  --error-surface-color: rgba(var(--error-color-RGB-components), 0.2);
+  --error-RGB: 230, 60, 60;
+  --error-color: rgba(var(--error-RGB), 1);
+  --error-surface-color: rgba(var(--error-RGB), 0.2);
 }
