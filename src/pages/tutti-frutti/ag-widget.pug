@@ -1,0 +1,52 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-ag.png" )
+  
+block content
+  //- .top.ag-top.active-colors
+    .top-header
+      .logos
+        .orb-emblem
+          include /partials/emblem
+        .project-logo
+          img(src="/images/identity/ORB_AG-logo.svg")
+        .project-caption
+          h1 Активный гражданин
+          p Оренбургской области
+      .nav-menu
+        .orb__nav
+          a(href="#") Главная страница
+          a(href="#") Карта города
+          a(href="#") Сообщения
+          a(href="#") Личный кабинет
+    .top-content
+      h2 Улучшаем<br>Оренбургскую<br>область<br>каждый день!
+      button Сообщить о проблеме
+  .wrapper.full-width.orb__top-space-M
+    .ag-widget.active-colors
+      .bg-logo
+        img(src="/images/identity/ORB_AG-logo.svg")
+      h3 Активный гражданин<br>Оренбургской области
+      .buttons
+
+        .button
+          a.orb__button-link.red(href="#")
+            .orb__link-text Сообщить о проблеме
+        .button      
+          a.orb__button-link.light(href="#")
+            .orb__link-text Участвовать в голосованиях
+      .apps
+        p Скачать приложение:
+        a.badge(href="#")
+          img(src="/images/tmp/App_Store_Badge_RU_RGB_blk_100317.svg")
+        a.badge(href="#")
+          img(src="/images/tmp/google-play-badge.png")
+
+
+    
+
+
+
+
+      
