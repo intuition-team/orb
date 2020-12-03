@@ -1,0 +1,36 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-oc.png" )
+
+block content
+  .map-container
+    img(src="/images/tmp/Screenshot2020120.png" style="width:100%")
+    .map-controls
+
+      p Зоны уверенного покрытия:
+      .checkboxes
+        .orb__checkbox
+          input(type='checkbox' id="checkbox-sample-4G")
+          label(for="checkbox-sample-4G") 4G
+        .orb__checkbox
+          input(type='checkbox' id="checkbox-sample-3G")
+          label(for="checkbox-sample-3G") 3G
+        .orb__checkbox
+          input(type='checkbox' id="checkbox-sample-2G")
+          label(for="checkbox-sample-2G") 2G
+
+      .orb__radiogroup-line
+        .option
+          input(type="radio" id="v1" name="radiogrout-sample" checked)
+          label(for="v1") Карта
+        .option
+          input(type="radio" id="v2" name="radiogrout-sample")
+          label(for="v2") Схема
+
+    
+
+
+
+
+      

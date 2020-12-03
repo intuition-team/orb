@@ -1,0 +1,17 @@
+.map-container {
+  position: relative;
+
+  .map-controls {
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    width: 13em;
+    background-color: var(--background-color);
+    padding: 1em;
+    border-radius: 0.3em;
+  }
+}
+
+.checkboxes {
+  margin-bottom: 1.5em;
+}
