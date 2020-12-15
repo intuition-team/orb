@@ -1,0 +1,81 @@
+.lobby-header {
+  padding: 1em 1.1em;
+  background-color: var(--surface-color);
+  .orb-logo {
+    display: flex;
+    .orb-emblem {
+      width: 3em;
+
+      .st0 {
+        fill: var(--text-color);
+      }
+    }
+
+    .orb-caption {
+      margin: 0.35em 0.6em;
+    }
+  }
+}
+
+.promo-auth {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  width: 15em;
+  z-index: 1000;
+
+  padding: 1em;
+  border-radius: 0.5em;
+  border-bottom: 0;
+
+  background-color: var(--background-color);
+  box-shadow: 0 1em 2em 0 rgba(var(--accent-RGB), 0.1);
+
+  .gosuslugi {
+    margin: 0.8em 0.05em;
+    width: 10em;
+  }
+
+  .fake-button {
+    margin-top: 0.3em;
+    font-size: 0.7em;
+
+    display: inline-block;
+    padding: 0.2em 0.8em 0.3em;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 0.3em;
+  }
+
+  &:hover {
+    border-bottom: 0;
+    box-shadow: 0 1em 2em 0 rgba(var(--hover-RGB), 0.2);
+
+    .fake-button {
+      background-color: var(--hover-color);
+    }
+  }
+}
+
+.lobby-promo {
+  position: relative;
+  padding: 1em 1em 2em 1em;
+  background-color: var(--surface-color);
+
+  .promo-cta {
+    padding: 1em 2em;
+    width: 65%;
+
+    .buttons {
+      margin: 1em 0;
+    }
+  }
+}
+
+.lobby-content {
+  padding: 1em 35% 4em 3em;
+}
+
+.lobby-footer {
+  padding: 1em;
+}

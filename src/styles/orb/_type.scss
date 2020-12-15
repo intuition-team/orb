@@ -34,6 +34,19 @@ $orb__desktop: "(min-device-width: 768px)";
     &:hover {
       border: 2px solid var(--underline-hover-color);
     }
+
+    &.orb__button-link-accent {
+      border: 2px solid var(--accent-color);
+      background-color: var(--accent-color);
+      border-radius: 0.3em;
+      color: var(--background-color);
+
+      &:hover {
+        border: 2px solid var(--hover-color);
+        background-color: var(--hover-color);
+        color: var(--background-color);
+      }
+    }
   }
 
   p {
@@ -48,6 +61,11 @@ $orb__desktop: "(min-device-width: 768px)";
 
   .orb__text-S {
     font-size: 0.85em;
+    @include orb__normalize-line-height;
+  }
+
+  .orb__text-XS {
+    font-size: 0.7em;
     @include orb__normalize-line-height;
   }
 

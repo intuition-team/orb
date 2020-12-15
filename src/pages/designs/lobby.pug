@@ -1,0 +1,63 @@
+extends /layouts/main.pug
+
+block meta
+  title Электронная приемная обращений граждан
+
+block content
+  .digit-colors
+    .lobby-header
+      .orb-logo
+        .orb-emblem
+          include /partials/emblem
+        .orb-caption Правительство<br>Оренбургской области
+      a.promo-auth(href="#")
+        p Авторизоваться через
+        figure.gosuslugi
+          img(src="https://esia.gosuslugi.ru/idp/resources/img/flt/ru/logo.svg")
+
+        p.orb__text-XS Это удобно — поля обращения автоматически заполнятся вашими данными
+        .fake-button Войти через Госуслуги
+
+
+    .lobby-promo
+      .promo-cta
+        h2 Электронная приемная обращений граждан
+        .buttons
+          a.orb__button-link.orb__button-link-accent.orb__right-space-XS(href="#")
+            .orb__link-text Направить обращение
+          a.orb__button-link(href="#")
+            .orb__link-text Узнать статус обращения
+        p.orb__text-S
+          | Обращения рассматриваются в течение 30 дней со дня регистрации. 
+          a(href="#") Порядок рассмотрения обращений граждан в электронном виде
+          |, 
+
+          a(href="#") обзоры обращений
+    .lobby-content
+      section.orb__top-space-S 
+        p Самый быстрый и эффективный способ подать обращение — электронный, но в особых случаях можно записаться на <a href="#">личный приём</a>.
+      section.orb__top-space-S 
+        .orb__grid
+          .orb__grid-cell.orb__right-inner-space-XS
+            p Действует специальная линия для направления гражданами информации о конкретных фактах коррупции
+            a.orb__button-link(href="#")
+              .orb__link-text Сообщить о коррупции
+
+          .orb__grid-cell.orb__right-inner-space-XS
+            p Проект «Активный гражданин» решает вопросы благоустройства и содержания объектов инфраструктуры
+            a.orb__button-link(href="#")
+              .orb__link-text Участвовать в голосованиях
+
+
+
+
+    .lobby-footer
+      p.orb__text-S Отдел по работе с обращениями граждан аппарата Губернатора и Правительства Оренбургской области:<br>460015, г. Оренбург, Дом Советов, (3532) 77-71-03, 78-65-32
+
+block footer
+    
+
+
+
+
+      

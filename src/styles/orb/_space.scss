@@ -10,4 +10,24 @@ $orb__density: 1.3em;
   .orb__top-space-L {
     margin-top: calc(#{$orb__density} * 5);
   }
+
+  .orb__right-space-XS {
+    margin-right: calc(#{$orb__density} / 2);
+  }
+  .orb__right-space-S {
+    margin-right: $orb__density;
+  }
+  .orb__right-space-M {
+    margin-right: calc(#{$orb__density} * 2);
+  }
+  .orb__right-space-L {
+    margin-right: calc(#{$orb__density} * 5);
+  }
+
+  .orb__right-inner-space-XS {
+    padding-right: calc(#{$orb__density} / 2);
+  }
+  .orb__right-inner-space-S {
+    padding-right: $orb__density;
+  }
 }
