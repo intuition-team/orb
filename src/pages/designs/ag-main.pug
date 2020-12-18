@@ -1,0 +1,56 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-ag.png" )
+  
+block content
+  .active-colors.small-at-1000
+    .orb__header
+      .orb__identity
+        .orb__identity-item
+          .orb-emblem
+            include /partials/emblem
+        .orb__identity-item
+          .orb-logo
+            img(src="/images/ORB_AG-logo-box.svg")
+        .orb__identity-item
+          .orb-logo-caption
+            p Активный гражданин<br>Оренбургской области
+
+      .orb__nav
+        a(href="#") О проекте
+        a(href="#") Новости
+        a(href="#") Войти
+
+    .orb__promo-container
+      .orb__promo
+        .orb__promo-image
+          img(src="/images/identity/AG-top-image.png")
+        .orb__promo-title
+          h1 Улучшаем<br>Оренбургскую<br>область!
+        .orb__promo-nav
+          a.orb__promo-nav-item Сообщить о проблеме
+          a.orb__promo-nav-item Участвовать в голосованиях
+          a.orb__promo-nav-item Открытые данные
+          a.orb__promo-nav-item Итоги работы правительства
+
+
+    .wrapper
+    .orb__footer
+
+
+
+  //- .top.ag-top.active-colors
+    .top-header
+      .nav-menu
+        
+    .top-content
+      h2 Улучшаем<br>Оренбургскую<br>область<br>каждый день!
+      button Сообщить о проблеме
+
+    
+
+
+
+
+      
