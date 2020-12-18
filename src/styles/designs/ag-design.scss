@@ -74,27 +74,6 @@
       }
     }
   }
-
-  .badge {
-    position: relative;
-    display: block;
-    border: 0;
-
-    &:hover {
-      border: 0;
-
-      img {
-        box-shadow: 0 0px 30px 0px var(--accent-color);
-        position: relative;
-        z-index: 1;
-      }
-    }
-
-    img {
-      height: 2em;
-      border-radius: 0.2em;
-    }
-  }
 }
 
 .apps {
@@ -105,5 +84,38 @@
   p {
     font-size: 0.8em;
     @include orb__normalize-line-height;
+  }
+}
+
+.orb {
+  .badge {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    margin-right: 0.5em;
+
+    &:hover {
+      border: 0;
+
+      img {
+        box-shadow: 0 0px 0px 4px var(--mark-color);
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    img {
+      width: auto;
+      height: 2em;
+      border-radius: 0.2em;
+    }
+  }
+}
+
+.problem-form {
+  display: flex;
+  font-size: 1.2em;
+  input {
+    margin-right: 0.3em;
   }
 }
