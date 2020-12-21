@@ -77,10 +77,12 @@
         }
 
         .orb-logo-caption {
-          font-size: 0.81em;
-          margin-top: 0.1em;
-          margin-left: 0.4em;
-          @include orb__normalize-line-height;
+          @media #{$mobile} {
+            font-size: 0.81em;
+            margin-top: 0.1em;
+            margin-left: 0.4em;
+            @include orb__normalize-line-height;
+          }
         }
       }
     }
