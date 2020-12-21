@@ -115,7 +115,53 @@
 .problem-form {
   display: flex;
   font-size: 1.2em;
+
+  @media #{$mobile} {
+    flex-wrap: wrap;
+  }
+
   input {
     margin-right: 0.3em;
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+a.vote-promo {
+  display: block;
+  padding: 1em 3em 1em 1em;
+  // margin: 1em 0;
+  background-color: rgba(var(--surface-RGB), 0.5);
+  color: var(--text-color);
+  border-bottom: 0;
+  height: 100%;
+
+  .fake-button {
+    margin-top: 0.3em;
+
+    display: inline-block;
+    padding: 0.3em 1em 0.4em;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 0.3em;
+
+    &.big {
+      font-size: 1.3em;
+      @include orb__normalize-line-height;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(var(--surface-RGB), 0.7);
+    // color: rgba(var(--surface-RGB), 1);
+    color: var(--text-color);
+    border-bottom: 0;
+
+    .fake-button {
+      background-color: var(--hover-color);
+    }
   }
 }

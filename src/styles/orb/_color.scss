@@ -127,7 +127,7 @@
   --background-RGB: 255, 255, 255;
   --background-color: rgb(var(--background-RGB));
 
-  --text-RGB: 15, 15, 15;
+  --text-RGB: 40, 40, 40;
   --text-color: rgb(var(--text-RGB));
 
   --accent-RGB: 0, 180, 45;
@@ -153,4 +153,6 @@
   --error-RGB: 220, 0, 0;
   --error-color: rgba(var(--error-RGB), 1);
   --error-surface-color: rgba(var(--error-RGB), 0.1);
+
+  color: var(--text-color);
 }

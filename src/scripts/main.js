@@ -5,6 +5,27 @@ const ready = function() {
   scrollMagic();
   $(window).scroll(scrollMagic);
 
+  // handle hambourger-menu
+
+  $(".orb__js-nav-close").click(function(e) {
+    e.preventDefault();
+    $(".orb__js-nav").removeClass("visible");
+  });
+
+  $(".orb__nav-hambourger").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(".orb__js-nav").addClass("visible");
+  });
+
+  $(window).on("click", function(e) {
+    $(".orb__js-nav").removeClass("visible");
+  });
+
+  $(".orb__js-nav").click(function(e) {
+    e.stopPropagation();
+  });
+
   // handle color schemes
 
   let currentColorScheme;
