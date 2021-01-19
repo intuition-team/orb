@@ -165,3 +165,22 @@ a.vote-promo {
     }
   }
 }
+
+.orb__window {
+  position: relative;
+  background-color: var(--background-color);
+  border-radius: 0.3em;
+  padding: 1.2em 1.5em 1.5em 1.2em;
+  box-shadow: 0 0.5em 1.5em 0 rgba(var(--text-RGB), 0.1);
+
+  &:after {
+    content: "×";
+    position: absolute;
+    font-size: 1.5em;
+    @include orb__normalize-line-height;
+    opacity: 0.4;
+    top: 0.15em;
+    right: 0.4em;
+    z-index: 1;
+  }
+}

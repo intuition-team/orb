@@ -1,11 +1,14 @@
 .orb {
   button {
     display: inline-block;
-    padding: 0.3em 1em 0.4em;
-    border: none;
+    padding: 0.25em 1em 0.35em;
+    border: 2px solid var(--accent-color);
     background-color: var(--accent-color);
     color: var(--background-color);
     border-radius: 0.3em;
+
+    font-size: 1em;
+    @include orb__normalize-line-height;
 
     &:focus {
       box-shadow: 0 0 0 5px var(--mark-color);
@@ -14,6 +17,7 @@
 
     &:hover {
       background-color: var(--hover-color);
+      border: 2px solid var(--hover-color);
     }
   }
 

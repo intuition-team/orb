@@ -104,6 +104,9 @@ block content
           input(type="radio" id="autumn-color" value="autumn-colors" name="color-switcher")
           label(for="autumn-color") Осень
         .option
+          input(type="radio" id="card-color" value="card-colors" name="color-switcher")
+          label(for="card-color") Карта
+        .option
           input(type="radio" id="active-color" value="active-colors" name="color-switcher")
           label(for="active-color") Актив
       .color-switcher-breakpoint
@@ -148,6 +151,20 @@ block content
             //- //- .cmyk CMYK 0 0 0 0
           .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
             .rgb RGB 10 48 80
+            //- //- .cmyk CMYK 0 0 0 0
+
+        .palette.brand-palette.card-colors-palette.hidden
+          .brand-palette-sample(style="background-color: var(--brand-color-4)")
+            .rgb RGB 255 225 0
+            //- //- .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-3); color: AliceBlue")
+            .rgb RGB 253 47 75
+            //- //- .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-2); color: AliceBlue")
+            .rgb RGB 0 60 190
+            //- //- .cmyk CMYK 0 0 0 0
+          .brand-palette-sample(style="background-color: var(--brand-color-1); color: AliceBlue")
+            .rgb RGB 0 20 40
             //- //- .cmyk CMYK 0 0 0 0
 
         .palette.brand-palette.active-colors-palette.hidden
@@ -241,6 +258,33 @@ block content
         .palette-bar(style="background-color: var(--surface-color)")
           .caption surface
           .rgb rgba(223, 215, 213, .5)
+        .palette-bar(style="background-color: var(--background-color)")
+          .caption background
+          .rgb rgb(255, 255, 255)
+
+      .palette.interface-palette.card-colors-palette.hidden
+        .palette-bar(style="background-color: var(--text-color); color: var(--background-color)")
+          .caption text
+          .rgb rgb(0, 20, 40)
+        .palette-bar(style="background-color: var(--link-color); color: var(--background-color)")
+          .caption link
+          .rgb rgb(0, 60, 190)
+        .palette-bar(style="background-color: var(--accent-color); color: var(--background-color)")
+          .caption accent
+          .rgb rgb(253, 47, 75)
+        .palette-bar(style="background-color: var(--hover-color); color: var(--background-color)")
+          .caption hover
+          .rgb rgb(175, 208, 20)
+        
+        .palette-bar(style="background-color: var(--error-color); color: var(--background-color)")
+          .caption error
+          .rgb rgb(220, 0, 20)
+        .palette-bar(style="background-color: var(--mark-color)")
+          .caption mark
+          .rgb rgb(255, 225, 0)
+        .palette-bar(style="background-color: var(--surface-color)")
+          .caption surface
+          .rgb rgba(233, 221, 229, .5)
         .palette-bar(style="background-color: var(--background-color)")
           .caption background
           .rgb rgb(255, 255, 255)

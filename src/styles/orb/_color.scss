@@ -116,6 +116,45 @@
   --error-surface-color: rgba(var(--error-RGB), 0.2);
 }
 
+// Карта
+
+.card-colors {
+  --brand-color-1: rgb(0, 20, 40);
+  --brand-color-2: rgb(0, 60, 190);
+  --brand-color-3: rgb(253, 47, 75);
+  --brand-color-4: rgb(255, 225, 0);
+
+  --background-RGB: 255, 255, 255;
+  --background-color: rgb(var(--background-RGB));
+
+  --text-RGB: 0, 20, 40;
+  --text-color: rgb(var(--text-RGB));
+
+  --accent-RGB: 253, 47, 75;
+  --accent-color: rgb(var(--accent-RGB));
+
+  --surface-RGB: 233, 221, 229;
+  --surface-color: rgba(var(--surface-RGB), 0.5);
+  --surface-hover-color: rgba(var(--surface-RGB), 1);
+  --surface-opaque-color: rgba(var(--surface-RGB), 1);
+
+  --link-RGB: 0, 60, 190;
+  --link-color: rgb(var(--link-RGB));
+  --link-underline-color: rgba(var(--link-RGB), 0.2);
+
+  --hover-RGB: 175, 208, 20;
+  --hover-color: rgb(var(--hover-RGB));
+  --underline-hover-color: rgba(var(--hover-RGB), 0.2);
+
+  --mark-color: rgba(255, 225, 0, 1);
+
+  --success-color: rgba(0, 150, 40, 1);
+
+  --error-RGB: 220, 0, 20;
+  --error-color: rgba(var(--error-RGB), 1);
+  --error-surface-color: rgba(var(--error-RGB), 0.2);
+}
+
 // Актив
 
 .active-colors {

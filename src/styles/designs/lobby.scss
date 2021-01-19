@@ -1,6 +1,7 @@
-.lobby-header {
+.letters-header {
   padding: 1em 1.1em;
   background-color: var(--surface-color);
+
   .orb-logo {
     display: flex;
     .orb-emblem {
@@ -31,6 +32,15 @@
   background-color: var(--background-color);
   box-shadow: 0 1em 2em 0 rgba(var(--accent-RGB), 0.1);
 
+  @media #{$mobile} {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: -2em;
+    left: 1em;
+  }
+
   .gosuslugi {
     margin: 0.8em 0.05em;
     width: 10em;
@@ -57,14 +67,29 @@
   }
 }
 
-.lobby-promo {
+.letters-promo {
   position: relative;
   padding: 1em 1em 2em 1em;
   background-color: var(--surface-color);
 
+  @media #{$mobile} {
+    padding: 0.5em 0.5em 3em 0.5em;
+  }
+
   .promo-cta {
     padding: 1em 2em;
     width: 65%;
+
+    @media #{$mobile} {
+      padding: 0.5em 0.6em;
+      width: 100%;
+    }
+
+    h2 {
+      @media #{$mobile} {
+        font-size: 2em;
+      }
+    }
 
     .buttons {
       margin: 1em 0;
@@ -72,10 +97,15 @@
   }
 }
 
-.lobby-content {
+.letters-content {
   padding: 1em 35% 4em 3em;
+
+  @media #{$mobile} {
+    padding: 1em 1.1em;
+    width: 100%;
+  }
 }
 
-.lobby-footer {
+.letters-footer {
   padding: 1em;
 }

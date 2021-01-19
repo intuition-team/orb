@@ -1,9 +1,8 @@
 extends /layouts/main.pug
 
-block meta
-  title Электронная приемная обращений граждан
-
-
+block favicon
+  link(rel="icon", href="/favicon-ag.png" )
+  
 block content
   .digit-colors
     .letters-header
@@ -17,13 +16,13 @@ block content
       .promo-cta
         h2 Электронная приемная обращений граждан
         .buttons
-          a.orb__button-link.orb__button-link-accent.orb__right-space-XS(href="#")
+          a.orb__button-link.orb__button-link-accent.orb__right-space-XS.orb__bottom-space-XS(href="#")
             .orb__link-text Направить обращение
           a.orb__button-link(href="#")
             .orb__link-text Узнать статус обращения
         p.orb__text-S
-          | Обращения рассматриваются в течение 30 дней со дня регистрации. 
-          a(href="#") Порядок рассмотрения обращений граждан в электронном виде
+          | Обращения рассматриваются в течение 30 дней со дня регистрации. 
+          a(href="#") Порядок рассмотрения обращений граждан в электронном виде
           |, 
           a(href="#") обзоры обращений
 
@@ -40,7 +39,7 @@ block content
         p Самый быстрый и эффективный способ подать обращение — электронный, но в особых случаях можно записаться на <a href="#">личный приём</a>.
       section.orb__top-space-S 
         .orb__grid
-          .orb__grid-cell.orb__right-inner-space-XS
+          .orb__grid-cell.orb__right-inner-space-XS.orb__bottom-space-S
             p Действует специальная линия для направления гражданами информации о конкретных фактах коррупции
             a.orb__button-link(href="#")
               .orb__link-text Сообщить о коррупции
@@ -58,8 +57,4 @@ block content
 
 block footer
     
-
-
-
-
       

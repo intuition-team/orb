@@ -178,7 +178,9 @@ const ready = function() {
     $(".em-converter input").val(newPxInEm);
     currentPxInEm = newPxInEm;
 
-    $("body").css("font-size", `${newPxInEm}px`);
+    if ($(".units-selector-container").length) {
+      $("body").css("font-size", `${newPxInEm}px`);
+    }
   }
 
   $(".js-scroll-link").click(function(e) {

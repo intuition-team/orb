@@ -24,6 +24,19 @@ $orb__density: 1.3em;
     margin-right: calc(#{$orb__density} * 5);
   }
 
+  .orb__bottom-space-XS {
+    margin-bottom: calc(#{$orb__density} / 2);
+  }
+  .orb__bottom-space-S {
+    margin-bottom: $orb__density;
+  }
+  .orb__bottom-space-M {
+    margin-bottom: calc(#{$orb__density} * 2);
+  }
+  .orb__bottom-space-L {
+    margin-bottom: calc(#{$orb__density} * 5);
+  }
+
   .orb__right-inner-space-XS {
     padding-right: calc(#{$orb__density} / 2);
   }
