@@ -1,0 +1,6 @@
+<mj-attributes>
+  <mj-all font-family="'Golos Text', Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13px" line-height="16px" padding="0" color="#0c2248"/>
+  <mj-body background-color="#eef4fa" />
+  <mj-section padding="0 4px 8px 4px" />
+  <mj-column padding="0 4px 0 4px" />
+</mj-attributes>

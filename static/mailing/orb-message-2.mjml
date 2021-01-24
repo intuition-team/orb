@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-title>Тема письма</mj-title>
+    <!-- <mj-preview>Подзаголовок письма</mj-preview> -->
+    <mj-include path="orb-mailing-attributes.mjml" />
+    <mj-include path="orb-mailing-styles.mjml" />
+    <mj-breakpoint width="600px" />
+  </mj-head>
+  <mj-body>
+
+    <!-- Header -->
+    <mj-include path="orb-mailing-header.mjml" />
+
+    <mj-wrapper css-class="content">
+      <mj-section>
+        <mj-column>
+          <mj-text>
+
+            <p><strong>Уважаемый UserName UserSurname!</strong></p>
+            <p>Ваше обращение от хх.хх.хххх зарегистрировано, ему присвоен номер хххххх. Срок рассмотрения до 30 дней.
+            </p>
+            <p>Как только появится ответ — сообщим отдельным письмом. </p>
+
+            <div class="space-L"></div>
+
+
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>
+
+    <!-- Footer -->
+    <mj-include path="orb-mailing-footer.mjml" />
+
+  
+  </mj-body>
+</mjml>

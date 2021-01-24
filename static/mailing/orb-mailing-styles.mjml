@@ -1,0 +1,316 @@
+/* Блок стилей, которые станут инлайновыми — для более надёжного отображения в почтовых клиентах */ 
+
+<mj-style inline="inline">
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #003ca0;
+  }
+
+  .space-S {
+    display: block;
+    width: 100%;
+    height: 10px;
+  }
+
+  .space-M {
+    display: block;
+    width: 100%;
+    height: 20px;
+  }
+
+  .space-L {
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+
+  .header {
+    background: #fff;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    box-sizing: border-box;
+    padding: 20px 0 0 16px;
+    padding-bottom: 0;
+    width: 72px;
+  }
+
+  .header-caption {
+    width: 250px;
+    padding: 0 0 0 12px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+  }
+
+  .content {
+    background: #fff;
+    position: relative;
+    padding: 14px 8px 12px ;
+  }
+
+  .footer {
+    display:block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+  }  
+
+  .footer p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    margin: 0 0 7px 0;
+    padding-right: 0;
+  }
+
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding-right: 5%;
+  }
+
+
+  h1 {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 0 20px 0;
+    padding-right: 2%;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 0 0 8px 0;
+    padding-right: 2%;
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+    padding-right: 2%;
+  }
+
+  .highlight-text {
+    display:block;
+    color: #0064dc;
+    border: 3px solid #0064dc;
+    border-radius: 6px;
+    padding: 8px 2% 12px 10px;
+    margin-top: 15px;
+  }
+
+  .sample-text {
+    display:block;
+    background-color: #eef4fa;
+    border-radius: 6px;
+    padding: 12px 8% 12px 12px;
+    margin-top: 12px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    font-size: 12px;
+    line-height: 16px;
+    color: #303f5d;
+    margin-top: 5px;
+    padding-right: 4%;
+  }
+
+</mj-style>
+
+
+/* Блок стилей, которые не инлайнятся — чтобы их можно было задать отдельно для мобилы и десктопа, через медиавыражения */
+
+<mj-style>
+  @font-face {
+    font-family: 'Golos Text';
+    src: url('https://336416.selcdn.ru/orb-mailing/Golos%20Text_DemiBold.woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Golos Text';
+    src: url('https://336416.selcdn.ru/orb-mailing/Golos%20Text_Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    background: #eef4fa;
+    color: #0c2248;
+    font-family: 'Golos Text', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  a:hover {
+    color: #006efa !important;
+  }
+
+
+
+  a.button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 4px;
+    background: #0064dc;
+    border-radius: 4px;
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  a.button:hover {
+    background: #006efa !important;
+  }
+
+  .button.stroke {
+    padding: 4px 12px;
+    color: #0064dc !important;
+    background: transparent !important;
+    border: 2px solid #c8dcf0;
+    border-radius: 4px;
+  }
+
+  a.button.stroke:hover {
+    color: #006efa !important;
+    background: transparent !important;
+    border: 2px solid #93b8f8 !important;
+  }
+
+  .button.big {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 22px;
+    border-radius: 6px;
+  }
+
+
+
+
+
+  /* Адаптация к десктопу */
+
+  @media only screen and (min-width: 600px) {
+
+    .space-S {
+      height: 20px !important;
+    }
+    .space-M {
+      height: 40px !important;
+    }
+    .space-L {
+      height: 60px !important;
+    }
+
+
+    .header {
+      background: none !important;
+      padding-bottom: 20px !important;
+    }
+
+    .header-logo {
+      padding: 20px 0 0 0 !important;
+      width: 60px !important;
+    }
+
+    .header-caption {
+      font-size: 20px !important;
+      line-height: 23px !important;
+    }
+
+    .content {
+      border-radius: 10px !important;
+    }
+
+    .footer {
+      padding: 20px 50px 70px 0px !important;
+    }
+
+    .footer p {
+      font-size: 14px !important;
+      line-height: 18px !important;
+      margin: 0 0 8px 0 !important;
+    }
+
+    .button {
+      font-size: 18px !important;
+      line-height: 23px !important;
+      padding: 8px 15px !important;
+      border-radius: 6px !important;
+    }
+
+    .button.stroke {
+      padding: 6px 15px !important;
+    }    
+
+    .button.big {
+      font-size: 26px !important;
+      line-height: 30px !important;
+      padding: 12px 22px !important;
+      border-radius: 6px !important;
+    }
+
+
+    p {
+      font-size: 18px !important;
+      line-height: 24px !important;
+      margin-bottom: 12px !important;
+    }
+
+    h1 {
+      font-size: 40px !important;
+      line-height: 44px !important;
+      margin-bottom: 20px !important;
+    }
+
+    h2 {
+      font-size: 26px !important;
+      line-height: 34px !important;
+      margin-bottom: 16px !important;
+    }
+
+    h3 {
+      font-size: 18px !important;
+      line-height: 24px !important;
+      margin-bottom: 12px !important;
+    }
+
+    .highlight-text {
+      border: 4px solid #0064dc !important;
+      border-radius: 6px !important;
+      padding: 12px 4% 12px 12px !important;
+      margin-top: 22px !important;
+    }
+
+    figcaption {
+      font-size: 14px !important;
+      line-height: 18px !important;
+    }
+  
+  }  
+</mj-style>

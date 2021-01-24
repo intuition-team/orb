@@ -1,0 +1,11 @@
+<!-- Шапка -->
+<mj-raw>
+  <div class="header">
+    <table>
+      <tr>
+        <td class="header-logo">
+          <img  src="https://336416.selcdn.ru/orb-mailing/ORB_digital-emblem-RGB-12-34-72.png" alt="Правительство Оренбургской области">
+        </td>
+        <td class="header-caption">          Правительство<br>Оренбургской области</td>
+  </div>
+</mj-raw>  
