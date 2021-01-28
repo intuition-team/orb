@@ -1,0 +1,19 @@
+.poll-header {
+  padding: 1em 1.1em;
+  background-color: var(--surface-color);
+
+  .orb-logo {
+    display: flex;
+    .orb-emblem {
+      width: 3em;
+
+      .st0 {
+        fill: var(--text-color);
+      }
+    }
+
+    .orb-caption {
+      margin: 0.35em 0.6em;
+    }
+  }
+}

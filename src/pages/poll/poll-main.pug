@@ -1,0 +1,67 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-poll.png" )
+  
+block content
+  .digit-colors
+    include /poll/_poll-header
+  
+    .wrapper
+      section
+        h3 2021
+        
+        .orb__grid
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions")
+              h5 Оценка эффективности деятельности органов местного самоуправления городских округов и муниципальных районов Оренбургской области
+              p 01.01.2021 → 31.12.2021
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions")
+              h5 СМИ. Интернет. Социальные сети. Каким источникам информации доверяют оренбуржцы?
+              p 19.10.2020 →
+
+      section
+        p 2020
+        .orb__grid
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Национальный проект «Экология» и ТКО в Оренбургской области
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Национальный проект «Культура» в Оренбургской области
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Оценка новой системы оплаты отопления в течение отопительного периода («одна седьмая»)
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Оценка эффективности деятельности органов местного самоуправления городских округов и муниципальных районов Оренбургской области (опрос 2020 года)
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 75 лет великой победы великой страны
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Использование онлайн-сервисов в условиях пандемии COVID-19
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Новый учебный год
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Национальная деревня
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Конституция РФ и Общероссийское голосование
+
+
+      section
+        p 2019
+        .orb__grid
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Оценка эффективности деятельности органов местного самоуправления городских округов и муниципальных районов Оренбургской области (опрос 2019 года)
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Оренбуржье юбилейное
+          .orb__grid-cell
+            a.orb-poll-block(href="/poll/poll-questions") 
+              h5 Великая победа великой страны
