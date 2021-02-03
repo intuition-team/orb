@@ -21,14 +21,45 @@ block content
     
     .wrapper.full-width
       section
-        h3 Новости
+        h3 Баннеры
       section._S
-        img(src="/images/tmp/Screenshot3245.png")
-        //- img(src="/images/tmp/Screenshot3245.png" style="transform: scaleX(-1)")
-        //- img(src="/images/tmp/Screenshot3245.png")
-      section._S
+        .banners
+          .banners-column.wide
+            include /designs/banner1
+
+            .ag-widget
+              .bg-logo
+                img(src="/images/tmp/orb_pics_ag6.png")
+              h4 Активный гражданин<br>Оренбургской области
+
+              .buttons
+                .button
+                  a.orb__button-link.orb__button-link-accent(href="#")
+                    .orb__link-text Сообщить о проблеме
+                .button      
+                  a.orb__button-link(href="#")
+                    .orb__link-text Участвовать в голосованиях
+              .apps
+                //- p Скачать приложение:
+                a.badge(href="#")
+                  img(src="/images/tmp/google-play-badge.png")
+                a.badge(href="#")
+                  img(src="/images/tmp/App_Store_Badge_RU_RGB_blk_100317.svg")
+
+
+          .banners-column.narrow
+            include /designs/banner2
+
+
+
+      //- section._S
         a.orb__button-link(href="/designs/ag-message")
           .orb__link-text Все новости
+      section
+        h4 Сообщить о проблеме
+
+        include /designs/_ag-themes
+
       section
         .orb__narrow-text-column
           .orb__narrow-text-column
@@ -39,11 +70,6 @@ block content
                 a.orb__button-link.orb__button-link-light-accent(href="#") Сохранить черновик
           
 
-
-      section
-        h4 Сообщить о проблеме
-
-        include /designs/_ag-themes
 
 
     .wrapper
