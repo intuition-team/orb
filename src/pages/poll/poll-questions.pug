@@ -73,9 +73,10 @@ block content
           .poll-question
             h4 Какими каналами для получения информации вы пользуетесь?
             p.orb__text-S Отметьте все подходящие варианты
+            
 
             .poll-answers  
-              .poll-options
+              .poll-options.options-as-text-list
                 .poll-option
                   input(type='checkbox' id="checkbox-sample-1")
                   label(for="checkbox-sample-1") Интернет
@@ -95,7 +96,7 @@ block content
             h4 Что для вас самое интересное?
 
             .poll-answers  
-              .poll-options
+              .poll-options.options-as-text-list
                 .poll-option
                   input(type='radio' id='radio-sample-1' name='radio-sample')
                   label(for='radio-sample-1') События в мире
@@ -124,7 +125,7 @@ block content
             p.orb__text-S Можно выбрать 8 вариантов
 
             .poll-answers  
-              .poll-options.poll-with-icons
+              .poll-options.options-as-icons-list
                 .poll-option
                   input(type='checkbox' id="checkbox-sample-s1")
                   label(for="checkbox-sample-s1")
@@ -245,6 +246,111 @@ block content
                 .option
                   input(type="radio" id="p3-3" name="radiogroup-sample-p3")
                   label(for="p3-3") Не читаю            
+
+
+          .poll-buttons
+            a.orb__button-link(href="#")
+              .orb__link-text ← Назад
+            a.orb__button-link.orb__button-link-accent(href="#")
+              .orb__link-text Далее →	
+
+
+        .poll-card
+          .poll-progress.orb__text-S Страница 3 из 11
+
+          .poll-question
+            h4 Вы удовлетворены организацией транспортного обслуживания?
+            p.orb__text-S Отметьте один вариант ответа в каждой строке таблицы
+            .poll-answers
+              .orb-poll-table.last-option-is-neutral
+                .orb-poll-th
+                  .orb-poll-td Критерии оценки
+                  .orb-poll-td
+                    .orb-poll-th-columns      
+                      .orb-poll-th-column Не<br>удовлетворён
+                      .orb-poll-th-column Частично<br>удовлетворён
+                      .orb-poll-th-column В целом<br>удовлетворён
+                      .orb-poll-th-column Не могу<br>оценить
+                .orb-poll-tr
+                  .orb-poll-td Безопасность движения
+                  .orb-poll-td
+                    .poll-options
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t1")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t1")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t1")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t1")
+                .orb-poll-tr
+                  .orb-poll-td График движения
+                  .orb-poll-td
+                    .poll-options
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t2")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t2")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t2")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t2")
+                .orb-poll-tr
+                  .orb-poll-td Количество транспорта на маршрутах где подписи совсем длинные
+                  .orb-poll-td
+                    .poll-options
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t3")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t3")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t3")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t3")
+                .orb-poll-tr
+                  .orb-poll-td Культура обслуживания
+                  .orb-poll-td
+                    .poll-options
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t4")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t4")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t4")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t4")
+                .orb-poll-tr
+                  .orb-poll-td Техническое состояние транспорта
+                  .orb-poll-td
+                    .poll-options
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t5")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t5")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t5")
+                      .poll-option
+                        label
+                          input(type="radio" name="radiogroup-sample-t5")
 
 
           .poll-buttons

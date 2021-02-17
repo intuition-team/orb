@@ -2,8 +2,23 @@
   @media screen and (max-width: 1200px) {
     max-width: 1000px;
     margin: 0 auto;
-    font-size: 17px;
+    font-size: 16px;
     @include orb__normalize-line-height;
+  }
+  @media #{$mobile} {
+    font-size: 15px;
+    @include orb__normalize-line-height;
+  }
+}
+
+.wrapper.full-at-1000 {
+  width: 84%;
+  @media screen and (max-width: 1200px) {
+    width: 96%;
+  }
+  @media #{$mobile} {
+    width: 100%;
+    padding: 0 0.9em 0 1em;
   }
 }
 
@@ -175,4 +190,227 @@ a.vote-promo {
     right: 0.4em;
     z-index: 1;
   }
+}
+
+.report-nav {
+  .orb__grid {
+    &.orb__grid-size-M {
+      .orb__grid-cell {
+        width: calc(100% / 5);
+
+        @media #{$mobile} {
+          width: calc(100% / 2);
+        }
+      }
+    }
+  }
+  .orb__grid-cell {
+    @media #{$desktop} {
+      &:nth-child(1) {
+        .orb__nav-card {
+          border-radius: 0.8em 0 0 0;
+        }
+      }
+      &:nth-child(5) {
+        .orb__nav-card {
+          border-radius: 0 0.8em 0 0;
+        }
+      }
+      &:nth-child(6) {
+        .orb__nav-card {
+          border-radius: 0 0 0 0.8em;
+        }
+      }
+      &:nth-child(10) {
+        .orb__nav-card {
+          border-radius: 0 0 0.8em 0;
+        }
+      }
+    }
+    @media #{$mobile} {
+      &:nth-child(1) {
+        .orb__nav-card {
+          border-radius: 0.8em 0 0 0;
+        }
+      }
+      &:nth-child(2) {
+        .orb__nav-card {
+          border-radius: 0 0.8em 0 0;
+        }
+      }
+      &:nth-child(9) {
+        .orb__nav-card {
+          border-radius: 0 0 0 0.8em;
+        }
+      }
+      &:nth-child(10) {
+        .orb__nav-card {
+          border-radius: 0 0 0.8em 0;
+        }
+      }
+    }
+  }
+
+  .orb__nav-card {
+    position: relative;
+    height: 10em;
+    padding-right: 5em;
+    color: white;
+    background-image: linear-gradient(
+      135deg,
+      rgba(0, 100, 220, 1),
+      rgba(0, 0, 100, 1)
+    );
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(
+        -45deg,
+        rgba(0, 220, 100, 1),
+        rgba(0, 100, 200, 1)
+      );
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    &:hover {
+      color: white;
+
+      &:after {
+        opacity: 1;
+        transition: opacity 0s ease;
+      }
+    }
+
+    .orb__nav-card__caption {
+      position: relative;
+      z-index: 1;
+    }
+
+    .orb__nav-card__image {
+      position: absolute;
+      bottom: 0.7em;
+      right: 1em;
+      z-index: 1;
+
+      img {
+        width: 5em;
+      }
+    }
+
+    &.tourism-design {
+      &:after {
+        background-image: linear-gradient(
+          -45deg,
+          rgba(0, 200, 250, 1),
+          rgba(0, 100, 200, 1)
+        );
+      }
+      .orb__nav-card__image {
+        img {
+          // width: 7em;
+        }
+      }
+    }
+
+    &.school-design {
+      .orb__nav-card__image {
+        bottom: 1.3em;
+        img {
+          transform: rotate(-7deg);
+        }
+      }
+    }
+    &.trolley-design {
+      .orb__nav-card__image {
+        img {
+          width: 4.5em;
+        }
+      }
+    }
+    &.med-design {
+      &:after {
+        background-image: linear-gradient(
+          -45deg,
+          rgba(220, 0, 100, 1),
+          rgba(0, 100, 200, 1)
+        );
+      }
+    }
+    &.music-design {
+      .orb__nav-card__image {
+        bottom: 1.5em;
+        right: -1.8em;
+
+        img {
+          transform: rotate(70deg);
+          width: 8em;
+        }
+      }
+    }
+
+    &.sport-design {
+      .orb__nav-card__image {
+        img {
+          width: 6em;
+        }
+      }
+    }
+    &.city-design {
+      .orb__nav-card__image {
+        img {
+          width: 6em;
+        }
+      }
+    }
+
+    &.eco-design {
+      .orb__nav-card__image {
+        right: 1.5em;
+
+        img {
+          width: 3em;
+        }
+      }
+    }
+  }
+}
+
+.report-big-illustration {
+  position: relative;
+  top: -1em;
+  padding-right: 3em;
+  margin-bottom: 3em;
+
+  &.shift-left {
+    left: -4em;
+
+    @media #{$mobile} {
+      left: 0;
+    }
+  }
+}
+.report-sm-illustration {
+  width: 60%;
+  margin-bottom: 2em;
+}
+.report-big-icon {
+  margin: 1em 0;
+  width: 6em;
+}
+.report-sm-icon {
+  margin: 1em 0;
+  width: 3.5em;
+}
+
+.report-plate {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em 3em 2em 1em;
+  border-radius: 0.5em;
 }

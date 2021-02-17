@@ -7,51 +7,226 @@ block content
   .active-colors.small-at-1000
     include /designs/_ag-header
 
-    .wrapper.full-width
+    .wrapper.full-at-1000
       section
-      h2 Итоги работы Правительства Оренбургской области за 2019 год
+        h2 Итоги работы Правительства Оренбургской области — 2019
+        //- p в 2019 году
+        //- .year2019
+          .orb__grid.orb__grid-size-L
+            .orb__grid-cell
+              .year-digit 2
+            .orb__grid-cell
+              .year-digit 0
+            .orb__grid-cell
+              .year-digit 1
+            .orb__grid-cell
+              .year-digit 9
 
-      .orb__grid.orb__grid-size-L.orb__grid-inset-S 
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-ed
-            .orb__nav-card__caption Образование
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-demo
-            .orb__nav-card__caption Демография
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-health
-            .orb__nav-card__caption Здравоохранение
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-sports
-            .orb__nav-card__caption Спорт
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-culture
-            .orb__nav-card__caption Культура
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-tourism
-            .orb__nav-card__caption Туризм
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-roads
-            .orb__nav-card__caption Дорожная инфраструктура
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-housekeeping
-            .orb__nav-card__caption Жилищно-коммунальное хозяйство
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-urban
-            .orb__nav-card__caption Жилье и городская среда
-        .orb__grid-cell
-          a.orb__nav-card(href="#")
-            include /icons/icon-eco
-            .orb__nav-card__caption Экология
+
+        .report-nav
+          .orb__grid.orb__grid-size-M
+            .orb__grid-cell
+              a.orb__nav-card.school-design.js-scroll-link(href="#school")
+                //- include /icons/icon-ed
+                .orb__nav-card__caption Образование
+                .orb__nav-card__image
+                  img(src="/images/report/laptop-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.trolley-design.js-scroll-link(href="#demo")
+                //- include /icons/icon-demo
+                .orb__nav-card__caption Демография
+                .orb__nav-card__image
+                  img(src="/images/report/trolley-icon.png")
+            .orb__grid-cell
+              a.orb__nav-card.med-design.js-scroll-link(href="#med")
+                //- include /icons/icon-health
+                .orb__nav-card__caption Здравоохранение
+                .orb__nav-card__image
+                  img(src="/images/report/med-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.sport-design.js-scroll-link(href="#sport")
+                //- include /icons/icon-sports
+                .orb__nav-card__caption Спорт
+                .orb__nav-card__image
+                  img(src="/images/report/sport-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.music-design.js-scroll-link(href="#culture")
+                //- include /icons/icon-culture
+                .orb__nav-card__caption Культура
+                .orb__nav-card__image
+                  img(src="/images/report/music-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.tourism-design.js-scroll-link(href="#tourism")
+                //- include /icons/icon-tourism
+                .orb__nav-card__caption Туризм
+                .orb__nav-card__image
+                  img(src="/images/report/tourism-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.js-scroll-link(href="#roads")
+                //- include /icons/icon-roads
+                .orb__nav-card__caption Дорожная инфраструктура
+                .orb__nav-card__image
+                  img(src="/images/report/construction-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.js-scroll-link(href="#housekeeping")
+                //- include /icons/icon-housekeeping
+                .orb__nav-card__caption Жилищно-коммунальное хозяйство
+                .orb__nav-card__image
+                  img(src="/images/report/paint-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.city-design.js-scroll-link(href="#city")
+                //- include /icons/icon-urban
+                .orb__nav-card__caption Жилье<br>и городская<br>среда
+                .orb__nav-card__image
+                  img(src="/images/report/city-icon.svg")
+            .orb__grid-cell
+              a.orb__nav-card.eco-design.js-scroll-link(href="#eco")
+                //- include /icons/icon-eco
+                .orb__nav-card__caption Экология
+                .orb__nav-card__image
+                  img(src="/images/report/recycled-bin-icon.svg")
+        
+        section#school
+          h3 Образование
+        section 
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-plate
+                p Более <mark>140 000 детей</mark> стали участниками открытых онлайн-уроков «Проектория» и проекта «Билет в будущее»
+                p Созданы <mark>6 мастерских</mark> на базе профессиональных образовательных организаций
+                p Создан первый в области детский технопарк «Кванториум»
+                p Открыт консультационный центр психолого-педагогической помощи родителям «Мы вместе»
+            .orb__grid-cell
+              .report-sm-illustration
+                img(src="/images/report/school.svg")
+              .report-text 
+                p Построены <mark>2 школы</mark>, это 414 мест
+                p <mark>26 школ</mark> получили капитальный ремонт. Отремонтировано <mark>25 спортивных залов</mark> 
+
+
+        section#demo
+          h3 Демография
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-text 
+                p Более <mark>30000 семей</mark> с детьми получили финансовую поддержку.
+                p Проведено <mark>1996 циклов ЭКО</mark> семьям, страдающим бесплодием.
+                p Местами в детских садах обеспечены:<br>— 97,9% детей в возрасте до 3 лет,<br>— 100% детей в возрасте от 3 до 7 лет.
+                p Построено 19 новых детских садов.
+              .report-sm-icon
+                img(src="/images/report/toy.png")
+
+            .orb__grid-cell
+              .report-big-illustration.shift-left
+                img(src="/images/report/family.svg")
+            .orb__grid-cell
+              .report-big-illustration
+                img(src="/images/report/elders.svg")
+                
+            .orb__grid-cell
+              .report-text 
+                p Спартакиада для пожилых граждан «Спортивное долголетие».
+                p Обучение компьютерной грамотности старшего поколения.
+                p <mark>41 автомобиль</mark> приобретён для транспортировки в медицинские организации граждан старше 65 лет, проживающих в сельской местности.
+              .report-big-icon
+                img(src="/images/report/car.png")
+
+
+        section#med
+          h3 Здравоохранение
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-plate
+                p <strong>Ремонтные работы:</strong><br>41 поликлиника<br>28 стационаров<br>5 прочих объетов здравоохранения
+                p <strong>Проектирование:</strong><br>4 врачебных амбулаторий<br>10 Фельдшерско-акушерских пункта
+                p <strong>Строительство:</strong><br>12 Фельдшерско-акушерских пункта          
+            .orb__grid-cell
+              .report-text 
+                p <mark>290 единиц</mark> медицинского оборудования
+                p Объём финансирования — 4,4 млрд руб.
+                p Закуплено <mark>6 передвижных медицинских комплексов</mark> и <mark>66 новых автомобилей</mark> скорой медицинской помощи
+
+            .orb__grid-cell
+              .report-text 
+                p Разработан проект областной детской больницы
+                p 6,43 млрд руб.
+                p 14,8 га земли
+                p 2023 г.
+        
+        section#sport
+          h3 Спорт
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-text
+                p Закуплены и смонтированы искусственные покрытия для футбольных полей в 3 поселениях
+                p Построены новые спортивные площадки для сдачи ГТО в 12 муниципалитетах
+                p 17,52 млн руб. стипендии и премии выдающимся
+              .report-plate
+                p 84 спортивные школы
+                p 414 отделений
+              .report-big-icon
+                img(src="/images/report/sport-logo.svg")
+              .report-text
+                p 2024: доля граждан Оренбургской области, систематически занимающихся физической культурой и спортом — 55%
+
+            .orb__grid-cell
+              .report-sm-illustration
+                img(src="/images/report/kids.svg")
+        
+        section#culture
+          h3 Культура
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-text
+                p Созданы 2 модельные библиотеки
+                p Выделено 10 млн руб.
+                p 71 учреждение культуры обеспечено музыкальными инструментами
+                p Количество посещений общедоступных библиотек:
+              .report-sm-illustration
+                img(src="/images/report/culture.svg")
+            .orb__grid-cell
+              .report-plate
+                p Проведена реновация выстовочного комплекса «Салют, Победа!» Оренбургского губернаторского историко-краеведческого музея
+                p Начат капитальный ремонт Оренбургского государственного областного театра кукол
+                p Проведен капитальный ремонт в 4 сельских домах культуры
+
+        
+        section#tourism
+          h3 Туризм
+          .orb__grid.orb__grid-inset-L
+            .orb__grid-cell
+              .report-sm-illustration
+                img(src="/images/report/travelers.svg")
+
+              .report-text
+                p Оренбургская область занимает 35 место в Национальном туристическом рейтинге из 85 субъектов РФ
+                p Туристический поток: 1661000 человек (↗51000)
+                p Объем платных услуг: 4025,6 млн руб. (↗68 млн руб.)
+            .orb__grid-cell
+              .report-plate
+                h4 Курорт «Солёные озера»
+                p В 2019 году начат второй этап реализации туристско-рекреационного кластера «Соленые озера:
+                p — <mark>построено 5 дорог</mark> протяженностью 9 км
+                p — разработан мастер-план развития города-курорта и дизайн-код
+                p Курорт «Солёные озера» занял:
+                p — 2 место среди самых посещаемых лечебных курортов России в 2019 году
+                p — 4 место в рейтинге лучших оздоровительных и лечебных курортов России
+                p — 5 место среди городов-курортов для оздоровительного отдыха
+
+
+
+        section#roads
+          h3 Дорожная инфраструктура
+        
+        section#housekeeping
+          h3 Жилищно-коммунальное хозяйство
+        
+        section#city 
+          h3 Жилье и городская среда
+        
+        section#eco 
+          h3 Экология
+
 
     include /designs/_ag-footer
 
