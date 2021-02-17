@@ -414,3 +414,20 @@ a.vote-promo {
   padding: 1em 3em 2em 1em;
   border-radius: 0.5em;
 }
+
+.eco-projects-table {
+  display: flex;
+  flex-wrap: wrap;
+
+  .eco-project {
+    width: 33%;
+    background-color: rgba(var(--surface-RGB), 0.5);
+
+    &:nth-child(1) {
+      border-radius: 0.5em 0 0 0.5em;
+    }
+    &:nth-child(3) {
+      border-radius: 0 0.5em 0.5em 0;
+    }
+  }
+}
