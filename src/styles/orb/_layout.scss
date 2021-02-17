@@ -395,18 +395,33 @@
       .orb__grid-cell {
         padding-right: calc(#{$orb__density} * 2);
         padding-bottom: calc(#{$orb__density} * 2);
+
+        @media #{$mobile} {
+          padding-right: calc(#{$orb__density});
+          padding-bottom: calc(#{$orb__density});
+        }
       }
     }
     &.orb__grid-inset-M {
       .orb__grid-cell {
         padding-right: calc(#{$orb__density} * 1);
         padding-bottom: calc(#{$orb__density} * 1);
+
+        @media #{$mobile} {
+          padding-right: calc(#{$orb__density} * 0.5);
+          padding-bottom: calc(#{$orb__density} * 0.5);
+        }
       }
     }
     &.orb__grid-inset-S {
       .orb__grid-cell {
         padding-right: calc(#{$orb__density} * 0.5);
         padding-bottom: calc(#{$orb__density} * 0.5);
+
+        @media #{$mobile} {
+          padding-right: calc(#{$orb__density} * 0.25);
+          padding-bottom: calc(#{$orb__density} * 0.25);
+        }
       }
     }
 

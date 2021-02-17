@@ -30,7 +30,7 @@ block content
                 //- include /icons/icon-ed
                 .orb__nav-card__caption Образование
                 .orb__nav-card__image
-                  img(src="/images/report/laptop-icon.svg")
+                  img(src="/images/report/book.svg")
             .orb__grid-cell
               a.orb__nav-card.trolley-design.js-scroll-link(href="#demo")
                 //- include /icons/icon-demo
@@ -85,14 +85,18 @@ block content
                 .orb__nav-card__caption Экология
                 .orb__nav-card__image
                   img(src="/images/report/recycled-bin-icon.svg")
-        
-        section#school
-          h3 Образование
+      .report        
+        section.orb__top-space-L#school
+          h2 Образование
         section 
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-plate
-                p Более <mark>140 000 детей</mark> стали участниками открытых онлайн-уроков «Проектория» и проекта «Билет в будущее»
+                .report-icon-in-text
+                  img(src="/images/report/laptop-icon.svg")
+
+                p Более <mark>140 000 детей</mark> стали участниками открытых онлайн-уроков «Проектория» и проекта «Билет в будущее»
+                .orb__top-space-S
                 p Созданы <mark>6 мастерских</mark> на базе профессиональных образовательных организаций
                 p Создан первый в области детский технопарк «Кванториум»
                 p Открыт консультационный центр психолого-педагогической помощи родителям «Мы вместе»
@@ -105,7 +109,7 @@ block content
 
 
         section#demo
-          h3 Демография
+          h2 Демография
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-text 
@@ -113,14 +117,14 @@ block content
                 p Проведено <mark>1996 циклов ЭКО</mark> семьям, страдающим бесплодием.
                 p Местами в детских садах обеспечены:<br>— 97,9% детей в возрасте до 3 лет,<br>— 100% детей в возрасте от 3 до 7 лет.
                 p Построено 19 новых детских садов.
-              .report-sm-icon
+              .report-M-icon
                 img(src="/images/report/toy.png")
 
             .orb__grid-cell
-              .report-big-illustration.shift-left
+              .report-big-illustration.shift-left.shift-top
                 img(src="/images/report/family.svg")
             .orb__grid-cell
-              .report-big-illustration
+              .report-big-illustration.shift-top
                 img(src="/images/report/elders.svg")
                 
             .orb__grid-cell
@@ -133,75 +137,122 @@ block content
 
 
         section#med
-          h3 Здравоохранение
+          h2 Здравоохранение
           .orb__grid.orb__grid-inset-L
+
             .orb__grid-cell
               .report-plate
-                p <strong>Ремонтные работы:</strong><br>41 поликлиника<br>28 стационаров<br>5 прочих объетов здравоохранения
-                p <strong>Проектирование:</strong><br>4 врачебных амбулаторий<br>10 Фельдшерско-акушерских пункта
-                p <strong>Строительство:</strong><br>12 Фельдшерско-акушерских пункта          
+                h4 Ремонтные работы
+                ul
+                  li 41 поликлиника
+                  li 28 стационаров
+                  li 5 прочих объетов здравоохранения
+                h4 Проектирование
+                ul 
+                  li 4 врачебных амбулаторий
+                  li 10 Фельдшерско-акушерских пункта
+                h4 Строительство
+                ul
+                  li 12 Фельдшерско-акушерских пункта          
+
             .orb__grid-cell
+              .report-plate
+                .report-big-icon.float-right
+                  img(src="/images/report/hospital.svg")
+
+                h4 Разработан проект областной детской больницы
+                ul
+                  li 6,43 млрд руб.
+                  li 14,8 га земли
+                p Срок реализации: 2023 г.
+              .orb__top-space-S
               .report-text 
+                .report-big-icon.float-left
+                  img(src="/images/report/microscope.svg")
                 p <mark>290 единиц</mark> медицинского оборудования
                 p Объём финансирования — 4,4 млрд руб.
-                p Закуплено <mark>6 передвижных медицинских комплексов</mark> и <mark>66 новых автомобилей</mark> скорой медицинской помощи
-
-            .orb__grid-cell
-              .report-text 
-                p Разработан проект областной детской больницы
-                p 6,43 млрд руб.
-                p 14,8 га земли
-                p 2023 г.
+                p Закуплено <mark>6 передвижных медицинских комплексов</mark>
+                p <mark>66 новых автомобилей</mark> скорой медицинской помощи
         
         section#sport
-          h3 Спорт
+          h2 Спорт
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
-              .report-text
-                p Закуплены и смонтированы искусственные покрытия для футбольных полей в 3 поселениях
-                p Построены новые спортивные площадки для сдачи ГТО в 12 муниципалитетах
-                p 17,52 млн руб. стипендии и премии выдающимся
               .report-plate
-                p 84 спортивные школы
-                p 414 отделений
-              .report-big-icon
-                img(src="/images/report/sport-logo.svg")
+                .report-big-icon
+                  img(src="/images/report/sport-logo.svg")
+                ul 
+                  li Закуплены и смонтированы искусственные покрытия для футбольных полей в 3 поселениях
+                  li Построены новые спортивные площадки для сдачи ГТО в 12 муниципалитетах
+                  li 17,52 млн руб. стипендии и премии выдающимся
+              
               .report-text
-                p 2024: доля граждан Оренбургской области, систематически занимающихся физической культурой и спортом — 55%
+                p Доля граждан Оренбургской области, систематически занимающихся физической культурой и спортом:
+                
+                .infographics
+                  .info-item
+                    .bar(style="width:35%") 35&hairsp;%
+                    .caption 2017
+                  .info-item
+                    .bar(style="width:43%") 43&hairsp;%
+                    .caption 2018
+                  .info-item
+                    .bar(style="width:48%") 48&hairsp;%
+                    .caption 2019
+                p Целевой показатель:
+                .infographics
+                  .info-item
+                    .bar.planning(style="width:55%") 55&hairsp;%
+                    .caption 2024
+
 
             .orb__grid-cell
-              .report-sm-illustration
+              .report-text
+                p 84 спортивные школы
+                p 414 отделений
+
+              .report-sm-illustration.shift-top
                 img(src="/images/report/kids.svg")
         
         section#culture
-          h3 Культура
+          h2 Культура
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-text
-                p Созданы 2 модельные библиотеки
-                p Выделено 10 млн руб.
-                p 71 учреждение культуры обеспечено музыкальными инструментами
+                p Созданы <mark>2 модельные библиотеки</mark>, на это выделено 10 млн руб.
+                p <mark>71 учреждение культуры</mark> обеспечено музыкальными инструментами.
                 p Количество посещений общедоступных библиотек:
-              .report-sm-illustration
-                img(src="/images/report/culture.svg")
+                .infographics
+                  .info-item
+                    .bar(style="width:71%") 7&thinsp;186&thinsp;500
+                    .caption 2018
+                  .info-item
+                    .bar(style="width:73%") 7&thinsp;323&thinsp;800
+                    .caption 2019
+
+              .report-text
             .orb__grid-cell
               .report-plate
+                .report-big-icon
+                  img(src="/images/report/culture.svg")
                 p Проведена реновация выстовочного комплекса «Салют, Победа!» Оренбургского губернаторского историко-краеведческого музея
                 p Начат капитальный ремонт Оренбургского государственного областного театра кукол
                 p Проведен капитальный ремонт в 4 сельских домах культуры
 
         
         section#tourism
-          h3 Туризм
+          h2 Туризм
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-sm-illustration
                 img(src="/images/report/travelers.svg")
 
               .report-text
-                p Оренбургская область занимает 35 место в Национальном туристическом рейтинге из 85 субъектов РФ
-                p Туристический поток: 1661000 человек (↗51000)
-                p Объем платных услуг: 4025,6 млн руб. (↗68 млн руб.)
+                p Оренбургская область занимает <mark>35 место</mark> в Национальном туристическом рейтинге из 85 субъектов РФ
+                p Туристический поток:
+                p.orb__text-L 1661000 человек (↑51000)
+                p Объем платных услуг:
+                p.orb__text-L 4025,6 млн руб. (↑68 млн руб.)
             .orb__grid-cell
               .report-plate
                 h4 Курорт «Солёные озера»
@@ -214,9 +265,8 @@ block content
                 p — 5 место среди городов-курортов для оздоровительного отдыха
 
 
-
         section#roads
-          h3 Дорожная инфраструктура
+          h2 Дорожная инфраструктура
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-text
@@ -225,9 +275,28 @@ block content
                   li Отремонтировано 249,5 км дорог
                   li Установлено 14 комплексов фотовидеофиксации нарушений ПДД
                   li на 42 объектах г. Оренбург выполнены мероприятия по устранению мест концентрации ДТП
+              .report-text
+                .infographics
+                  .info-item
+                    .bar(style="width:32%") 1,32 млрд руб.
+                    .caption 2018
+                  p.orb__text-S Приоритетный проект «Безопасные и качественные дороги»
+                  .info-item
+                    .bar(style="width:80%") 3,19 млрд руб.
+                    .caption 2019
+                  p.orb__text-S Национальный проект «Безопасные и качественные автомобильные дороги»
+
+                
             .orb__grid-cell
               .report-text
                 h4 Финансирование дорожной деятельности
+                .infographics
+                  .info-item
+                    .bar(style="width:32%") 1,32 млрд руб.
+                    .caption 2018
+                  .info-item
+                    .bar(style="width:80%") 3,19 млрд руб.
+                    .caption 2019
                 h4 Развитие транспортной системы оренбургской области
                 ul
                   li Ремонт 524,8км дорог
@@ -237,7 +306,7 @@ block content
                 img(src="/images/report/road.svg")
         
         section#housekeeping
-          h3 Жилищно-коммунальное хозяйство
+          h2 Жилищно-коммунальное хозяйство
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-plate
@@ -261,21 +330,19 @@ block content
 
             .orb__grid-cell
               .report-text
+                .report-sm-illustration
+                  img(src="/images/report/house.svg")
+              .report-text
                 h4 Капитальный ремонт многоквартирных домов
                 p В региональную программу капитального ремонта включено:
                 ul
-                  li 9619 домов
-                  li 3,4 млрд руб.
-                  li 30,3 млн м²
-              .report-big-illustration
-                img(src="/images/report/house.svg")
+                  li <mark>9619 домов</mark>
+                  li <mark>3,4 млрд руб.</mark>
+                  li <mark>30,3 млн м²</mark>
         
         section#city 
-          h3 Жилье и городская среда
+          h2 Жилье и городская среда
           .orb__grid.orb__grid-inset-L
-            .orb__grid-cell
-              .report-big-illustration
-                img(src="/images/report/city.svg")
             .orb__grid-cell
               .report-text
                 p 55 общественных территорий
@@ -284,14 +351,73 @@ block content
                 p Введено в эксплуатацию 98 объектов
                 p 45 сельских населенных пунктов
 
+              .report-text
+                .report-big-illustration
+                  img(src="/images/report/city.svg")
+              .report-text
+                h4 Жильё
+                p Общий ввод жилья, тыс. м²
+                .infographics
+                  .info-item
+                    .bar(style="width:44%") 892
+                    .caption 2017
+                  .info-item
+                    .bar(style="width:45%") 912
+                    .caption 2018
+                  .info-item
+                    .bar(style="width:49.5%") 994
+                    .caption 2019
+                  .info-item
+                    .bar(style="width:52%") 1036
+                    .caption 2020
+                  .info-item
+                    .bar.planning(style="width:55%") 1099
+                    .caption 2021
+                  .info-item
+                    .bar.planning(style="width:53.5%") 1070
+                    .caption 2022
+                  .info-item
+                    .bar.planning(style="width:55%") 1100
+                    .caption 2023
+                  .info-item
+                    .bar.planning(style="width:59%") 1184
+                    .caption 2024
+
+            .orb__grid-cell
+
               .report-plate
                 h5 Формирование комфортной гордской среды
                 .report-sm-illustration
                   img(src="/images/report/piechart.svg")
+              .report-text
+                h5 Обеспечение устойчивого сокращения непригодного для проживания жилищного
+                ul 
+                  li Переселение 5313 человек
+                  li Площадь расселения аварийного фонда — 98,85 ??
+                p Срок реализации: 2024 г.
+              .report-text
+                p Площадь расселенного аварийного жилищного фонда в 2019 году, м²:
+                .infographics
+                  .info-item
+                    .bar.planning(style="width:16%") 1650
+                    .caption План
+                  .info-item
+                    .bar(style="width:45%") 4560
+                    .caption Факт
+                p 2020 год, м²:
+                .infographics
+                  .info-item
+                    .bar.planning(style="width:80%") 11780
+                    .caption План
+                  .info-item
+                    .bar(style="width:90%") ???
+                    .caption Факт
+
+
                 
         
         section#eco 
-          h3 Экология
+          h2 Экология
           .orb__grid.orb__grid-inset-L
             .orb__grid-cell
               .report-text
@@ -300,17 +426,6 @@ block content
               .report-plate
                 .report-big-icon
                   img(src="/images/report/eco-project-logo.png")
-
-                p Цели проекта:
-                ul 
-                  li Эффективное обращение с отходами
-                  li Повышение качества питьевой воды
-                  li Снижение уровня загрязнения атмосферного воздуха
-
-            .orb__grid-cell
-              .report-big-illustration
-                img(src="/images/report/herbs.svg")
-              .report-text
                 ul 
                   li Чистая вода
                   li Сохранение лесов
@@ -318,36 +433,50 @@ block content
                   li обращения с твердыми
                   li коммунальными отходами
                   li Чистый воздух
+
+
+            .orb__grid-cell
+              .report-big-illustration.shift-top
+                img(src="/images/report/herbs.svg")
+              .report-text
+                p Цели проекта:
+                ul 
+                  li Эффективное обращение с отходами
+                  li Повышение качества питьевой воды
+                  li Снижение уровня загрязнения атмосферного воздуха
           
-          h4 Региональные проекты 
+          h3 Региональные проекты 
           .eco-projects-table
             .eco-project
-              h3 Чистый воздух
+              .eco-project-header 
+                h4 Чистый воздух
               h6 Срок реализации
-              p 2019–2024 гг.
+              p.orb__text-L 2019–2024 гг.
               h6 Финансирование
-              p 670,6 млн руб.
+              p.orb__text-L 670,6 млн руб.
               h6 Реализация
               ul
                 li объем выбросов загрязняющих веществ в г. Медногорске снижен на 8,1% (в сравнении с 2017 годом)
                 li проведены мероприятия по экологическому просвещению в ООО «Медногорский медносерный комбинат»
                 li заключен контракт на подготовку документации на строительство автомобильной дороги «Восточный обход г. Медногорска»
             .eco-project
-              h3 Комплексная система обращения с ТКО
+              .eco-project-header 
+                h4 Комплексная система обращения с ТКО
               h6 Срок реализации
-              p 2019–2024 гг.
+              p.orb__text-L 2019–2024 гг.
               h6 Финансирование
-              p 4,08 млн руб.
+              p.orb__text-L 4,08 млн руб.
               h6 Реализация
               ul
                 li приобретено оборудование для оснащения (Гайский городской округ, Новосергиевский район)
                 li произведен I этап реконструкции (г. Медногорск) объектов обработки ТКО
             .eco-project
-              h3 Сохранение лесов
+              .eco-project-header 
+                h4 Сохранение лесов
               h6 Срок реализации
-              p 2019–2024 гг.
+              p.orb__text-L 2019–2024 гг.
               h6 Финансирование
-              p 94,19 млн руб.
+              p.orb__text-L 94,19 млн руб.
               h6 Реализация
               p Приобретены:
               ul
