@@ -421,6 +421,15 @@ a.vote-promo {
       left: 0;
     }
   }
+
+  &.plus {
+    img {
+      width: 130%;
+      @media #{$mobile} {
+        width: 105%;
+      }
+    }
+  }
 }
 .report-sm-illustration {
   width: 60%;
