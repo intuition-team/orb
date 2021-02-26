@@ -10,56 +10,78 @@ block content
     .orb__wrapper.full-at-1000
       section
         h2 Итоги работы Правительства Оренбургской области — 2019
+        //- p в 2019 году
+        //- .year2019
+          .orb__grid.orb__grid-size-L
+            .orb__grid-cell
+              .year-digit 2
+            .orb__grid-cell
+              .year-digit 0
+            .orb__grid-cell
+              .year-digit 1
+            .orb__grid-cell
+              .year-digit 9
+
 
         .report-nav
           .orb__grid.orb__grid-size-M
             .orb__grid-cell
               a.orb__nav-card.school-design.js-scroll-link(href="#school")
+                //- include /icons/icon-ed
                 .orb__nav-card__caption Образование
                 .orb__nav-card__image
                   img(src="/images/report/book.svg")
             .orb__grid-cell
               a.orb__nav-card.trolley-design.js-scroll-link(href="#demo")
+                //- include /icons/icon-demo
                 .orb__nav-card__caption Демография
                 .orb__nav-card__image
                   img(src="/images/report/trolley-icon.png")
             .orb__grid-cell
               a.orb__nav-card.med-design.js-scroll-link(href="#med")
+                //- include /icons/icon-health
                 .orb__nav-card__caption Здравоохранение
                 .orb__nav-card__image
                   img(src="/images/report/med-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.sport-design.js-scroll-link(href="#sport")
+                //- include /icons/icon-sports
                 .orb__nav-card__caption Спорт
                 .orb__nav-card__image
                   img(src="/images/report/sport-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.music-design.js-scroll-link(href="#culture")
+                //- include /icons/icon-culture
                 .orb__nav-card__caption Культура
                 .orb__nav-card__image
                   img(src="/images/report/music-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.tourism-design.js-scroll-link(href="#tourism")
+                //- include /icons/icon-tourism
                 .orb__nav-card__caption Туризм
                 .orb__nav-card__image
                   img(src="/images/report/tourism-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.js-scroll-link(href="#roads")
+                //- include /icons/icon-roads
                 .orb__nav-card__caption Дорожная инфраструктура
                 .orb__nav-card__image
                   img(src="/images/report/construction-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.js-scroll-link(href="#housekeeping")
+                //- include /icons/icon-housekeeping
                 .orb__nav-card__caption Жилищно-коммунальное хозяйство
                 .orb__nav-card__image
                   img(src="/images/report/paint-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.city-design.js-scroll-link(href="#city")
+                //- include /icons/icon-urban
                 .orb__nav-card__caption Жилье<br>и городская<br>среда
                 .orb__nav-card__image
                   img(src="/images/report/city-icon.svg")
             .orb__grid-cell
               a.orb__nav-card.eco-design.js-scroll-link(href="#eco")
+                //- include /icons/icon-eco
                 .orb__nav-card__caption Экология
                 .orb__nav-card__image
                   img(src="/images/report/recycled-bin-icon.svg")
@@ -460,6 +482,7 @@ block content
               ul
                 li специализированная лесопожарная и лесохозяйственная техника и оборудование
                 li районированные семена лесных растений (сосна обыкновенная) и семена лесных пород (клен татарский)
+
 
 
     include /designs/_ag-footer
