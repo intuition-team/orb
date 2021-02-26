@@ -1,5 +1,7 @@
 import "../styles/main.scss";
 import $, { each } from "jquery";
+import "./awakeness";
+import "./scroll-link";
 
 const ready = function() {
   scrollMagic();
@@ -183,22 +185,6 @@ const ready = function() {
     }
   }
 
-  $(".js-scroll-link").click(function(e) {
-    e.preventDefault();
-
-    var linkOffset = -40;
-    if ($($.attr(this, "href")).data("scroll-link-offset")) {
-      linkOffset += $($.attr(this, "href")).data("scroll-link-offset");
-    }
-
-    $("html, body").animate(
-      {
-        scrollTop: $($.attr(this, "href")).offset().top + linkOffset
-      },
-      500
-    );
-  });
-
   function scrollMagic() {
     let uDelta;
     let cDelta;
@@ -224,28 +210,6 @@ const ready = function() {
       $(".color-control").addClass("hidden");
     }
   }
-  const awakeness = () => {
-    let windowHeight = window.innerHeight;
-
-    $(window).resize(function() {
-      windowHeight = window.innerHeight;
-    });
-
-    $(".infographics .bar, .report mark").each(function() {
-      var elementMiddle = $(this).offset().top + $(this).height() / 2;
-
-      if (
-        elementMiddle < $(window).scrollTop() ||
-        elementMiddle > $(window).scrollTop() + windowHeight
-      ) {
-        $(this).addClass("sleep");
-      } else {
-        $(this).removeClass("sleep");
-      }
-    });
-  };
-  awakeness();
-  window.addEventListener("scroll", awakeness);
 };
 
 $(document).ready(ready);

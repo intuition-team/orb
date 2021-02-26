@@ -1,19 +1,11 @@
-@import "base/variables";
+$fonts-path: "/fonts";
 
 @function font-path($path) {
   @return "#{$fonts-path}/#{$path}";
 }
 
-@function image-path($path) {
-  @return "#{$images-path}/#{$path}";
-}
-
 @function font-url($path) {
   @return url(font-path($path));
-}
-
-@function image-url($path) {
-  @return url(image-path($path));
 }
 
 @mixin font-face($family, $path, $weight: normal, $style: normal) {

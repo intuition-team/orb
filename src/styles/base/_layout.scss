@@ -1,5 +1,8 @@
 @import "node_modules/normalize.css/normalize";
 
+$mobile: "(max-device-width: 767px)";
+$desktop: "(min-device-width: 768px)";
+
 * {
   box-sizing: border-box;
 }
@@ -17,26 +20,3 @@ body {
     min-width: auto;
   }
 }
-
-// .font-scaling {
-//   @media screen and (max-width: 1350px) {
-//     font-size: 21px;
-//   }
-
-//   @media screen and (max-width: 1300px) {
-//     font-size: 20px;
-//   }
-
-//   @media screen and (max-width: 1250px) {
-//     font-size: 19px;
-//   }
-
-//   @media screen and (max-width: 1200px) {
-//     font-size: 18px;
-//   }
-
-//   @media #{$mobile} {
-//     font-size: 19px;
-//     line-height: 1.2;
-//   }
-// }
