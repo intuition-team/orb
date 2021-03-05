@@ -22,10 +22,12 @@
     color: var(--link-color);
     border-bottom: 1px solid var(--link-underline-color);
     text-decoration: none;
+    transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
 
     &:hover {
       color: var(--hover-color);
       border-bottom: 1px solid var(--underline-hover-color);
+      transition: color 0s ease, border 0s ease, background-color 0s ease;
     }
   }
 
@@ -34,6 +36,8 @@
     padding: 0.25em 1em 0.35em;
     border: 2px solid var(--link-underline-color);
     border-radius: 0.3em;
+
+    font-family: "Golos UI", sans-serif;
 
     &:hover {
       border: 2px solid var(--underline-hover-color);
@@ -159,11 +163,12 @@
   }
 
   h6 {
-    font-weight: 600;
+    font-family: "Golos UI", sans-serif;
+    font-weight: 500;
     font-size: 0.8em;
     line-height: 1.3em;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.04em;
     margin-bottom: 0.7em;
   }
 
@@ -229,10 +234,13 @@
   }
 
   code {
-    font-weight: 500;
-    padding: 0.1em;
-    background: var(--surface-color);
-    color: var(--code-color);
+    font-family: "Golos UI", sans-serif;
+    font-weight: 400;
+    padding: 0 0.15em 0.1em;
+    background: rgba(var(--text-RGB), 0.05);
+    color: rgba(var(--text-RGB), 0.7);
+    border-radius: 0.1em;
+    // letter-spacing: 0.04em;
   }
 
   a.button {

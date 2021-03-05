@@ -565,7 +565,20 @@ block content
             .em 0.1
             .px
 
-
+    section
+      h3 Фрагмент кода в тексте<u>, &lt;code&gt;</u>
+      p Вы можете подключить файл со стилями из репозитория, создать в проекте контейнер с классом <code>.orb</code> и внутри него использовать описанные компоненты.
+      .props
+        .prop
+          .prop-caption Размер шрифта
+          .value
+            .em.base 1.3
+            .px
+        .prop
+          .prop-caption Интерлиньяж
+          .value
+            .em 1.3
+            .px
 
 
       
@@ -611,7 +624,7 @@ block content
       //- h3 Чекбокс
       
       h3 Радиогруппа<u>, .orb__radiogroup-line</u>
-      p Используется для выбора единственного варианта из множества, а также для переключения состояний интерфейса.
+      p Используется для выбора <code>единственного</code> варианта из множества, а также для переключения состояний интерфейса.
     section.orb__top-space-S
       .orb__radiogroup-line
         .option
@@ -662,6 +675,18 @@ block content
           .value background
 
 
+
+    section
+      h3 Раскрывающийся список<u>, .orb__select</u>
+
+      .orb__select
+        select
+          option(selected='selected') Оренбург
+          option Орск
+          option Бугуруслан
+          option Бузулук
+          option Медногорск
+          option Новотроицк
 
     section
       h3 Текстовое поле<u>, input[type=text]</u>

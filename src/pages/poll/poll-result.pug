@@ -6,3 +6,157 @@ block favicon
 block content
   .digit-colors
     include /poll/_poll-header
+
+    .orb__wrapper
+      section
+
+
+        .poll-card
+          
+          h2 Спасибо!
+
+          .poll-summary
+            h6 Ваши ответы:
+
+          .poll-summary
+            p Город или муниципальное образование Оренбургской области, в котором вы проживаете? <strong>Оренбург</strong>
+          .poll-summary
+            p Пользуетесь ли вы общественным транспортом в вашем муниципальном образовании? <strong>Пользуюсь постоянно</strong>
+          .poll-summary
+            p Вы удовлетворены организацией транспортного обслуживания?
+            ul
+              li Безопасность движения: <strong>в целом удовлетворён</strong>
+              li График движения: <strong>частично</strong>
+              li Количество транспортных средств на маршрутах: <strong>частично</strong>
+              li Культура обслуживания: <strong>не удовлетворён</strong>
+              li Техническое состояние транспортных средств: <strong>в целом удовлетворён</strong>
+          .poll-summary
+            p Как вы оцениваете работу государственных унитарных предприятий, находящихся в собственности Оренбургской области и оказывающих услуги населению вашего муниципального образования? <strong>Не могу оценить</strong>
+
+          .poll-summary
+            p Как вы считаете, автомобильные дороги в Оренбургской области лучше или хуже, чем в соседних регионах? <strong>Затрудняюсь ответить</strong>
+
+
+          .poll-buttons.orb__top-space-M
+            a.orb__button-link(href="#")
+              .orb__link-text ← Исправить
+            a.orb__button-link.orb__button-link-accent(href="#")
+              .orb__link-text Результаты опроса
+
+        .poll-card
+          
+          h2 Результаты опроса
+          .poll-result
+            p Город или муниципальное образование
+            .orb__select
+              select
+                option
+                option(selected='selected') Оренбург
+                option Орск
+                option Бугуруслан
+                option Бузулук
+                option Медногорск
+                option Новотроицк
+                option Другой субъект РФ (кроме Оренбургской области)
+                option Другая страна СНГ (кроме России)
+                option За пределами России и СНГ
+          .poll-result
+            h4 Пользуетесь ли вы общественным транспортом?
+            .poll-infographics
+              .info-item-caption Постоянно пользуюсь общественным транспортом
+              .info-item
+                .bar(style="width:52%") 52&hairsp;%
+                .caption 36 человек
+              .info-item-caption Иногда пользуюсь общественным транспортом
+              .info-item
+                .bar(style="width:29%") 29&hairsp;%
+                .caption 20
+              .info-item-caption Не пользуюсь общественным транспортом
+              .info-item
+                .bar(style="width:19%") 19&hairsp;%
+                .caption 13
+            
+
+          .poll-result
+            h4 Вы удовлетворены организацией транспортного обслуживания?
+            .legend
+              .legend-item • Нет
+              .legend-item • Частично
+              .legend-item • В целом удовлетворён
+              .legend-item • Не могу оценить
+          .orb__grid.orb__grid-inset-S
+            .orb__grid-cell
+              p Безопасность движения
+              .poll-infographics
+                .info-item.colors
+                  .bar(style="width:calc(41% * 1.5)") 41&hairsp;%
+                  .caption 23
+                .info-item.colors
+                  .bar(style="width:calc(45% * 1.5)") 45&hairsp;%
+                  .caption 25
+                .info-item.colors
+                  .bar(style="width:calc(13% * 1.5)") 13&hairsp;%
+                  .caption 7
+                .info-item.colors
+                  .bar(style="width:calc(2% * 1.5)") 2&hairsp;%
+                  .caption 1
+            .orb__grid-cell
+              p График движения
+              .poll-infographics
+                .info-item.colors
+                  .bar(style="width:calc(46% * 1.5)") 46&hairsp;%
+                  .caption 26
+                .info-item.colors
+                  .bar(style="width:calc(34% * 1.5)") 34&hairsp;%
+                  .caption 19
+                .info-item.colors
+                  .bar(style="width:calc(18% * 1.5)") 18&hairsp;%
+                  .caption 10
+                .info-item.colors
+                  .bar(style="width:calc(2% * 1.5)") 2&hairsp;%
+                  .caption 1
+            .orb__grid-cell
+              p Количество транспортных средств на маршрутах
+              .poll-infographics
+                .info-item.colors
+                  .bar(style="width:calc(38% * 1.5)") 38&hairsp;%
+                  .caption 21
+                .info-item.colors
+                  .bar(style="width:calc(39% * 1.5)") 39&hairsp;%
+                  .caption 22
+                .info-item.colors
+                  .bar(style="width:calc(20% * 1.5)") 20&hairsp;%
+                  .caption 11
+                .info-item.colors
+                  .bar(style="width:calc(4% * 1.5)") 4&hairsp;%
+                  .caption 2
+            .orb__grid-cell
+              p Культура обслуживания
+              .poll-infographics
+                .info-item.colors
+                  .bar(style="width:calc(38% * 1.5)") 38&hairsp;%
+                  .caption 21
+                .info-item.colors
+                  .bar(style="width:calc(39% * 1.5)") 39&hairsp;%
+                  .caption 22
+                .info-item.colors
+                  .bar(style="width:calc(21% * 1.5)") 21&hairsp;%
+                  .caption 12
+                .info-item.colors
+                  .bar(style="width:calc(2% * 1.5)") 2&hairsp;%
+                  .caption 1
+            .orb__grid-cell
+              p Техническое состояние транспортных средств
+              .poll-infographics
+                .info-item.colors
+                  .bar(style="width:calc(52% * 1.5)") 52&hairsp;%
+                  .caption 29
+                .info-item.colors
+                  .bar(style="width:calc(34% * 1.5)") 34&hairsp;%
+                  .caption 19
+                .info-item.colors
+                  .bar(style="width:calc(11% * 1.5)") 11&hairsp;%
+                  .caption 6
+                .info-item.colors
+                  .bar(style="width:calc(4% * 1.5)") 4&hairsp;%
+                  .caption 2

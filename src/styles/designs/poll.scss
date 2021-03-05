@@ -17,11 +17,32 @@
   }
 }
 
+.orb {
+  .orb-poll-block {
+    display: block;
+    height: 100%;
+    padding: 1em 3em 1em 1em;
+
+    background-color: var(--surface-color);
+    border-radius: 0.5em;
+    border-bottom-width: 0.2em;
+
+    &:hover {
+      background-color: rgba(var(--hover-RGB), 0.1);
+      border-bottom-width: 0.2em;
+    }
+  }
+}
+
 .poll-card {
   margin: 0 0 2em 0;
   padding: 1em 3em 1em 1em;
   background-color: var(--surface-color);
   border-radius: 0.5em;
+
+  @media #{$mobile} {
+    padding: 1em;
+  }
 
   .poll-progress {
     margin-bottom: 1em;
@@ -34,6 +55,24 @@
   .poll-buttons {
     .orb__button-link {
       margin-right: 0.4em;
+    }
+  }
+
+  .poll-summary {
+    width: 80%;
+    margin-bottom: 1.5em;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
+  }
+
+  .poll-result {
+    width: 80%;
+    margin-bottom: 2.2em;
+
+    @media #{$mobile} {
+      width: 100%;
     }
   }
 }
@@ -68,6 +107,10 @@
   &.options-as-text-list {
     width: 80%;
 
+    @media #{$mobile} {
+      width: 100%;
+    }
+
     .poll-option {
       &:first-child {
         border-radius: 0.3em 0.3em 0 0;
@@ -97,8 +140,15 @@
       position: relative;
       width: 11em;
       margin-right: 0.1em;
-
       justify-content: center;
+
+      font-family: "Golos UI", sans-serif;
+
+      @media #{$mobile} {
+        font-size: 0.75em;
+        line-height: 1;
+        // width: 10em;
+      }
 
       &:first-child {
         border-radius: 0;
@@ -129,6 +179,13 @@
           }
         }
       }
+
+      input {
+        @media #{$mobile} {
+          position: relative;
+          top: 0.15em;
+        }
+      }
     }
   }
 }
@@ -140,11 +197,16 @@
     display: flex;
     flex-wrap: wrap;
 
+    border-bottom: 1px solid rgba(var(--text-RGB), 0.5);
+    padding-bottom: 0.5em;
+
     font-size: 0.85em;
     @include orb__normalize-line-height;
 
-    border-bottom: 1px solid rgba(var(--text-RGB), 0.5);
-    padding-bottom: 0.5em;
+    @media #{$mobile} {
+      font-size: 0.75em;
+      line-height: 1;
+    }
 
     .orb-poll-td {
       &:nth-child(1) {
@@ -172,6 +234,11 @@
 
     .orb-poll-td {
       border-bottom: 1px solid rgba(var(--text-RGB), 0.2);
+
+      @media #{$mobile} {
+        font-size: 0.9em;
+        line-height: 1.2;
+      }
 
       &:nth-child(1) {
         width: 35%;
@@ -213,6 +280,107 @@
           }
         }
       }
+    }
+  }
+}
+
+.poll-infographics {
+  margin-bottom: 1em;
+
+  .info-item-caption {
+    margin: 0.5em 0 0.2em;
+  }
+
+  .info-item {
+    display: flex;
+    // margin-bottom: 0.5em;
+    align-items: baseline;
+
+    font-family: "Golos UI", sans-serif;
+
+    .bar {
+      width: 50%;
+      padding: 0.2em 0.5em;
+      color: white;
+      margin-right: 0.3em;
+      text-align: right;
+      white-space: nowrap;
+      transition: width 0.3s ease;
+      background-image: linear-gradient(
+        to right,
+        var(--accent-color),
+        var(--link-color)
+      );
+
+      &.sleep {
+        width: 10% !important;
+      }
+    }
+
+    .caption {
+      color: rgba(var(--text-RGB), 0.5);
+    }
+
+    &.colors {
+      &:nth-child(1) {
+        .bar {
+          background-image: linear-gradient(
+            to right,
+            var(--link-color),
+            rgba(200, 0, 0, 1)
+          );
+        }
+      }
+      &:nth-child(2) {
+        .bar {
+          background-image: linear-gradient(
+            to right,
+            var(--link-color),
+            rgba(0, 0, 0, 0.4)
+          );
+        }
+      }
+      &:nth-child(3) {
+        .bar {
+          background-image: linear-gradient(
+            to right,
+            var(--link-color),
+            rgba(0, 200, 50, 1)
+          );
+        }
+      }
+      &:nth-child(4) {
+        .bar {
+          background-image: linear-gradient(
+            to right,
+            var(--link-color),
+            rgba(0, 0, 0, 0.7)
+          );
+        }
+      }
+    }
+  }
+}
+
+.legend {
+  font-size: 0.75em;
+  margin-bottom: 1em;
+
+  .legend-item {
+    display: inline;
+    margin-right: 0.7em;
+
+    &:nth-child(1) {
+      color: rgba(200, 0, 0, 1);
+    }
+    &:nth-child(2) {
+      color: rgba(0, 0, 0, 0.4);
+    }
+    &:nth-child(3) {
+      color: rgba(0, 200, 50, 1);
+    }
+    &:nth-child(4) {
+      color: rgba(0, 0, 0, 0.7);
     }
   }
 }

@@ -1,7 +1,7 @@
 @import "node_modules/normalize.css/normalize";
 
-$mobile: "(max-device-width: 767px)";
-$desktop: "(min-device-width: 768px)";
+$mobile: "(max-width: 767px)";
+$desktop: "(min-width: 768px)";
 
 * {
   box-sizing: border-box;

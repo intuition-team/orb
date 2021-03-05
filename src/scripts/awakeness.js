@@ -8,18 +8,20 @@ const ready = function() {
       windowHeight = window.innerHeight;
     });
 
-    $(".report-infographics .bar, .report mark").each(function() {
-      var elementMiddle = $(this).offset().top + $(this).height() / 2;
+    $(".report-infographics .bar, .poll-infographics .bar, .report mark").each(
+      function() {
+        var elementMiddle = $(this).offset().top + $(this).height() / 2;
 
-      if (
-        elementMiddle < $(window).scrollTop() ||
-        elementMiddle > $(window).scrollTop() + windowHeight
-      ) {
-        $(this).addClass("sleep");
-      } else {
-        $(this).removeClass("sleep");
+        if (
+          elementMiddle < $(window).scrollTop() ||
+          elementMiddle > $(window).scrollTop() + windowHeight
+        ) {
+          $(this).addClass("sleep");
+        } else {
+          $(this).removeClass("sleep");
+        }
       }
-    });
+    );
   };
   awakeness();
   window.addEventListener("scroll", awakeness);
