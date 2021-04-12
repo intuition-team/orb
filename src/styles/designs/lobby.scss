@@ -48,7 +48,7 @@
 
   .fake-button {
     margin-top: 0.3em;
-    font-size: 0.7em;
+    font-size: 0.75em;
 
     display: inline-block;
     padding: 0.2em 0.8em 0.3em;
@@ -98,7 +98,7 @@
 }
 
 .letters-content {
-  padding: 1em 35% 4em 3em;
+  padding: 1em 25% 4em 3em;
 
   @media #{$mobile} {
     padding: 1em 1.1em;
@@ -108,4 +108,54 @@
 
 .letters-footer {
   padding: 1em;
+}
+
+.ag-frame {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -0.5em;
+    bottom: -0.5em;
+    left: -0.8em;
+    right: -0.5em;
+    border: 1px solid rgba(var(--text-RGB), 0.2);
+    border-radius: 0.3em;
+  }
+}
+
+.orb {
+  .orb__button-link {
+    &.ag-logo-bg {
+      position: relative;
+      background-image: url("/images/ORB_AG-logo-box.svg");
+      background-size: 8em auto;
+      background-position: 80% 60%;
+      background-repeat: no-repeat;
+      background-color: rgba(0, 20, 120, 1);
+      padding: 0.35em 1em 0.45em;
+
+      border: 0;
+
+      &:hover {
+        border: 0;
+      }
+    }
+  }
+}
+.ag-badges {
+  margin-top: 0.3em;
+}
+
+.orb__link-icon {
+  position: relative;
+  top: 0.1em;
+  display: inline-block;
+  margin: 0 0.2em 0 0;
+  img {
+    // display: inline;
+    width: 1em;
+  }
 }

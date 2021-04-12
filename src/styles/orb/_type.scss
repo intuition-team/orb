@@ -10,7 +10,7 @@
   section {
     margin-top: 3em;
 
-    &._S {
+    &.S {
       margin-top: 1em;
     }
     &._L {
@@ -63,6 +63,14 @@
         border: 2px solid rgba(var(--hover-RGB), 0.4);
         color: var(--hover-color);
       }
+    }
+
+    &.L {
+      font-size: 1.2em;
+    }
+
+    .orb__link-text {
+      display: inline;
     }
   }
 

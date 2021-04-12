@@ -43,4 +43,7 @@ $orb__density: 1.3em;
   .orb__right-inner-space-S {
     padding-right: $orb__density;
   }
+  .orb__right-inner-space-M {
+    padding-right: calc(#{$orb__density} * 1.5);
+  }
 }

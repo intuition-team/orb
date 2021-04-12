@@ -236,7 +236,7 @@
   .orb__promo {
     position: relative;
     background-color: var(--surface-color);
-    height: 26em;
+    height: 23em;
     padding: 1.5em;
     overflow: hidden;
     border-radius: 0.5em;
@@ -247,9 +247,12 @@
 
     .orb__promo-image {
       position: absolute;
-      left: 35%;
-      width: 75%;
-      top: 5.5em;
+      // left: 30%;
+      // width: 75%;
+      // top: 2em;
+      left: 48%;
+      width: 55%;
+      top: 7em;
 
       @media #{$mobile} {
         left: 3%;
@@ -263,50 +266,73 @@
     }
 
     .orb__promo-title {
+      width: 70%;
       position: relative;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
       // margin-top: 1em;
     }
+  }
+  .orb__promo-nav {
+    // position: absolute;
 
-    .orb__promo-nav {
-      position: absolute;
-      display: flex;
-      left: 1.5em;
-      right: 0.5em;
-      bottom: 2.5em;
+    display: flex;
+    width: 100%;
+    // left: 1em;
+    // right: 0;
+    // bottom: 1em;
 
-      .orb__promo-nav-item {
-        width: 25%;
-        border-bottom: 0;
+    a.orb__promo-nav-item {
+      &:hover {
+        background-color: rgba(var(--surface-RGB), 0.7);
+        transition: background-color 0s ease;
+      }
+    }
 
-        font-size: 1.2em;
-        @include orb__normalize-line-height;
+    .orb__promo-nav-item {
+      width: 25%;
+      border-bottom: 0;
 
-        padding: 0.6em 0.9em 0.8em;
+      font-size: 1.2em;
+      @include orb__normalize-line-height;
 
-        background-color: rgba(var(--surface-RGB), 0.5);
-        backdrop-filter: blur(1em);
+      padding: 0.6em 0.9em 0.8em;
 
-        border-right: 1px solid rgba(0, 0, 0, 0.05);
-        transition: background-color 0.3s ease;
+      background-color: rgba(var(--surface-RGB), 0.5);
+      backdrop-filter: blur(1em);
 
-        &:hover {
-          background-color: rgba(var(--surface-RGB), 0.7);
-          transition: background-color 0s ease;
-        }
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
 
-        &:first-child {
-          background-color: var(--accent-color);
-          color: var(--background-color);
-          border-radius: 0.5em 0 0 0.5em;
-          border-right: none;
-          &:hover {
-            background-color: rgba(var(--hover-RGB), 1);
-          }
-        }
+      &:first-child {
+        // background-color: var(--accent-color);
+        // color: var(--background-color);
+        border-radius: 0.5em 0 0 0.5em;
+        // border-right: none;
+        // &:hover {
+        //   background-color: rgba(var(--hover-RGB), 1);
+        // }
+      }
 
-        &:last-child {
-          border-radius: 0 0.5em 0.5em 0;
-          border-right: none;
+      &:last-child {
+        border-radius: 0 0.5em 0.5em 0;
+        border-right: none;
+      }
+
+      &.soon {
+        color: rgba(0, 0, 0, 0.5);
+        &::after {
+          content: "Скоро";
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 0.5em 1em;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: rgba(0, 0, 0, 0.3);
+          font-size: 0.6em;
         }
       }
     }

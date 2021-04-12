@@ -36,19 +36,27 @@ block content
       .fake-button Войти через Госуслуги
 
     .letters-content
-      section.orb__top-space-S 
-        p Самый быстрый и эффективный способ подать обращение — электронный, но в особых случаях можно записаться на <a href="#">личный приём</a>.
+      //- section.orb__top-space-S 
+      //-   p Самый быстрый и эффективный способ подать обращение — электронный, но в особых случаях можно записаться на <a href="#">личный приём</a>.
       section.orb__top-space-S 
         .orb__grid
-          .orb__grid-cell.orb__right-inner-space-XS
+          .orb__grid-cell.orb__right-inner-space-M
             p Действует специальная линия для направления гражданами информации о конкретных фактах коррупции
             a.orb__button-link(href="#")
               .orb__link-text Сообщить о коррупции
 
-          .orb__grid-cell.orb__right-inner-space-XS
-            p Проект «Активный гражданин» решает вопросы благоустройства и содержания объектов инфраструктуры
-            a.orb__button-link(href="#")
-              .orb__link-text Участвовать в голосованиях
+          .orb__grid-cell.orb__right-inner-space-M
+            .ag-frame
+              p <strong>Активный гражданин</strong> решает вопросы городского хозяйства и развития территорий
+              a.orb__button-link.orb__button-link-accent.ag-logo-bg(href="#" style="")
+                .orb__link-text Сообщить о проблеме
+              .ag-badges
+                a.badge.inline(href="#")
+                  img(src="/images/tmp/App_Store_Badge_RU_RGB_blk_100317.svg")
+                a.badge.inline(href="#")
+                  img(src="/images/tmp/google-play-badge.png")
+              p.orb__text-S Сообщения рассматриваются за 10 дней!
+
 
 
 
