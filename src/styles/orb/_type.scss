@@ -84,6 +84,10 @@
     @include orb__normalize-line-height;
   }
 
+  .orb__text-SM {
+    font-size: 0.9em;
+    @include orb__normalize-line-height;
+  }
   .orb__text-S {
     font-size: 0.85em;
     @include orb__normalize-line-height;
@@ -325,6 +329,30 @@
 
     @media #{$mobile} {
       width: 100%;
+    }
+  }
+
+  .orb__app-store-badge {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    margin: 0 0.3em 0.3em 0;
+
+    &:hover {
+      border: 0;
+
+      img {
+        position: relative;
+        z-index: 1;
+        filter: brightness(1);
+      }
+    }
+
+    img {
+      width: auto;
+      height: 2em;
+      border-radius: 0.2em;
+      filter: brightness(0.9);
     }
   }
 }

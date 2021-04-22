@@ -93,36 +93,6 @@
   }
 }
 
-.orb {
-  .badge {
-    position: relative;
-    display: block;
-    border: 0;
-    margin: 0 0.3em 0.3em 0;
-
-    &.inline {
-      display: inline-block;
-    }
-
-    &:hover {
-      border: 0;
-
-      img {
-        // box-shadow: 0 0px 10px 4px var(--accent-color);
-        position: relative;
-        z-index: 1;
-        filter: brightness(0.8) invert(0.1);
-      }
-    }
-
-    img {
-      width: auto;
-      height: 2em;
-      border-radius: 0.2em;
-    }
-  }
-}
-
 .problem-form {
   display: flex;
   font-size: 1.2em;

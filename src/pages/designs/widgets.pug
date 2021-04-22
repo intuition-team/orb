@@ -1,0 +1,31 @@
+extends /layouts/main.pug
+
+block favicon
+  link(rel="icon", href="/favicon-ag.png" )
+  
+block content
+  
+  .orb__top-space-M
+  .orb__wrapper
+    .widgets
+      .orb__widget-container.wide
+        .orb__widget.wide.AG.active-colors
+          include /designs/_widget_AG
+          
+      .orb__widget-container.tall
+        .orb__widget.tall.AG.active-colors
+          include /designs/_widget_AG
+      .orb__widget-container.wide
+        .orb__widget.wide.UCO.autumn-colors
+          include /designs/_widget_UCO
+      .orb__widget-container.tall
+        .orb__widget.tall.UCO.autumn-colors
+          include /designs/_widget_UCO
+
+
+    
+
+
+
+
+      
