@@ -78,10 +78,22 @@
   &.regular {
     font-weight: 400;
   }
-  &.medium {
+  &.demibold {
     font-weight: 600;
   }
   &.bold {
+    font-weight: 700;
+  }
+  &.ui-regular {
+    font-family: "Golos UI", sans-serif;
+    font-weight: 400;
+  }
+  &.ui-medium {
+    font-family: "Golos UI", sans-serif;
+    font-weight: 500;
+  }
+  &.ui-bold {
+    font-family: "Golos UI", sans-serif;
     font-weight: 700;
   }
 
@@ -262,16 +274,4 @@ h3 {
   //     }
   //   }
   // }
-}
-
-.marten {
-  padding-top: 5em;
-
-  svg {
-    margin: 0 -1em;
-  }
-
-  .st0 {
-    fill: var(--text-color);
-  }
 }

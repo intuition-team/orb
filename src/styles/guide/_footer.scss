@@ -1,7 +1,17 @@
 footer {
-  height: 7em;
+  padding: 8em 0 1em;
 
   @media #{$mobile} {
     height: auto;
+  }
+}
+
+.marten {
+  svg {
+    margin: 0 -1em;
+  }
+
+  .st0 {
+    fill: var(--text-color);
   }
 }

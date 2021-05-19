@@ -1,43 +1,53 @@
 .nav
   .nav-header
     .nav-title
-      h6 Дизайн-система цифровых сервисов Оренбургской области
-  .nav-link
-    a.js-scroll-link(href="#symbols") Символика
-  .nav-link
-    a.js-scroll-link(href="#colors") Цвет
-  .nav-link
-    a.js-scroll-link(href="#type") Типографика
-  .nav-link
-    a.js-scroll-link(href="#components") Компоненты
+      h6
+        +a(href="/") Дизайн-система цифровых сервисов Оренбургской области
+  if page === '/'
+    .nav-link
+      span ⋅ 
+      a.js-scroll-link(href="#colors") Цвет
+    .nav-link
+      span ⋅ 
+      a.js-scroll-link(href="#type") Типографика
+    .nav-link
+      span ⋅ 
+      a.js-scroll-link(href="#components") Компоненты
 
-.sidebar-controls.unit-control.orb__text-S.hidden
-  .orb__radiogroup-line.units-selector.sidebar-units-selector
-    .option
-      input(type="radio" id="sidebar-em-units" value="em" name="sidebar-units-selector")
-      label(for="sidebar-em-units") em
-    .option
-      input(type="radio" id="sidebar-px-units" value="px" name="sidebar-units-selector")
-      label(for="sidebar-px-units") px
-  .em-converter.sidebar-em-converter
-    label.orb__overlap-right 1 em = 
-    input(type="number" value="20" max="24" min="14")
-    span  px
+    .sidebar-controls-group
+      .sidebar-controls.unit-control.orb__text-S.hidden
+        .orb__radiogroup-line.units-selector.sidebar-units-selector
+          .option
+            input(type="radio" id="sidebar-em-units" value="em" name="sidebar-units-selector")
+            label(for="sidebar-em-units") em
+          .option
+            input(type="radio" id="sidebar-px-units" value="px" name="sidebar-units-selector")
+            label(for="sidebar-px-units") px
+        .em-converter.sidebar-em-converter
+          label.orb__overlap-right 1 em = 
+          input(type="number" value="20" max="24" min="14")
+          span  px
 
-.sidebar-controls.color-control.orb__text-S.hidden
-  .orb__radiogroup-line.color-switch.sidebar-color-switch
-    .option
-      input(type="radio" id="sidebar-digit-color" value="digit-colors" name="sidebar-color-switcher")
-      label(for="sidebar-digit-color")  • 
-    .option
-      input(type="radio" id="sidebar-steppe-color" value="steppe-colors" name="sidebar-color-switcher" )
-      label(for="sidebar-steppe-color")  • 
-    .option
-      input(type="radio" id="sidebar-autumn-color" value="autumn-colors" name="sidebar-color-switcher")
-      label(for="sidebar-autumn-color")  • 
-    .option
-      input(type="radio" id="sidebar-card-color" value="card-colors" name="sidebar-color-switcher")
-      label(for="sidebar-card-color")  • 
-    .option
-      input(type="radio" id="sidebar-active-color" value="active-colors" name="sidebar-color-switcher")
-      label(for="sidebar-active-color")  • 
+      .sidebar-controls.color-control.orb__text-S.hidden
+        .orb__radiogroup-line.color-switch.sidebar-color-switch
+          .option
+            input(type="radio" id="sidebar-digit-color" value="digit-colors" name="sidebar-color-switcher")
+            label(for="sidebar-digit-color")  • 
+          .option
+            input(type="radio" id="sidebar-steppe-color" value="steppe-colors" name="sidebar-color-switcher" )
+            label(for="sidebar-steppe-color")  • 
+          .option
+            input(type="radio" id="sidebar-autumn-color" value="autumn-colors" name="sidebar-color-switcher")
+            label(for="sidebar-autumn-color")  • 
+          .option
+            input(type="radio" id="sidebar-card-color" value="card-colors" name="sidebar-color-switcher")
+            label(for="sidebar-card-color")  • 
+          .option
+            input(type="radio" id="sidebar-active-color" value="active-colors" name="sidebar-color-switcher")
+            label(for="sidebar-active-color")  • 
+
+.nav
+  .nav-link
+    +a(href="/identity") Стиль Минцифры
+  .nav-link
+    +a(href="/emblem") Цифровой герб

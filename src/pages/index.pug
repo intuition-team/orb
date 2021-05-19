@@ -2,6 +2,7 @@ extends /layouts/main.pug
 
 block content
   .sidebar
+    - var page = '/'
     include /partials/sidebar
 
   .orb__wrapper.shift-right
@@ -40,53 +41,7 @@ block content
 
 
 
-    section#symbols
-      h2 Цифровая символика Оренбургской области
-      h4 Цифровой герб Оренбургской области
-      p Геральдическое описание герба:
-      aside В червленом поле два золотых знамени, сопровожденные вверху украшенным на концах греко-российским крестом (с одной перекладиной в пояс и одной перекладиной в перевязь), а внизу золотым полумесяцем, повернутым рогами вверх и вправо; на полотнище каждого знамени российский орел образца 1856 года; в серебряной главе щита — бегущая лазоревая куница с червлеными глазами и языком.
-      .orb__grid.orb__grid-align-bottom
-        .orb__grid-cell
-          .crest
-            p  Цветная версия:
-            figure
-              img(src="/images/ORB_digital-emblem-colored.svg")
-              figcaption
-                a(href="/images/ORB_digital-emblem-CMYK.eps" download) Скачать в формате EPS
-              
-        .orb__grid-cell
-          .crest
-            p Одноцветная версия:
-            figure
-              include /partials/emblem
-              figcaption 
-                a(href="/images/ORB_digital-emblem-RGB-12-34-72.svg" download) Скачать в формате SVG
-    section
-      p Правила и ограничения
-      ul
-        li Охранное поле при использовании с другими гербами и логотипами — 1/2 ширины
-        li Охранное поле при комбинировании с текстовыми подписями — 1/4 ширины
-        li Одновцветную версию можно красить в любой цвет из любой фирменной палитры, но должен быть хороший контраст c фоном
-        li Можно использовать специальную версию без обрамления
-        li Не допускаются непропорциональные искажения, изменения в детализации, не допускается контурная обводка и произвольное использование цвета
 
-    //- section
-      .logo-plate
-        .logo
-          .emblem
-            include /partials/emblem
-          .caption Оренбургская<br>область
-        .logo
-          .emblem.shield
-            include /partials/shield
-          .caption Оренбургская<br>область
-    section
-      h4 Логотипы проектов Минцифры Оренбургской области
-    section
-      figure(style="margin-right: -15%")
-        img(src="/images/identity/ORB-identity-logos.png")
-        figcaption
-          a(href="/images/ORB-identity-RGB.ai" download) Скачать в формате AI
 
     section.orb__top-space-L#colors
       h2 Цветовые палитры
@@ -332,8 +287,8 @@ block content
 
     section.orb__top-space-L#type
       h2 Типографика
-      p В дизайне сайтов Орегбургской области используется шрифт Golos. Это универсальный закрытый гротеск, разработанный в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов.
-      p Дизайн-система использует три начертания: Regular, Demibold и Bold.
+      p В дизайне сайтов Орегбургской области используется семейство шрифтов Golos. Это универсальные закрытые гротески, разработанные в студии Паратайп по инициативе компании Смена специально для сайтов государственных и социальных сервисов.
+      p Дизайн-система использует шрифт Golos Text в начертаниях Regular, Demibold, Bold и шрифт Golos UI в начертанииях Regular, Medium, Bold.
       .orb__grid.orb__grid-size-XS
         .orb__grid-cell
           .font-letter.bold Аа
@@ -350,47 +305,47 @@ block content
         .orb__grid-cell
           .font-letter.bold Жж
         .orb__grid-cell
-          .font-letter.bold Зз
+          .font-letter.ui-bold Зз
         .orb__grid-cell
-          .font-letter.bold Ий
+          .font-letter.ui-bold Ий
         .orb__grid-cell
-          .font-letter.bold Кк
+          .font-letter.ui-bold Кк
         .orb__grid-cell
-          .font-letter.bold Лл
+          .font-letter.ui-bold Лл
         .orb__grid-cell
-          .font-letter.bold Мм
+          .font-letter.ui-bold Мм
         .orb__grid-cell
-          .font-letter.medium НН
+          .font-letter.ui-bold НН
         .orb__grid-cell
-          .font-letter.medium Оо
+          .font-letter.ui-bold Оо
         .orb__grid-cell
-          .font-letter.medium Пп
+          .font-letter.demibold Пп
         .orb__grid-cell
-          .font-letter.medium Рр
+          .font-letter.demibold Рр
         .orb__grid-cell
-          .font-letter.medium Сс
+          .font-letter.demibold Сс
         .orb__grid-cell
-          .font-letter.medium Тт
+          .font-letter.demibold Тт
         .orb__grid-cell
-          .font-letter.medium Уу
+          .font-letter.demibold Уу
         .orb__grid-cell
-          .font-letter.medium Фф
+          .font-letter.demibold Фф
         .orb__grid-cell
-          .font-letter.medium Хх
+          .font-letter.demibold Хх
         .orb__grid-cell
-          .font-letter.medium Цц
+          .font-letter.ui-medium Цц
         .orb__grid-cell
-          .font-letter.medium Чч
+          .font-letter.ui-medium Чч
         .orb__grid-cell
-          .font-letter.medium Шш
+          .font-letter.ui-medium Шш
         .orb__grid-cell
-          .font-letter.regular Щщ
+          .font-letter.ui-medium Щщ
         .orb__grid-cell
-          .font-letter.regular Ьъ
+          .font-letter.ui-medium Ьъ
         .orb__grid-cell
-          .font-letter.regular Ыы
+          .font-letter.ui-medium Ыы
         .orb__grid-cell
-          .font-letter.regular Ээ
+          .font-letter.ui-medium Ээ
         .orb__grid-cell
           .font-letter.regular Юю
         .orb__grid-cell
@@ -406,15 +361,15 @@ block content
         .orb__grid-cell
           .font-letter.regular 5%
         .orb__grid-cell
-          .font-letter.regular ±6
+          .font-letter.ui-regular ±6
         .orb__grid-cell
-          .font-letter.regular §7
+          .font-letter.ui-regular §7
         .orb__grid-cell
-          .font-letter.regular 8*
+          .font-letter.ui-regular 8*
         .orb__grid-cell
-          .font-letter.regular 9˚
+          .font-letter.ui-regular 9˚
         .orb__grid-cell
-          .font-letter.regular 0
+          .font-letter.ui-regular 0
 
     section
       h3 Абзац текста<u>, &lt;p&gt;</u>
@@ -918,13 +873,6 @@ block content
         .orb__link-text Предложить сервис
 
 
-
-
-    section
-    figure.marten
-      include /partials/marten
-    p C любыми вопросами о дизайн-системе и продуктах Минцифры Оренбургской области вы можете обратиться к начальнику отдела мониторинга интернет-ресурсов Центра информационных технологий Оренбургской области Юлии Хрипковой: <a href="mailto:udh@mail.orb.ru">udh@mail.orb.ru</a>, <a href="https://t.me/Uliya_Hripkova">@Uliya_Hripkova</a>
-    p.orb__text-S Сделано <a href="https://intuition.team">с Интуицией</a> в 2020 году
 
 
 
