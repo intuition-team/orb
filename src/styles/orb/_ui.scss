@@ -36,11 +36,11 @@
     font-family: "Golos UI", sans-serif;
 
     &::placeholder {
-      color: var(--text-transparent-color);
+      color: rgba(var(--text-RGB), 0.3);
     }
 
     &:focus {
-      box-shadow: 0 0 0 5px var(--mark-color);
+      // box-shadow: 0 0 0 5px var(--mark-color);
       outline: none;
     }
   }
@@ -236,20 +236,20 @@
 }
 
 .orb {
-  // .orb__nav {
-  //   a,
-  //   span {
-  //     margin-right: 0.8em;
+  .orb__nav {
+    a,
+    span {
+      margin-right: 0.8em;
 
-  //     &:last-child {
-  //       margin-right: 0;
-  //     }
-  //   }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
-  //   span {
-  //     font-weight: 700;
-  //   }
-  // }
+    span {
+      font-weight: 600;
+    }
+  }
   .orb__icons-nav {
     margin: 2em 0 1em;
     display: flex;
