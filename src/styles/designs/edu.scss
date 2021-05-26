@@ -1,0 +1,98 @@
+.orb {
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em 1em;
+    background-color: rgba(var(--surface-RGB), 0.3);
+
+    .orb-logo {
+      display: flex;
+
+      .orb-emblem {
+        margin-top: -0.1em;
+        width: 3.8em;
+
+        .st0 {
+          fill: var(--text-color);
+        }
+      }
+
+      .orb-caption {
+        margin: 0 0.6em;
+        font-weight: 600;
+      }
+    }
+
+    .orb__auth {
+      display: flex;
+
+      .orb__auth-item {
+        margin-left: 0.8em;
+
+        &.orb__auth-button {
+          a {
+            padding: 0.15em 0.4em 0.2em;
+            border-radius: 0.2em;
+            border: 1px solid var(--link-underline-color);
+            &:hover {
+              border: 1px solid var(--underline-hover-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .orb__navbar {
+    padding: 0.6em 1em;
+    // background-color: rgba(var(--surface-RGB), .5);
+    // color: var(--background-color);
+    // background-color: var(--text-color);
+    // border-bottom: 2px solid rgba(var(--surface-RGB), .3);
+    margin-bottom: 5em;
+
+    .orb__nav {
+      display: flex;
+
+      .orb__nav-item {
+        margin-right: 0.8em;
+
+        a {
+          border-bottom: 0;
+
+          &:hover {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.edu-nav-cards-filter {
+  display: flex;
+  justify-content: center;
+  font-size: 0.85em;
+
+  .orb__radiogroup-line {
+    .option {
+      &:first-child {
+        label {
+          border-radius: 1em 0 0 1em;
+        }
+      }
+
+      &:last-child {
+        label {
+          border-radius: 0 1em 1em 0;
+        }
+      }
+    }
+  }
+}
+
+.orb {
+  .edu-nav-card {
+    height: 15em;
+  }
+}

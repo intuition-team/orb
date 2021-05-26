@@ -236,20 +236,20 @@
 }
 
 .orb {
-  .orb__nav {
-    a,
-    span {
-      margin-right: 0.8em;
+  // .orb__nav {
+  //   a,
+  //   span {
+  //     margin-right: 0.8em;
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  //     &:last-child {
+  //       margin-right: 0;
+  //     }
+  //   }
 
-    span {
-      font-weight: 700;
-    }
-  }
+  //   span {
+  //     font-weight: 700;
+  //   }
+  // }
   .orb__icons-nav {
     margin: 2em 0 1em;
     display: flex;

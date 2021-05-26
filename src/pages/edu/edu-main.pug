@@ -1,0 +1,79 @@
+extends /layouts/main.pug
+
+//- block favicon
+  //- link(rel="icon", href="/favicon-ag.png" )
+  
+block content
+  .digit-colors.small-at-1000
+    include /edu/_edu-header
+    include /edu/_edu-navbar
+
+
+    .orb__wrapper.full-width
+      .edu-nav-cards-filter
+        .orb__radiogroup-line
+          .option
+            input(type="radio" id="v0" name="radiogrout-sample" checked)
+            label(for="v0") Всем
+          .option
+            input(type="radio" id="v1" name="radiogrout-sample")
+            label(for="v1") Родителям
+          .option
+            input(type="radio" id="v2" name="radiogrout-sample")
+            label(for="v2") Учащимся
+          .option
+            input(type="radio" id="v3" name="radiogrout-sample")
+            label(for="v3") Педагогам
+          .option
+            input(type="radio" id="v4" name="radiogrout-sample")
+            label(for="v4") Руководителям
+          .option
+            input(type="radio" id="v5" name="radiogrout-sample")
+            label(for="v5") Тех. специалистам
+
+    
+      .orb__grid.orb__grid-size-XL.orb__grid-inset-S
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Реестр образовательных организаций
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Электронная школа
+            p Мониторинг образования
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Региональный образовательный портал и открытые данные
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Электронный журнал и дневник
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Доступность дошкольного образования
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Дополнительное образование
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Приемка образовательных органиций
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Профессиональное образование
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Библиотека педагогических практик
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Электронный конспект урока
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Электронное обучение
+        .orb__grid-cell
+          a.orb__nav-card.edu-nav-card(href="#")
+            h4 Руководства пользователя
+
+
+
+    //- include /edu/_edu-footer
+
+
+block footer
