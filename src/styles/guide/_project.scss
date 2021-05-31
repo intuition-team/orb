@@ -107,7 +107,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  // background: var(--surface-color);
+  // background: rgba(var(--surface-RGB), 0.5);
   // padding: calc(#{$orb__density} * 0.5);
 
   @media #{$mobile} {
@@ -220,7 +220,7 @@ h3 {
 .crest {
   padding-right: 30%;
   .st0 {
-    fill: var(--text-color);
+    fill: rgba(var(--text-RGB), 1);
   }
 
   // &.shield {
@@ -234,7 +234,7 @@ h3 {
   padding: 1.5em 2em 2em;
   display: flex;
   // justify-content: space-around;
-  background-color: var(--surface-color);
+  background-color: rgba(var(--surface-RGB), 0.5);
 
   .logo {
     width: 50%;
@@ -253,7 +253,7 @@ h3 {
 
     svg {
       .st0 {
-        fill: var(--text-color);
+        fill: rgba(var(--text-RGB), 1);
       }
     }
   }
@@ -266,11 +266,11 @@ h3 {
   }
 
   // &.dark {
-  //   background-color: var(--text-color);
-  //   color: var(--accent-color);
+  //   background-color: rgba(var(--text-RGB), 1);
+  //   color: rgba(var(--accent-RGB), 1);
   //   svg {
   //     .st0 {
-  //       fill: var(--accent-color);
+  //       fill: rgba(var(--accent-RGB), 1);
   //     }
   //   }
   // }

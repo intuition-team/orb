@@ -9,7 +9,7 @@ header {
 /// HEADER SAMPLES
 
 .top {
-  background-color: var(--surface-opaque-color);
+  background-color: rgba(var(--surface-RGB), 1);
 
   .top-header {
     padding: 1.1em 1.2em;
@@ -32,7 +32,7 @@ header {
     width: 3.8em;
 
     .st0 {
-      fill: var(--text-color);
+      fill: rgba(var(--text-RGB), 1);
     }
   }
 

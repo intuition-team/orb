@@ -7,7 +7,7 @@
       width: 3em;
 
       .st0 {
-        fill: var(--text-color);
+        fill: rgba(var(--text-RGB), 1);
       }
     }
 
@@ -23,7 +23,7 @@
     height: 100%;
     padding: 1em 3em 1em 1em;
 
-    background-color: var(--surface-color);
+    background-color: rgba(var(--surface-RGB), 0.5);
     border-radius: 0.5em;
     border-bottom-width: 0.2em;
 
@@ -37,7 +37,7 @@
 .poll-card {
   margin: 0 0 2em 0;
   padding: 1em 3em 1em 1em;
-  background-color: var(--surface-color);
+  background-color: rgba(var(--surface-RGB), 0.5);
   border-radius: 0.5em;
 
   @media #{$mobile} {
@@ -308,8 +308,8 @@
       transition: width 0.3s ease;
       background-image: linear-gradient(
         to right,
-        var(--accent-color),
-        var(--link-color)
+        rgba(var(--accent-RGB), 1),
+        rgba(var(--link-RGB), 1)
       );
 
       &.sleep {
@@ -326,7 +326,7 @@
         .bar {
           background-image: linear-gradient(
             to right,
-            var(--link-color),
+            rgba(var(--link-RGB), 1),
             rgba(200, 0, 0, 1)
           );
         }
@@ -335,7 +335,7 @@
         .bar {
           background-image: linear-gradient(
             to right,
-            var(--link-color),
+            rgba(var(--link-RGB), 1),
             rgba(0, 0, 0, 0.4)
           );
         }
@@ -344,7 +344,7 @@
         .bar {
           background-image: linear-gradient(
             to right,
-            var(--link-color),
+            rgba(var(--link-RGB), 1),
             rgba(0, 200, 50, 1)
           );
         }
@@ -353,7 +353,7 @@
         .bar {
           background-image: linear-gradient(
             to right,
-            var(--link-color),
+            rgba(var(--link-RGB), 1),
             rgba(0, 0, 0, 0.7)
           );
         }

@@ -19,14 +19,14 @@
   }
 
   a {
-    color: var(--link-color);
-    border-bottom: 1px solid var(--link-underline-color);
+    color: rgba(var(--link-RGB), 1);
+    border-bottom: 1px solid rgba(var(--link-RGB), 0.2);
     text-decoration: none;
     transition: color 0.5s ease, border 0.5s ease, background-color 0.5s ease;
 
     &:hover {
-      color: var(--hover-color);
-      border-bottom: 1px solid var(--underline-hover-color);
+      color: rgba(var(--hover-RGB), 1);
+      border-bottom: 1px solid rgba(var(--hover-RGB), 0.2);
       transition: color 0s ease, border 0s ease, background-color 0s ease;
     }
   }
@@ -34,34 +34,34 @@
   .orb__button-link {
     display: inline-block;
     padding: 0.25em 1em 0.35em;
-    border: 2px solid var(--link-underline-color);
+    border: 2px solid rgba(var(--link-RGB), 0.2);
     border-radius: 0.3em;
 
     font-family: "Golos UI", sans-serif;
 
     &:hover {
-      border: 2px solid var(--underline-hover-color);
+      border: 2px solid rgba(var(--hover-RGB), 0.2);
     }
 
     &.orb__button-link-accent {
-      border: 2px solid var(--accent-color);
-      background-color: var(--accent-color);
-      color: var(--background-color);
+      border: 2px solid rgba(var(--accent-RGB), 1);
+      background-color: rgba(var(--accent-RGB), 1);
+      color: rgba(var(--background-RGB), 1);
 
       &:hover {
-        border: 2px solid var(--hover-color);
-        background-color: var(--hover-color);
-        color: var(--background-color);
+        border: 2px solid rgba(var(--hover-RGB), 1);
+        background-color: rgba(var(--hover-RGB), 1);
+        color: rgba(var(--background-RGB), 1);
       }
     }
 
     &.orb__button-link-light-accent {
       border: 2px solid rgba(var(--accent-RGB), 0.4);
-      color: var(--accent-color);
+      color: rgba(var(--accent-RGB), 1);
 
       &:hover {
         border: 2px solid rgba(var(--hover-RGB), 0.4);
-        color: var(--hover-color);
+        color: rgba(var(--hover-RGB), 1);
       }
     }
 
@@ -125,19 +125,25 @@
 
     // mark {
     //   background: none;
-    //   box-shadow: inset 0 -0.15em var(--background-color),
-    //     inset 0 -0.5em var(--mark-color);
+    //   box-shadow: inset 0 -0.15em rgba(var(--background-RGB), 1),
+    //     inset 0 -0.5em rgba(var(--mark-RGB), 1);
     // }
   }
 
   h1 {
     font-size: 4.2em;
-    line-height: 1em;
+    line-height: 1;
     font-weight: 700;
     margin-bottom: 0.4em;
 
     @media #{$mobile} {
-      font-size: 2.3em;
+      font-size: 2.1em;
+    }
+    &.S {
+      font-size: 3.6em;
+      @media #{$mobile} {
+        font-size: 2.3em;
+      }
     }
   }
 
@@ -166,6 +172,7 @@
     font-size: 1.3em;
     line-height: 1.3em;
     margin-bottom: 0.6em;
+    font-weight: 600;
   }
 
   h5 {
@@ -190,8 +197,8 @@
   }
 
   mark {
-    color: var(--text-color);
-    background-color: var(--mark-color);
+    color: rgba(var(--text-RGB), 1);
+    background-color: rgba(var(--mark-RGB), 1);
   }
 
   ul,
@@ -238,11 +245,15 @@
   aside {
     margin: 0;
     margin-bottom: 1em;
-    background: var(--surface-color);
+    background: rgba(var(--surface-RGB), 0.5);
     padding: calc(#{$orb__density} * 0.75);
     padding-top: calc(#{$orb__density} * 0.6);
     padding-right: calc(#{$orb__density} * 2);
     border-radius: 0.2em;
+
+    @media #{$mobile} {
+      padding-right: calc(#{$orb__density});
+    }
   }
 
   code {
@@ -293,11 +304,11 @@
   }
 
   .orb__error-color {
-    color: var(--error-color);
+    color: rgba(var(--error-RGB), 1);
   }
 
   .orb__success-color {
-    color: var(--success-color);
+    color: rgba(var(--success-RGB), 1);
   }
 
   .orb__marginal-note {
@@ -309,14 +320,14 @@
   .orb__label {
     display: inline-block;
     padding: 0.1em;
-    background-color: var(--accent-color);
+    background-color: rgba(var(--accent-RGB), 1);
     color: var(--on-accent-color);
     border-radius: 0.2em;
 
     &.orb__label-outline {
       background-color: var(--on-accent-color);
       color: theme-color(main-color);
-      border: 2px solid var(--accent-color);
+      border: 2px solid rgba(var(--accent-RGB), 1);
     }
 
     &.orb__label-S {

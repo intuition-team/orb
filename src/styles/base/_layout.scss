@@ -13,8 +13,8 @@ body {
   width: 100%;
   height: 100%;
   min-width: 1000px;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: rgba(var(--text-RGB), 1);
+  background-color: rgba(var(--background-RGB), 1);
 
   @media #{$mobile} {
     min-width: auto;

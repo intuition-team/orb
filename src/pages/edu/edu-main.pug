@@ -1,7 +1,7 @@
 extends /layouts/main.pug
 
-//- block favicon
-  //- link(rel="icon", href="/favicon-ag.png" )
+block favicon
+  link(rel="icon", href="/favicon-empty.png" )
   
 block content
   .digit-colors.small-at-1000
@@ -10,6 +10,11 @@ block content
 
 
     .orb__wrapper.full-width
+      //- h1.S Образовательные организации Оренбургской области
+      //- .orb__text
+      //-   p Информационная система используется для организации общедоступного и бесплатного дошкольного образования и обеспечение предоставления информации о последовательности предоставления мест в дошкольные образовательные организации.
+
+
       .edu-nav-cards-filter
         .orb__radiogroup-line
           .option
@@ -41,7 +46,7 @@ block content
 
 
     
-      .orb__grid.orb__grid-size-XL.orb__grid-inset-S
+      .orb__grid.orb__grid-size-XL.orb__grid-round-corners
         .orb__grid-cell
           a.orb__nav-card.edu-nav-card(href="#")
             h4 Реестр образовательных организаций
@@ -82,7 +87,7 @@ block content
 
 
 
-    //- include /edu/_edu-footer
+    include /edu/_edu-footer
 
 
 block footer

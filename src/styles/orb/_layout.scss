@@ -33,6 +33,13 @@
         padding-right: 6em;
       }
     }
+
+    .orb__text {
+      width: 70%;
+      @media #{$mobile} {
+        width: 100%;
+      }
+    }
   }
 
   .orb__header {
@@ -166,8 +173,8 @@
 
     margin-top: 7em;
     padding: 1em 1em 1.5em;
-    border-top: 3px solid rgba(var(--surface-RGB), 1);
-    // background-color: var(--surface-color);
+    // border-top: 3px solid rgba(var(--surface-RGB), 1);
+    // background-color: rgba(var(--surface-RGB), 0.5);
 
     .orb__identity {
       display: flex;
@@ -235,7 +242,7 @@
 
   .orb__promo {
     position: relative;
-    background-color: var(--surface-color);
+    background-color: rgba(var(--surface-RGB), 0.5);
     height: 23em;
     padding: 1.5em;
     overflow: hidden;
@@ -307,8 +314,8 @@
       transition: background-color 0.3s ease;
 
       &:first-child {
-        // background-color: var(--accent-color);
-        // color: var(--background-color);
+        // background-color: rgba(var(--accent-RGB), 1);
+        // color: rgba(var(--background-RGB), 1);
         border-radius: 0.5em 0 0 0.5em;
         // border-right: none;
         // &:hover {
@@ -345,6 +352,15 @@
 
     &.orb__grid-align-bottom {
       align-items: flex-end;
+    }
+
+    &.orb__grid-round-corners {
+      border-radius: 1em;
+      overflow: hidden;
+
+      @media #{$mobile} {
+        border-radius: 0.8em;
+      }
     }
 
     &.orb__grid-size-XXL {
@@ -450,6 +466,17 @@
         }
       }
     }
+    &.orb__grid-inset-XS {
+      .orb__grid-cell {
+        padding-right: calc(#{$orb__density} * 0.2);
+        padding-bottom: calc(#{$orb__density} * 0.2);
+
+        @media #{$mobile} {
+          padding-right: calc(#{$orb__density} * 0.1);
+          padding-bottom: calc(#{$orb__density} * 0.1);
+        }
+      }
+    }
 
     .orb__grid-cell {
       width: 50%;
@@ -468,7 +495,7 @@
     position: relative;
     display: block;
     padding: 0.8em 1em 1.2em 0.8em;
-    background-color: var(--surface-color);
+    background-color: rgba(var(--surface-RGB), 0.5);
     border-bottom: none;
     height: 100%;
 
@@ -479,7 +506,7 @@
         width: 2em;
         margin-bottom: 0.5em;
         path {
-          fill: var(--link-color);
+          fill: rgba(var(--link-RGB), 1);
           transition: fill 0.5s ease;
         }
       }
@@ -487,13 +514,13 @@
 
     &:hover {
       border-bottom: none;
-      background-color: var(--surface-hover-color);
+      background-color: rgba(var(--surface-RGB), 1);
       transition: background-color 0s ease, color 0s ease;
 
       .orb__nav-card__icon {
         svg {
           path {
-            fill: var(--hover-color);
+            fill: rgba(var(--hover-RGB), 1);
             transition: fill 0s ease;
           }
         }
