@@ -2,6 +2,7 @@ import "../styles/main.scss";
 import $, { each } from "jquery";
 import "./awakeness";
 import "./scroll-link";
+import "./logo-downloads";
 
 const ready = function() {
   scrollMagic();
