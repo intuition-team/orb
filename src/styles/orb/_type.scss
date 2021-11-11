@@ -366,4 +366,35 @@
       filter: brightness(0.9);
     }
   }
+
+  .orb__radiogroup-links {
+    display: flex;
+    margin-bottom: 0.5em;
+
+    font-family: "Golos UI", sans-serif;
+    font-size: 1.04em;
+
+    a,
+    span {
+      display: block;
+      padding: 0.3em 0.5em 0.4em;
+      background-color: rgba(var(--surface-RGB), 0.5);
+
+      &:first-child {
+        border-radius: 0.3em 0 0 0.3em;
+        padding-left: 0.8em;
+      }
+
+      &:last-child {
+        border-radius: 0 0.3em 0.3em 0;
+        padding-right: 0.8em;
+      }
+    }
+
+    a {
+      &:hover {
+        background-color: rgba(var(--surface-RGB), 1);
+      }
+    }
+  }
 }
