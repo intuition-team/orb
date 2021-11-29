@@ -1,0 +1,104 @@
+extends /layouts/main.pug
+
+block meta
+  title Электронная приемная обращений граждан
+
+
+block content
+  .digit-colors
+    .letters-header
+      .orb-logo
+        .orb-emblem
+          include /partials/emblem
+        .orb-caption Цифровая экосистема<br>Оренбуржья
+
+
+      .auth-form
+        form
+          .auth-form-group
+            h4 Единый аккаунт для всех сервисов
+          //- .auth-form-item
+            figure
+              img(src="/images/report/family.svg")
+          .auth-form-group
+            .auth-form-item
+              input(type="text" placeholder="Логин")
+            .auth-form-item
+              input(type="text" placeholder="Пароль")
+            .auth-form-item
+              button Войти
+              a.button-hint(href="#") Забыли пароль?
+
+
+          .auth-form-group
+            .auth-form-item
+              a.orb__button-link(href="#")
+                .orb__link-text Вход через 
+                img.orb__link-icon.gosuslugi(src="https://esia.gosuslugi.ru/idp/resources/img/flt/ru/logo.svg")
+            .auth-form-item
+              a.orb__button-link(href="#")
+                img.orb__link-icon(src="/images/auth/f_logo_RGB-Blue_1024.svg")
+                .orb__link-text Вход через Fасebook
+            .auth-form-item
+              a.orb__button-link(href="#")
+                .orb__link-text
+                  img.orb__link-icon.vk(src="/images/auth/VK_Compact_Logo.svg")
+                  span Вход через Вконтакте
+
+          .auth-form-group
+            .auth-form-item
+              a(href="#") Регистрация
+
+      .auth-form
+        form
+          .auth-form-group
+            h4 Единый аккаунт для всех сервисов
+          //- .auth-form-item
+            figure
+              img(src="/images/report/family.svg")
+          .auth-form-group
+            .auth-form-item.wide
+              label Населённый пункт
+              .orb__select
+                select
+                  option(selected='selected') Оренбург
+                  option Орск
+                  option Бугуруслан
+                  option Бузулук
+                  option Медногорск
+                  option Новотроицк
+
+          .auth-form-group
+            .auth-form-item
+              input(type="text" placeholder="Имя")
+            .auth-form-item
+              input(type="text" placeholder="Фамилия")
+            .auth-form-item
+              input(type="text" placeholder="Отчество")
+
+          .auth-form-group
+            .auth-form-item
+              input(type="text" placeholder="Дата рождения")
+            .auth-form-item
+              input(type="text" placeholder="Пол")
+
+          .auth-form-group              
+            .auth-form-item
+              button Продолжить →
+              //- a.button-hint(href="#") Вход
+
+          .auth-form-group
+            .auth-form-item
+              a(href="#") Вход
+
+
+
+
+
+block footer
+    
+
+
+
+
+      

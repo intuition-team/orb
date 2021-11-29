@@ -1,7 +1,7 @@
 .orb {
   button {
     display: inline-block;
-    padding: 0.25em 1em 0.35em;
+    padding: 0.25em 1em 0.3em;
     border: 2px solid rgba(var(--accent-RGB), 1);
     background-color: rgba(var(--accent-RGB), 1);
     color: rgba(var(--background-RGB), 1);
@@ -118,7 +118,7 @@
 
       label {
         display: block;
-        padding: 0.3em 0.5em 0.4em;
+        padding: 0.3em 0.5em 0.35em;
         background-color: rgba(var(--surface-RGB), 0.5);
 
         &:hover {
@@ -136,6 +136,29 @@
         label {
           border-radius: 0 0.3em 0.3em 0;
           padding-right: 0.8em;
+        }
+      }
+    }
+
+    &.light {
+      .option {
+        input {
+          &:checked + label {
+            background-color: rgba(var(--link-RGB), 0.2);
+            color: rgba(var(--background-RGB), 1);
+          }
+        }
+
+        label {
+          background-color: transparent;
+          border: 2px solid rgba(var(--link-RGB), 0.2);
+          color: rgba(var(--link-RGB), 1);
+
+          &:hover {
+            background-color: transparent;
+            border: 2px solid rgba(var(--hover-RGB), 0.2);
+            color: rgba(var(--hover-RGB), 1);
+          }
         }
       }
     }

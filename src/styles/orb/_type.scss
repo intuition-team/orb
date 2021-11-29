@@ -269,6 +269,17 @@
   a.button {
   }
 
+  .button-hint {
+    margin-left: 1em;
+    border-bottom-style: dashed;
+    border-bottom-color: rgba(var(--text-RGB), 0.2);
+    color: rgba(var(--text-RGB), 0.5);
+
+    &:hover {
+      border-bottom-style: dashed;
+    }
+  }
+
   figure {
     margin: 0 0 calc(#{$orb__density} * 0.5) 0;
 

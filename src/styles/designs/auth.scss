@@ -1,0 +1,53 @@
+.auth-form {
+  display: inline-block;
+  vertical-align: top;
+  margin: 3em 1.5em 10em;
+  width: 22em;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  border-bottom: 0;
+
+  background-color: rgba(var(--background-RGB), 1);
+  box-shadow: 0 1em 2em 0 rgba(var(--accent-RGB), 0.1);
+}
+
+.auth-form-group {
+  margin: 0 0 1.5em 0;
+}
+
+.auth-form-item {
+  width: 14.2em;
+  margin-bottom: 0.5em;
+
+  &.wide {
+    width: 100%;
+  }
+
+  label {
+    display: inline-block;
+    width: 10em;
+  }
+
+  .orb__button-link {
+    width: 14.2em;
+    text-align: center;
+  }
+
+  img.orb__link-icon {
+    display: inline;
+    height: 0.9em;
+    width: auto;
+    margin-right: 0.4em;
+
+    &.vk {
+      height: 0.7em;
+      margin-bottom: 0.1em;
+    }
+
+    &.gosuslugi {
+      height: 0.8em;
+      margin-left: 0.2em;
+      margin-bottom: -0.1em;
+    }
+  }
+}
