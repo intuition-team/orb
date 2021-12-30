@@ -3,6 +3,7 @@ import $, { each } from "jquery";
 import "./awakeness";
 import "./scroll-link";
 import "./logo-downloads";
+import "./report-parallax";
 
 const ready = function() {
   scrollMagic();

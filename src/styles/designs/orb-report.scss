@@ -34,12 +34,18 @@
     right: 0;
     top: 0;
     bottom: 0;
+    height: 35em;
 
     &.future-bg1 {
       background-image: url("/images/identity/ORB_O-logo.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-size: 52%;
+      background-size: 55%;
+
+      @media #{$mobile} {
+        background-size: 115%;
+        background-position: 50% 30%;
+      }
     }
 
     &.future-bg2 {
@@ -50,8 +56,12 @@
     &.future-bg3 {
       background-image: url("/images/orb-report/2021.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 56%;
+      background-position: 50% 42%;
+      background-size: 58%;
+      @media #{$mobile} {
+        background-size: 90%;
+        background-position: 50% 40%;
+      }
     }
 
     &.future-bg4 {
