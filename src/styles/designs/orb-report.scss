@@ -1,0 +1,62 @@
+.orb-report-header {
+  padding: 1em 1.1em;
+  // background-color: rgba(var(--surface-RGB), 0.5);
+
+  .orb-logo {
+    display: flex;
+    .orb-emblem {
+      width: 3em;
+
+      .st0 {
+        fill: rgba(var(--text-RGB), 1);
+      }
+    }
+
+    .orb-caption {
+      margin: 0em 0.6em;
+    }
+  }
+}
+
+.orb-report-2021-cover {
+  position: relative;
+  background-color: rgba(var(--text-RGB), 1);
+  height: 30em;
+  border-radius: 0.8em;
+  overflow: hidden;
+
+  background-image: url("/images/orb-report/future-bg-1.png");
+  background-size: contain;
+
+  .orb-future-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    &.future-bg1 {
+      background-image: url("/images/identity/ORB_O-logo.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 52%;
+    }
+
+    &.future-bg2 {
+      background-image: url("/images/orb-report/future-bg-2.png");
+      background-size: contain;
+    }
+
+    &.future-bg3 {
+      background-image: url("/images/orb-report/2021.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 56%;
+    }
+
+    &.future-bg4 {
+      background-image: url("/images/orb-report/future-bg-3.png");
+      background-size: contain;
+    }
+  }
+}
