@@ -623,3 +623,19 @@ a.vote-promo {
     }
   }
 }
+.report-factoid {
+  color: var(--brand-color-2);
+
+  .number {
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 600;
+    &__major {
+      color: rgb(220, 0, 0);
+    }
+
+    @media #{$mobile} {
+      font-size: 2.2em;
+    }
+  }
+}
