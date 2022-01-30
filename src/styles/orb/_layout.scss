@@ -370,6 +370,9 @@
         @media #{$mobile} {
           width: 100%;
         }
+        @media print {
+          width: calc(100% / 2);
+        }
       }
     }
 
@@ -389,6 +392,9 @@
 
         @media #{$mobile} {
           width: calc(100% / 2);
+        }
+        @media print {
+          width: calc(100% / 4);
         }
       }
     }

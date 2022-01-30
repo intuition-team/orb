@@ -28,6 +28,11 @@
   background-image: url("/images/orb-report/future-bg-1.png");
   background-size: contain;
 
+  @media print {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .orb-future-bg {
     position: absolute;
     left: 0;
@@ -35,6 +40,11 @@
     top: 0;
     bottom: 0;
     height: 35em;
+
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
 
     &.future-bg1 {
       background-image: url("/images/identity/ORB_O-logo.svg");
@@ -67,6 +77,149 @@
     &.future-bg4 {
       background-image: url("/images/orb-report/future-bg-3.png");
       background-size: contain;
+    }
+  }
+}
+.report-factoid {
+  color: var(--brand-color-2);
+
+  .number {
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 600;
+    &__major {
+      color: rgb(220, 0, 0);
+    }
+
+    @media #{$mobile} {
+      font-size: 2.2em;
+    }
+  }
+}
+// TO DO порефакторить c img-fit
+.report-picture-heading {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  height: 20em;
+  overflow: hidden;
+
+  @media #{$mobile} {
+    height: 10em;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    align-self: center;
+  }
+  .bg {
+    position: absolute;
+    padding: 0 3em;
+    background-color: rgba(var(--accent-RGB), 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media #{$mobile} {
+      padding: 0 1.6em;
+    }
+
+    h2,
+    h3 {
+      color: white;
+    }
+  }
+}
+.report-person-block {
+  height: 8em;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+
+  @media print {
+    width: 100%;
+  }
+
+  &__1 {
+    .info {
+      background-color: #264582;
+    }
+  }
+  &__2 {
+    .info {
+      background-color: #2457c5;
+    }
+  }
+  &__3 {
+    .info {
+      background-color: #4979d1;
+    }
+  }
+  &__4 {
+    .info {
+      background-color: #70a3e7;
+    }
+  }
+
+  .qr-code {
+    display: none;
+    @media print {
+      margin-left: $orb__density;
+      display: inline-flex;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 8em;
+  }
+  .info {
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex: 1;
+
+    @media print {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a {
+      @media print {
+        display: none !important;
+      }
+    }
+  }
+  .orb__button-link-inverted {
+    border: 2px solid rgba(var(--background-RGB), 0.2);
+    color: rgba(var(--background-RGB), 0.9);
+
+    &:hover {
+      border: 2px solid rgba(var(--background-RGB), 0.4);
+      color: rgba(var(--background-RGB), 1);
+    }
+  }
+}
+.print_new_page {
+  page-break-before: always;
+}
+
+.print {
+  &__visible {
+    display: none;
+    @media print {
+      display: block !important;
+    }
+  }
+  &__hidden {
+    @media print {
+      display: none !important;
     }
   }
 }
