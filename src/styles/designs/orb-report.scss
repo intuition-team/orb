@@ -151,11 +151,11 @@
   display: flex;
   flex-direction: row;
   justify-content: stretch;
-  height: 14em;
+  height: 20em;
   overflow: hidden;
 
   @media #{$mobile} {
-    height: 10em;
+    height: 14em;
   }
 
   img {
@@ -166,15 +166,16 @@
     z-index: -1;
   }
   .bg {
-    padding: 0 3em;
-    background-color: rgba(var(--accent-RGB), 0.5);
+    padding: 2em 1.8em;
+    background-color: rgba(var(--accent-RGB), 0.6);
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    width: 60%;
 
     @media #{$mobile} {
-      padding: 0 1.6em;
+      padding: 1.6em 1.4em;
+      width: 70%;
     }
 
     @media print {
@@ -185,6 +186,8 @@
     h2,
     h3 {
       color: white;
+      font-weight: 600;
+      margin: 0;
     }
   }
 }
