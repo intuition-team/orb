@@ -601,11 +601,6 @@ a.vote-promo {
 
       border-radius: 1em;
 
-      @media print {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
       &.sleep {
         width: 10% !important;
       }

@@ -206,6 +206,47 @@
   }
 }
 
+.orb-report-infographics {
+  margin-bottom: 1em;
+
+  .info-item {
+    display: flex;
+    align-items: baseline;
+
+    .bar {
+      width: 50%;
+      padding: 0.2em 0.5em;
+      color: white;
+      margin-right: 0.3em;
+      text-align: right;
+      white-space: nowrap;
+      transition: width 0.3s ease;
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--accent-RGB), 1),
+        rgba(var(--link-RGB), 1)
+      );
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      &.sleep {
+        width: 10% !important;
+      }
+
+      &.planning {
+        background-image: linear-gradient(to right, #65a3ea, #3c8be4);
+      }
+    }
+
+    .caption {
+      color: rgba(var(--text-RGB), 0.5);
+    }
+  }
+}
+
 .orb-report-full-img {
   width: 75%;
   margin-bottom: 2.5em;
