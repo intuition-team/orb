@@ -27,7 +27,7 @@ block content
             +a(href='/designs/ag-report') 2019
             +a(href='/designs/ag-report-2020') 2020
 
-      section
+      section.orb__bottom-space-L
         aside 
           h4 Об отчёте
           p Здесь представлена общая информация о деятельности министерства цифрового развития и связи Оренбургской области и ГКУ  «Центр информационных технологий Оренбургской области» за 2021 год.
@@ -36,7 +36,7 @@ block content
           p В тексте под Минцифрой подразумевается Министерство и ГКУ «ЦИТ», если не указано иное.
           p С уважением, команда Минцифры
 
-      section.orb__top-space-L 
+      section 
         .contents
           h3.print__new-page-break Содержание
           .orb__grid.orb__grid-size-XL.orb__grid-inset-L
@@ -126,7 +126,7 @@ block content
                 a(href="#") Работа коллегиальных и общественных органов
 
       .report
-        section.print__new-page-break 
+        section.orb__bottom-space-L.print__new-page-break 
           h2 О Минцифре
           h3#history Историческая справка
           .orb__grid.orb__grid-size-L
@@ -181,9 +181,9 @@ block content
                 p.orb__bottom-space-S 
                   <b>2020–н.в</b><br>Министерство цифрового развития и связи Оренбургской области,<br>Министр
 
-        section.orb__top-space-L#government
+        section.orb__bottom-space-L#government
           h3.print__new-page-break Минцифра в структуре<br>Правительства Оренбургской области
-          .orb-report-person-block.orb-report-person-block__1.orb__bottom-space-S
+          .orb-report-person-block.order__1.orb__bottom-space-S
             img(src="/images/orb-report/person_5.png")
             .info
               b Паслер Денис Владимирович 
@@ -191,7 +191,7 @@ block content
               a.orb__button-link.orb__button-link-inverted.print__hidden(href="#")
                 .orb__link-text Узнать больше
             img(src="/images/orb-report/qr_code_1.png").qr-code.print__visible
-          .orb-report-person-block.orb-report-person-block__2.orb__bottom-space-S
+          .orb-report-person-block.order__2.orb__bottom-space-S
             img(src="/images/orb-report/person_6.png")
             .info
               b Петухов Игнат Евгеньевич 
@@ -199,7 +199,7 @@ block content
               a.orb__button-link.orb__button-link-inverted.print__hidden(href="#")
                 .orb__link-text Узнать больше
             img(src="/images/orb-report/qr_code_2.png").qr-code.print__visible
-          .orb-report-person-block.orb-report-person-block__3.orb__bottom-space-S
+          .orb-report-person-block.order__3.orb__bottom-space-S
             img(src="/images/orb-report/person_4.png")
             .info
               b Толпейкин Денис Владимирович 
@@ -207,125 +207,176 @@ block content
               a.orb__button-link.orb__button-link-inverted.print__hidden(href="#")
                 .orb__link-text Узнать больше
             img(src="/images/orb-report/qr_code_3.png").qr-code.print__visible
-          .orb-report-person-block.orb-report-person-block__4.orb__bottom-space-S
+          .orb-report-person-block.order__4.orb__bottom-space-S
             img(src="/images/orb-report/person_7.png")
             .info
               b Борисов Ян Евгеньевич
               p.orb__text-SM Директор государственного казенного учреждения «Центр информационных технологий Оренбургской области»
               a.orb__button-link.orb__button-link-inverted.print__hidden(href="#")
                 .orb__link-text Узнать больше
-            img(src="/images/orb-report/qr_code_4.png").qr-code.print__visible
-          
+            img(src="/images/orb-report/qr_code_4.png").qr-code.print__visible   
 
-        section.orb__top-space-L.print__new-page-break 
+        section.orb__bottom-space-L.print__new-page-break 
           h3 Организационная структура <br>и команда Минцифры
           .orb-report-full-img
             img(src="/images/tmp/orb_report_2021_screen_3.png")
 
-        section.orb__top-space-M.print__new-page-break 
-          h3.print__visible Организационная структура <br>и команда Минцифры <span class="orb__text-XS">(продолжение)</span>
-          .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-            .orb__grid-cell
-              h4 Образование
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_education.png")
-            .orb__grid-cell
-              h4 Cтаж в Минцифре
-              .report-50-percent-width-illustration
-                img(src="/images/tmp/orb_report_2021_stag.png")
-            .orb__grid-cell
-              h4 Команда <span class="orb__text-XS">(на 31.12.2021)</span>
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_team.png")
-            .orb__grid-cell
-              h4 Возраст
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_age.png")
+          section.orb__top-space-M.print__new-page-break 
+            h3.print__visible Организационная структура <br>и команда Минцифры <span class="orb__text-XS">(продолжение)</span>
+            .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+              .orb__grid-cell
+                h4 Образование
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_education.png")
+              .orb__grid-cell
+                h4 Cтаж в Минцифре
+                .report-50-percent-width-illustration
+                  img(src="/images/tmp/orb_report_2021_stag.png")
+              .orb__grid-cell
+                h4 Команда <span class="orb__text-XS">(на 31.12.2021)</span>
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_team.png")
+              .orb__grid-cell
+                h4 Возраст
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_age.png")
           
-        section.orb__top-space-L.print__new-page-break 
+        section.orb__bottom-space-L.print__new-page-break 
           h3 Организационная структура <br>и команда ГКУ«ЦИТ»  
           .orb-report-full-img
             img(src="/images/tmp/orb_report_2021_screen_4.png")
 
-        section.orb__top-space-M.print__new-page-break 
-          h3.print__visible Организационная структура <br>и команда ГКУ«ЦИТ» <span class="orb__text-XS">(продолжение)</span>
-          .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-            .orb__grid-cell
-              h4 Образование
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_education.png")
-              p.orb__text.orb__text-S Все сотрудники ГКУ «ЦИТ» имеют высшее образование, при этом 15 человек имеют 2 и более высших образования.
-            .orb__grid-cell
-              h4 Cтаж в Минцифре
-              .report-50-percent-width-illustration
-                img(src="/images/tmp/orb_report_2021_stag.png")
-            .orb__grid-cell
-              h4 Команда <span class="orb__text-XS">(на 31.12.2021)</span>
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_team.png")
-            .orb__grid-cell
-              h4 Возраст
-              .report-sm-illustration
-                img(src="/images/tmp/orb_report_2021_age.png")
+          section.orb__top-space-M.print__new-page-break 
+            h3.print__visible Организационная структура <br>и команда ГКУ«ЦИТ» <span class="orb__text-XS">(продолжение)</span>
+            .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+              .orb__grid-cell
+                h4 Образование
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_education.png")
+                p.orb__text.orb__text-S Все сотрудники ГКУ «ЦИТ» имеют высшее образование, при этом 15 человек имеют 2 и более высших образования.
+              .orb__grid-cell
+                h4 Cтаж в Минцифре
+                .report-50-percent-width-illustration
+                  img(src="/images/tmp/orb_report_2021_stag.png")
+              .orb__grid-cell
+                h4 Команда <span class="orb__text-XS">(на 31.12.2021)</span>
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_team.png")
+              .orb__grid-cell
+                h4 Возраст
+                .report-sm-illustration
+                  img(src="/images/tmp/orb_report_2021_age.png")
           
-        section.orb__top-space-L.print__new-page-break#learning
+        section.orb__bottom-space-L.print__new-page-break#learning
           .orb-report-picture-heading
             img(src="/images/orb-report/heading_bg.png")
             .bg
               h2 Обучение и саморазвитие
 
           .orb__text.orb__top-space-S
-            p 2021 году при поддержке министра цифрового развития и связи Оренбургской области Дениса Толпейкина большинство сотрудников министерства и ГКУ «ЦИТ» прошли ежегодной обучение. 
-            p В обучении участвовали сотрудники всех уровней: от специалистов до руководителей. Министр и его заместители также повышали свои профессиональные компетенции на базе Центра подготовки Руководителей цифровой трансформации РАНХиГС — они изучили программы по управленческому мастерству и реализации проектов цифровой трансформации.
-            p Программа обучение состояла из тематических и общих программ обучения и электронных курсов. Большинство освоенных программ посвящено профессиональному развитию в сфере цифровой трансформации и технологиям, основанными на работе с данными — обучение по ним  прошли 64 сотрудника Минцифры и ГКУ «ЦИТ».
-            p Основными площадками для получения новых знаний в 2021 году стали Центр подготовки руководителей цифровой трансформации на базе РАНХиГС и АНО ВО «Университет Иннополис». Процесс обучения в большей части проходил без отрыва от производства с применением дистанционных технологий.
+            p 2021 году при поддержке министра цифрового развития и связи Оренбургской области Дениса Толпейкина большинство сотрудников министерства и ГКУ «ЦИТ» прошли ежегодное обучение. 
+            p В обучении участвовали сотрудники всех уровней: от специалистов до руководителей. Министр и его заместители также повышали свои профессиональные компетенции на базе Центра подготовки Руководителей цифровой трансформации РАНХиГС — они изучили программы по управленческому мастерству и реализации проектов цифровой трансформации.
+            p Программа обучение состояла из тематических и общих программ обучения и электронных курсов. Большинство освоенных программ посвящено профессиональному развитию в сфере цифровой трансформации и технологиям, основанными на работе с данными — обучение по ним прошли <mark>64 сотрудника</mark> Минцифры и ГКУ «ЦИТ».
+            p Основными площадками для получения новых знаний в 2021 году стали Центр подготовки руководителей цифровой трансформации на базе РАНХиГС и АНО ВО «Университет Иннополис». Процесс обучения в большей части проходил без отрыва от производства с применением дистанционных технологий.
 
-        section.orb__top-space-L.print__new-page-break
+        section.orb__bottom-space-L.print__new-page-break
           h2 Ключевые цифры, рейтинги<br>и показатели 
           h3 Характеристика IT-отрасли <br>Оренбургской области
-          //- .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-          //-   .orb__grid-cell.orb__right-inner-space-M
-          //-     img(src="/images/orb-report/screen_it_1.png")
-          //-   .orb__grid-cell.orb__right-inner-space-M
-          //-    img(src="/images/orb-report/screen_it_2.png")
           .orb-report-full-img
               img(src="/images/tmp/orb_report_2021_screen_5.png")
-          p.orb__text <b>Источник:</b> Росстат. Данные об обороте организаций и числе занятых проводятся по состоянию на октябрь указанного года, остальные данные — на 1 января следующего.
+          p.orb__text.orb__text-S <b>Источник:</b> Росстат. Данные об обороте организаций и числе занятых проводятся по состоянию на октябрь указанного года, остальные данные — на 1 января следующего.
 
 
-        section.orb__top-space-L#rate 
-          h3.print__new-page-break Оренбургская область <br>в рейтингах и показателях
+        section.orb__bottom-space-L.print__new-page-break#rate 
+          h3 Оренбургская область <br>в рейтингах и показателях
           h4 Финансирование ИТ 
           .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number.major 61
+                span.number 61
                 p.orb__text место по ИКТ-бюджету среди 85 регионов РФ (по данным ФНС России)
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number.major 72
+                span.number 72
                 p.orb__text место по ИКТ-бюджету на душу населения (174,3 ₽/чел) среди 85 регионов РФ 
 
           h4 Связь и интернет
           .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number 4
+                span.number 4
                 p.orb__text место среди 85 регионов РФ по обеспечению домохозяйств широкополосным интернетом
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number 98%
+                span.number 98%
                 p.orb__text населения охвачены цифровым ТВ 
 
           h4 Госуслуги
           .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number 17,2%
+                span.number 17,2%
                 p.orb__text населения области получают государственные и муниципальные услуги в электронной форме
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number 90%
+                span.number 90%
                 p.orb__text населения полностью удовлетворены качеством предоставления электронных услуг
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.orb-report-factoid-number 16
+                span.number 16
                 p.orb__text место среди 85 регионов РФ по использованию населением госуслуг в электронной форме 
-          p Источники:<br> <a href="http://rosstat.gov.ru/storage/mediabank/lqv3T0Rk/info-ob2020.pdf">rosstat.gov.ru</a> и <a href="https://www.cnews.ru/news/top/2019-10-23_cnews_opublikoval_rejting_regionov">cnews.ru</a>
+          p.orb__text.orb__text-S Источники:<br> <a href="http://rosstat.gov.ru/storage/mediabank/lqv3T0Rk/info-ob2020.pdf">rosstat.gov.ru</a> и <a href="https://www.cnews.ru/news/top/2019-10-23_cnews_opublikoval_rejting_regionov">cnews.ru</a>
 
+        section.orb__bottom-space-L.print__new-page-break 
+          h2 Деятельность
+          h3 Национальная программа<br>«Цифровая экономика»
+          h4 Региональный проект «Кадры для цифровой экономики» 
+          .orb__text
+            p <b>Цель</b> — обеспечить доступность для населения обучения по программам дополнительного образования для получения новых и востребованных на рынке труда цифровых компетенций.
+            br
+            p <b>Задача</b> — выстроить преемственную на всех уровнях систему образования, включающую: 
+            ul 
+              li выявление и поддержку талантов в областях математики и информатики;
+              li подготовку высококвалифицированных кадров, отвечающих новым требованиям к ключевым компетенциям цифровой экономики;
+              li реализацию программ переподготовки по востребованным профессиям в условиях цифровой экономики, а также перспективных образовательных проектов.
+            br
+            p В рамках мероприятий проекта:
+            ul 
+              li Реализовано более <mark>15 образовательных программ</mark>, позволивших жителями Оренбургской области освоить ключевые компетенции цифровой экономики.
+              li <mark>5 должностных лиц</mark>, ответственных за цифровизацию в региональных органах власти, повысили компетенции по вопросам обеспечения работы проектов цифрового развития, работы с данными, работы с государственными информационными системами и цифровыми платформами, цифровой трансформации государственного управления, в том числе процессов предоставления государственных услуг.
+              li Продолжается реализация на территории Оренбургской области проектов «Лицей Академия Яндекса», «Яндекс.Учебник», «Я Учитель» и внедрение курсов от «Яндекс.Практикум» по анализу данных на базе ФГБОУ ВО «Оренбургский государственный университет».
+              li Реализована государственная программа дополнительного образования в сфере цифровой экономики при условиях 50% софинансирования от государства. <mark>439 оренбуржцев</mark> подали заявки на программы переподготовки и завершат обучение в 2022 году.
+              li Состоялся первый выпуск «Лицей Академии Яндекс» — двухлетнюю программу завершили <mark>33 выпускника</mark>. Проект реализуется на пяти площадках г.Оренбурга, г. Орска и г. Новотроицка. В нем участвуют 118 учащихся первого курса и 43 — второго.
+              li Продолжается апробация курса «Яндекс.Информатика» — сервиса «Яндекс.Учебник» для учеников 7-8 классов. В проекте участвуют <mark>1&thinsp;416 школьников</mark> из 70 школ Оренбургской области.
+              li Продолжается участие в проекте «Урок цифры». За год в образовательных мероприятиях приняли участие <mark>447&thinsp;411 учеников</mark> 1-11 классов.
+              li Оренбургская область стала участником пилотного запуска проекта «Программирование для школьников». Участие в проекте позволит школьникам региона старше 14 лет освоить современные языки программирования — обучение пройдет в 2022 году. От оренбургской области одобрено 778 заявок.
+          
+          section.print__new-page-break 
+            h4.print__visible Региональный проект «Кадры для цифровой экономики» 
+              .orb__text-S (продолжение)
+            h5 Достижение ключевых показателей
+            .orb__grid.orb__grid-size-XL.orb__grid-inset-L
+              .orb__grid-cell
+                p.orb__text.orb__text-S Количество государственных (муниципальных) служащих и работников учреждений, прошедших обучение компетенциям в сфере цифровой трансформации государственного и муниципального управления,<br>человек
+                .report-infographics 
+                  .info-item
+                    .bar.planning(style="width:35%") 142
+                    .caption План
+                  .info-item
+                    .bar(style="width:70%") 293
+                    .caption Факт
+              .orb__grid-cell 
+                p.orb__text.orb__text-S Количество специалистов, освоивших цифровые компетенции по программам повышения квалификации,<br>человек
+                .report-infographics 
+                  .info-item
+                    .bar.planning(style="width:70%") 116
+                    .caption План
+                  .info-item
+                    .bar(style="width:70%") 116
+                    .caption Факт
+              .orb__grid-cell 
+                p.orb__text.orb__text-S Количество учащихся, охваченных мероприятиями профориентации,<br>человек
+                .report-infographics 
+                  .info-item
+                    .bar.planning(style="width:25%;") 131&thinsp;550
+                    .caption План
+                  .info-item
+                    .bar(style="width:70%") 448&thinsp;988
+                    .caption Факт
+            p.orb__text-S Значения плановых показателей по состоянию на 01.12.2021
     include /designs/_dd-footer
 
 
