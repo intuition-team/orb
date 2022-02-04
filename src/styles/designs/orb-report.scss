@@ -247,6 +247,42 @@
   }
 }
 
+.orb-report-steps {
+  width: 80%;
+
+  ul {
+    li {
+      list-style-type: none;
+      padding-left: calc(#{$orb__density} * 1.4);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        content: " \2193";
+      }
+    }
+  }
+  .result {
+    position: relative;
+    padding-left: calc(#{$orb__density} * 1.4);
+    margin-top: calc(#{$orb__density} * 1.4);
+    svg {
+      position: absolute;
+      left: -0.3em;
+      fill: currentColor;
+    }
+    &-number {
+      color: rgba(var(--accent-RGB), 1);
+      font-size: 2em;
+      font-weight: 600;
+    }
+    &-text {
+      margin-top: calc(#{$orb__density} * 0.2);
+    }
+  }
+}
+
 .orb-report-full-img {
   width: 75%;
   margin-bottom: 2.5em;
