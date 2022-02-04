@@ -247,6 +247,54 @@
   }
 }
 
+.orb-report-steps {
+  width: 80%;
+
+  ul {
+    li {
+      list-style-type: none;
+      padding-left: calc(#{$orb__density} * 1.4);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        content: " \2193";
+        top: 0.1em;
+      }
+    }
+  }
+  .result {
+    position: relative;
+    padding-left: calc(#{$orb__density} * 1.4);
+    margin-top: calc(#{$orb__density} * 1.4);
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/orb-report/check_circle_outline_black_24dp.svg");
+      left: -0.3em;
+      width: 1.5em;
+      height: 1.5em;
+      background-size: 100%;
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    &-number {
+      color: rgba(var(--accent-RGB), 1);
+      font-size: 2em;
+      font-weight: 600;
+    }
+    &-text {
+      margin-top: calc(#{$orb__density} * 0.2);
+    }
+  }
+}
+
 .orb-report-full-img {
   width: 75%;
   margin-bottom: 2.5em;
