@@ -260,6 +260,7 @@
         position: absolute;
         left: 0;
         content: " \2193";
+        top: 0.1em;
       }
     }
   }
@@ -267,11 +268,22 @@
     position: relative;
     padding-left: calc(#{$orb__density} * 1.4);
     margin-top: calc(#{$orb__density} * 1.4);
-    svg {
+
+    &::before {
       position: absolute;
+      content: "";
+      background-image: url("/images/orb-report/check_circle_outline_black_24dp.svg");
       left: -0.3em;
-      fill: currentColor;
+      width: 1.5em;
+      height: 1.5em;
+      background-size: 100%;
+
+      @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     }
+
     &-number {
       color: rgba(var(--accent-RGB), 1);
       font-size: 2em;
