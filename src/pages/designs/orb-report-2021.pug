@@ -42,29 +42,29 @@ block content
           .orb__grid.orb__grid-size-L.orb__grid-inset-L.orb__text-S.mobile__hidden
             .orb__grid-cell
               h4
-                a(href="#") О Минцифре
+                a.js-scroll-link(href="#about") О Минцифре
               p
-                a(href="#history") Историческая справка
+                a.js-scroll-link(href="#history") Историческая справка
               p
-                a(href="#government") Минцифра в структуре Правительства Оренбургской области
+                a.js-scroll-link(href="#government") Минцифра в структуре Правительства Оренбургской области
               p
-                a(href="#") Организационная структура и команда Минцифры
+                a.js-scroll-link(href="#org1") Организационная структура и команда Минцифры
               p
-                a(href="#") Организационная структура и команда ГКУ «ЦИТ»
+                a.js-scroll-link(href="#org2") Организационная структура и команда ГКУ «ЦИТ»
               p
-                a(href="#learning") Обучение и саморазвитие
+                a.js-scroll-link(href="#learning") Обучение и саморазвитие
 
               h4.orb__top-space-M
-                a(href="#") Ключевые цифры, рейтинги и показатели 
+                a.js-scroll-link(href="#statistics") Ключевые цифры, рейтинги и показатели 
               p
-                a(href="#") Характеристика IT-отрасли Оренбургской области
+                a.js-scroll-link(href="#statistics1") Характеристика IT-отрасли Оренбургской области
               p
-                a(href="#rate") Оренбургская область в рейтингах и показателях
+                a.js-scroll-link(href="#statistics2") Оренбургская область в рейтингах и показателях
 
               h4.orb__top-space-M
-                a(href="#") Деятельность
+                a.js-scroll-link(href="#activity") Деятельность
               h5
-                a(href="#digital_economy") Национальная программа «Цифровая экономика»
+                a.js-scroll-link(href="#digital_economy") Национальная программа «Цифровая экономика»
               p
                 a(href="#") Региональный проект «Информационная инфраструктура»
               p
@@ -182,13 +182,13 @@ block content
               h5
                 a(href="#") Деятельность
               p
-                a(href="#digital_economy") Национальная программа «Цифровая экономика»
+                a(href="#") Национальная программа «Цифровая экономика»
               p
                 a(href="#") Связь и телекоммуникации 
               p
                 a(href="#") Электронное правительство
               p
-                a(href="#covid") Работа в период CoVID-19
+                a(href="#") Работа в период CoVID-19
               p
                 a(href="#") Обеспечение деятельности органов государственной власти Оренбургской области
             
@@ -212,7 +212,7 @@ block content
 
       .report
         section.orb__bottom-space-L.print__new-page-break 
-          h2 О Минцифре
+          h2#about О Минцифре
           h3#history Историческая справка
           .orb__grid.orb__grid-size-L
             .orb__grid-cell.orb__right-inner-space-M
@@ -302,7 +302,7 @@ block content
             img(src="/images/orb-report/qr_code_4.png").qr-code.print__visible   
 
         section.orb__bottom-space-L.print__new-page-break 
-          h3 Организационная структура <br>и команда Минцифры
+          h3#org1 Организационная структура <br>и команда Минцифры
           .orb-report-full-img
             img(src="/images/tmp/orb_report_2021_screen_3.png")
 
@@ -327,7 +327,7 @@ block content
                   img(src="/images/tmp/orb_report_2021_age.png")
           
         section.orb__bottom-space-L.print__new-page-break 
-          h3 Организационная структура <br>и команда ГКУ«ЦИТ»  
+          h3#org2 Организационная структура <br>и команда ГКУ«ЦИТ»  
           .orb-report-full-img
             img(src="/images/tmp/orb_report_2021_screen_4.png")
 
@@ -365,15 +365,15 @@ block content
             p Основными площадками для получения новых знаний в 2021 году стали Центр подготовки руководителей цифровой трансформации на базе РАНХиГС и АНО ВО «Университет Иннополис». Процесс обучения в большей части проходил без отрыва от производства с применением дистанционных технологий.
 
         section.orb__bottom-space-L.print__new-page-break
-          h2 Ключевые цифры, рейтинги<br>и показатели 
-          h3 Характеристика IT-отрасли <br>Оренбургской области
+          h2#statistics Ключевые цифры, рейтинги<br>и показатели 
+          h3#statistics1 Характеристика IT-отрасли <br>Оренбургской области
           .orb-report-full-img
               img(src="/images/tmp/orb_report_2021_screen_5.png")
           p.orb__text.orb__text-S <b>Источник:</b> Росстат. Данные об обороте организаций и числе занятых проводятся по состоянию на октябрь указанного года, остальные данные — на 1 января следующего.
 
 
-        section.orb__bottom-space-L.print__new-page-break#rate 
-          h3 Оренбургская область <br>в рейтингах и показателях
+        section.orb__bottom-space-L.print__new-page-break
+          h3#statistics2 Оренбургская область <br>в рейтингах и показателях
           h4 Финансирование ИТ 
           .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
@@ -406,7 +406,7 @@ block content
           p.orb__text.orb__text-S Источники:<br> <a href="http://rosstat.gov.ru/storage/mediabank/lqv3T0Rk/info-ob2020.pdf">rosstat.gov.ru</a> и <a href="https://www.cnews.ru/news/top/2019-10-23_cnews_opublikoval_rejting_regionov">cnews.ru</a>
 
         section.orb__bottom-space-L.print__new-page-break 
-          h2 Деятельность
+          h2#activity Деятельность
           h3#digital_economy Национальная программа<br>«Цифровая экономика»
           h4 Региональный проект «Кадры для цифровой экономики» 
           .orb__text
