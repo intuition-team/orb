@@ -312,6 +312,27 @@
   margin-top: 0.6em;
 }
 
+.orb-report-chapter-title {
+  height: 80vh;
+  display: flex;
+  background: radial-gradient(
+      67.96% 70.03% at 56.85% 86.42%,
+      rgba(229, 237, 246, 0.8) 0%,
+      rgba(232, 230, 239, 0) 100%
+    ),
+    linear-gradient(317.51deg, #71a5ec 28.16%, #2564d2 83.83%);
+  border-radius: 50px;
+  padding: 4em 3em;
+  margin-bottom: 5em;
+  color: white;
+  border-radius: 0.8em;
+
+  @media print {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 .print {
   &__new-page-break {
     page-break-before: always;
