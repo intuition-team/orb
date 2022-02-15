@@ -308,6 +308,17 @@
   margin-bottom: 2.5em;
 }
 
+.orb-report-fix-height-img {
+  height: 12em;
+  margin-bottom: 1em;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    width: inherit;
+  }
+}
+
 .orb__identity.orb-report-2021 {
   margin-top: 0.6em;
 }
