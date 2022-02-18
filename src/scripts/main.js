@@ -4,6 +4,7 @@ import "./awakeness";
 import "./scroll-link";
 import "./logo-downloads";
 import "./report-parallax";
+import "./charts";
 
 const ready = function() {
   scrollMagic();
