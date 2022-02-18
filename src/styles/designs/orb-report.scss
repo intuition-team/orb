@@ -457,3 +457,24 @@
     }
   }
 }
+.pie-conic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  // background: conic-gradient(#655 var(--p,50%), yellowgreen 0);
+  background: conic-gradient(
+    #2357c5 var(--p1, 10%),
+    #4979d1 0,
+    var(--p2, 20%),
+    #769ee5 0,
+    var(--p3, 0%),
+    #aac2f0 0,
+    var(--p4, 0%),
+    #ccd9f5 0
+  );
+
+  @media print {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
