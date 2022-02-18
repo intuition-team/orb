@@ -395,18 +395,20 @@
 
     &::before {
       content: attr(data-total);
-      display: block;
+      display: flex;
       position: absolute;
       z-index: 1;
-      width: 100px;
-      height: 100px;
-      background: #eee;
+      width: 120px;
+      height: 120px;
+      background: rgba(var(--background-RGB), 1);
       border-radius: 50%;
-      top: 50px;
-      left: 50px;
+      top: 40px;
+      left: 40px;
       line-height: 100px;
       text-align: center;
-      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9em;
     }
   }
 }
@@ -457,6 +459,10 @@
 
     &::before {
       content: "" !important;
+    }
+
+    span:last-child {
+      flex-shrink: 0;
     }
   }
 }

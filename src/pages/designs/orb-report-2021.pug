@@ -311,9 +311,9 @@ block content
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell
                 h4 Образование
-                .pieID.pieID--education.pie-chart--wrapper(data-id="education")
+                .pie-chart--wrapper(data-id="education")
                   .pie-chart
-                    .pie-chart__pie(data-total="250")
+                    .pie-chart__pie
                     ul.pie-chart__legend
                       li(data-value="48,6") 
                         span Инженерное
@@ -332,7 +332,7 @@ block content
                         span 9,5%
               .orb__grid-cell
                 h4 Cтаж в Минцифре
-                .pieID.pieID--education.pie-chart--wrapper
+                .pie-chart--wrapper(data-id="experience")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -351,7 +351,7 @@ block content
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell
                 h4 Возраст
-                .pieID.pieID--education.pie-chart--wrapper
+                .pie-chart--wrapper(data-id="age")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -360,7 +360,7 @@ block content
                         span 14%
                       li(data-value="50")
                         span 31-40
-                        span 21,5%
+                        span 50%
                       li(data-value="22")
                         span 41-50
                         span 22%
@@ -384,7 +384,7 @@ block content
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell
                 h4 Образование
-                .pieID.pieID--education.pie-chart--wrapper
+                .pie-chart--wrapper(data-id="education_CIT")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -405,7 +405,7 @@ block content
                         span 5%
               .orb__grid-cell
                 h4 Cтаж в ГКУ ГКУ«ЦИТ»
-                .pieID.pieID--education.pie-chart--wrapper
+                .pie-chart--wrapper(data-id="experience_CIT")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -424,7 +424,7 @@ block content
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L  
               .orb__grid-cell
                 h4 Возраст
-                .pieID.pieID--education.pie-chart--wrapper
+                .pie-chart--wrapper(data-id="age_CIT")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -998,28 +998,29 @@ block content
           .orb-report-picture-heading
             img(src="/images/orb-report/e-government.jpg")
             .bg
-              h2 Электронное правительство
+              h1 Электронное правительство
           
-          section.orb__bottom-space-L.print__new-page-break
-            p На территории Оренбургской области функционирует инфраструктура электронного правительства. Она включает в себя информационные системы и сервисы, направленные на обеспечение взаимодействия граждан и организаций с государством, а также различных органов власти между собой.
-            p Среди них:
-              ul
-                li Портал государственных услуг — <a href="http://gosuslugi.ru">gosuslugi.ru</a>;
-                li Региональная система межведомственного электронного взаимодействия;
-                li Государственная информационная система оказания услуг в многофункциональных центрах области;
-                li Система электронного документооборота органов исполнительной власти и органов местного самоуправления;
-                li Ведомственные государственные информационные системы органов власти Оренбургской области;
-                li Центр обработки данных Правительства Оренбургской области;
-                li Единая информационно-телекоммуникационная сеть.
+          section.orb__bottom-space-L
+            .orb__text
+              p На территории Оренбургской области функционирует инфраструктура электронного правительства. Она включает в себя информационные системы и сервисы, направленные на обеспечение взаимодействия граждан и организаций с государством, а также различных органов власти между собой.
+              p Среди них:
+                ul
+                  li Портал государственных услуг — <a href="http://gosuslugi.ru">gosuslugi.ru</a>;
+                  li Региональная система межведомственного электронного взаимодействия;
+                  li Государственная информационная система оказания услуг в многофункциональных центрах области;
+                  li Система электронного документооборота органов исполнительной власти и органов местного самоуправления;
+                  li Ведомственные государственные информационные системы органов власти Оренбургской области;
+                  li Центр обработки данных Правительства Оренбургской области;
+                  li Единая информационно-телекоммуникационная сеть.
             
           section.orb__top-space-L.print__new-page-break
             .orb-report-picture-heading
               img(src="/images/orb-report/portal gosuslugi.jpg")
               .bg
                 h2 Портал госуслуг
-            
-            section.orb__top-space-M.print__new-page-break
-              p Оренбургская область не создает региональный портал государственных услуг. Вместо этого все региональные и муниципальные услуги и сервисы выводятся на федеральный портал. Так граждане получают доступ ко всем электронным государственным услугам на одной платформе — вне зависимости, органами какого уровня они предоставляются.       
+  
+            section
+              p.orb__text Оренбургская область не создает региональный портал государственных услуг. Вместо этого все региональные и муниципальные услуги и сервисы выводятся на федеральный портал. Так граждане получают доступ ко всем электронным государственным услугам на одной платформе — вне зависимости, органами какого уровня они предоставляются.       
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                   span.number 16 
@@ -1027,7 +1028,6 @@ block content
                 .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                   span.number 2,2 млн
                   p.orb__text заявлений на получение всех видов услуг, включая федеральные, подано на портале Госуслуг за 2021 год 
-              .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                   span.number 162
                   p.orb__text из 247 госуслуг, оказываемых органами исполнительной власти, органов местного самоуправления и подведомственных учреждений переведены в электронный вид
@@ -1035,57 +1035,167 @@ block content
                   span.number 97%
                   p.orb__text жителей Оренбургской области в возрасте старше 14 лет зарегистрированы на портале Госуслуг
             
-            h3 Популярные услуги
-            section.orb__top-space-M.print__new-page-break
-              h4 Топ-3 популярных услуг:
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/stat top 3 gosuslugi.jpg")
-              section.orb__top-space-L.print__new-page-break
-                h4 Детализация по типам и сумме платежей:
-                  .orb-report-report-50-percent-width-illustration
-                    img(src="/images/orb-report/stat tip plategey.jpg")
-              section.orb__top-space-L.print__new-page-break
-            h3 Портрет посетителя
-            section.orb__top-space-M.print__new-page-break
+            section
+              h3 Популярные услуги
+              .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+                .orb__grid-cell
+                  h4 Топ-3 популярных услуг
+                  .pie-chart--wrapper(data-id="services_top_3")
+                    .pie-chart
+                      .pie-chart__pie(data-total="2,2 млн")
+                      ul.pie-chart__legend
+                        li(data-value="619") 
+                          span Запись на приём к врачу
+                          span 619,4 тыс.
+                        li(data-value="238")
+                          span Выплата 10 000 рублей на детей школьного возраста
+                          span 238,8 тыс.
+                        li(data-value="216")
+                          span Информирование зарегистрированных лиц о состоянии их индивидуальных лицевых счетов
+                          span 216,6 тыс.
+                        li(data-value="1100")
+                          span Прочие
+                          span 1,1 млн
+                .orb__grid-cell
+                  h4 Детализация по типам и сумме платежей
+                  .pie-chart--wrapper(data-id="types_and_sum_details")
+                    .pie-chart
+                      .pie-chart__pie(data-total="483,5 млн ₽")
+                      ul.pie-chart__legend
+                        li(data-value="245") 
+                          span Судебные задолженности
+                          span 245,1 млн ₽
+                        li(data-value="123")
+                          span Штрафы
+                          span 123,1 млн ₽
+                        li(data-value="110")
+                          span Госпошлины
+                          span 110,4 млн ₽
+                        li(data-value="89")
+                          span Налоги
+                          span 89,1 млн ₽
+                        li(data-value="25")
+                          span Другие
+                          span 25,4 млн ₽
+
+            section
+              h3 Портрет посетителя
               h4 Возраст и пол посетителей
                 .orb-report-report-50-percent-width-illustration
                   img(src="/images/orb-report/stat vosrast posetiteley.jpg")
-            section.orb__top-space-L.print__new-page-break
-              h4 Типы устройств
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/stat tip ustroystv.jpg")
-              h4 Детализация по типам и сумме платежей:
-            .orb-report-report-50-percent-width-illustration
-            img(src="/images/orb-report/stat tip plategey.jpg")
-          section.orb__top-space-L.print__new-page-break  
-            h3 Единая система межведомственного электронного взаимодействия
-          section.orb__top-space-M.print__new-page-break
-          p Единая система межведомственного электронного взаимодействия (СМЭВ)  — государственная информационная система, предназначенная для организации информационного взаимодействия между информационными системами федеральных органов исполнительной власти, государственных внебюджетных фондов, исполнительных органов государственной власти субъектов РФ, органов местного самоуправления, государственных и муниципальных учреждений, многофункциональных центров, а также иных органов и организаций.
-          p Цель СМЭВ — повышение качества предоставления государственных и муниципальных услуг и исполнения государственных и муниципальных функций за счет использования общих информационных ресурсов, уменьшения времени на поиск и обработку информации в электронной форме.
-          .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-            .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-              span.number 28 
-              p.orb__text место среди 85 регионов РФ занимает Оренбургская область по количеству направленных межведомственных запросов через СМЭВ версии 2
-            .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-              span.number 40
-              p.orb__text место среди 85 регионов РФ занимает Оренбургская область по количеству направленных межведомственных запросов через СМЭВ версии 3.хх 
-          .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-            .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-              span.number 77
-              p.orb__text информационных систем органов исполнительной власти и местного самоуправления Оренбургской области подключено к СМЭВ 
-            .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-              span.number 108,8 млн
-              p.orb__text документов (сведений) направленно через СМЭВ за 2021 год
-            section.orb__top-space-S.print__new-page-break
-              p В Оренбургской области используется СМЭВ версии 2.х. 
-              p С 2019 года регион приступил к переходу на новую версию — СМЭВ 3.х. Преимущество СМЭВ 3.х перед версией второго поколения — возможность асинхронного взаимодействия. Благодаря этому сообщения гарантированно доходят до адресатов, хранятся дольше — до 15 дней, могут занимать до 1ГБ.
-              p В планах в течение 2022 года полностью перевести регион на работу в СМЭВ 3.х.
-            section.orb__top-space-S.print__new-page-break
+
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/SMEV.jpg")
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/SMEV 2.jpg")
+                .orb__grid-cell
+                  h4 Типы устройств
+                  .pie-chart--wrapper(data-id="devices_types")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="51") 
+                          span Смартфоны и планшеты
+                          span 51%
+                        li(data-value="49")
+                          span ПК
+                          span 49%
+                .orb__grid-cell
+                  h4 Количество посещений
+                  .pie-chart--wrapper(data-id="amount_of_visits")
+                    .pie-chart
+                      .pie-chart__pie(data-total="1,28 млн")
+                      ul.pie-chart__legend
+                        li(data-value="1010") 
+                          span Оренбург
+                          span 1,01 млн
+                        li(data-value="88")
+                          span Орск
+                          span 88 тыс.
+                        li(data-value="77")
+                          span Бузулук
+                          span 77 тыс.
+                        li(data-value="58")
+                          span Новотроицк
+                          span 58 тыс.
+                        li(data-value="49")
+                          span Остальные
+                          span 49 тыс.
+
+            section.print__new-page-break  
+              h3 Единая система межведомственного<br>электронного взаимодействия
+              .orb__text
+                p Единая система межведомственного электронного взаимодействия (СМЭВ)  — государственная информационная система, предназначенная для организации информационного взаимодействия между информационными системами федеральных органов исполнительной власти, государственных внебюджетных фондов, исполнительных органов государственной власти субъектов РФ, органов местного самоуправления, государственных и муниципальных учреждений, многофункциональных центров, а также иных органов и организаций.
+                p Цель СМЭВ — повышение качества предоставления государственных и муниципальных услуг и исполнения государственных и муниципальных функций за счет использования общих информационных ресурсов, уменьшения времени на поиск и обработку информации в электронной форме.
+              .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+                .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
+                  span.number 28 
+                  p.orb__text место среди 85 регионов РФ занимает Оренбургская область по количеству направленных межведомственных запросов через СМЭВ версии 2
+                .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
+                  span.number 40
+                  p.orb__text место среди 85 регионов РФ занимает Оренбургская область по количеству направленных межведомственных запросов через СМЭВ версии 3.хх 
+                .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
+                  span.number 77
+                  p.orb__text информационных систем органов исполнительной власти и местного самоуправления Оренбургской области подключено к СМЭВ 
+                .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
+                  span.number 108,8 <span class="orb__text-S">млн</span>
+                  p.orb__text документов (сведений) направленно через СМЭВ за 2021 год
+              .orb__text
+                p В Оренбургской области используется СМЭВ версии 2.х. 
+                p С 2019 года регион приступил к переходу на новую версию — СМЭВ 3.х. Преимущество СМЭВ 3.х перед версией второго поколения — возможность асинхронного взаимодействия. Благодаря этому сообщения гарантированно доходят до адресатов, хранятся дольше — до 15 дней, могут занимать до 1ГБ.
+                p В планах в течение 2022 года полностью перевести регион на работу в СМЭВ 3.х.
+            
+              .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+                .orb__grid-cell
+                  h5 Общее количество участников взаимодействия, подключенных к СМЭВ (всего 113 участников)
+                  .pie-chart--wrapper(data-id="SMEV_members")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="58") 
+                          span СМЭВ 3.х
+                          span 58 участников
+                        li(data-value="55")
+                          span СМЭВ 2.х
+                          span 55 участников
+                .orb__grid-cell
+                  h5 Общее количество запросов, предоставляемых через СМЭВ (всего 108,8 млн запросов)
+                  .pie-chart--wrapper(data-id="SMEV_requests")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="110") 
+                          span Запросы федеральный сведений
+                          span 110,9 млн
+                        li(data-value="1,5")
+                          span Запросы региональных сведений
+                          span ≈1,5 млн
+              h4 Виды документов (сведений),<br>доступных участникам взаимодействия через СМЭВ 
+              .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
+                .orb__grid-cell
+                  h5 Сведения, находящиеся в распоряжении федеральных органов исполнительной власти 
+                  .pie-chart--wrapper(data-id="SMEV_federal")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="255") 
+                          span СМЭВ 3.х
+                          span 255 видов
+                        li(data-value="48")
+                          span СМЭВ 2.х
+                          span 48 видов
+                  p * всего 303 вида сведений
+                .orb__grid-cell
+                  h5 Сведения, находящиеся в распоряжении региональных органов исполнительной власти
+                  .pie-chart--wrapper(data-id="SMEV_regional")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="3") 
+                          span СМЭВ 3.х
+                          span 3 вида
+                        li(data-value="30")
+                          span СМЭВ 2.х
+                          span 30 видов
+                  p * всего 33 вида сведений     
+
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb-report-report-50-percent-width-illustration
                   img(src="/images/orb-report/SMEV 3.jpg")
@@ -1704,46 +1814,46 @@ block content
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell
                   h4 Основные вопросы обращений граждан
-                    .pieID.pieID--education.pie-chart--wrapper
-                      .pie-chart
-                        .pie-chart__pie
-                        ul.pie-chart__legend
-                          li(data-value="45") 
-                           span Интернет
-                           span 45%
-                          li(data-value="25")
-                            span Мобильная связь
-                            span 25%
-                          li(data-value="10")
-                            span ТВ и радио
-                            span 16,2%
-                          li(data-value="10")
-                            span Стационарная телефония
-                            span 10%
-                          li(data-value="8")
-                            span Возвращение из-за рубежа
-                            span 8%
-                          li(data-value="2")
-                            span Госуслуги и иные вопросы
-                            span 2%
+                  .pie-chart--wrapper(data-id="citizens_questions")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="45") 
+                          span Интернет
+                          span 45%
+                        li(data-value="25")
+                          span Мобильная связь
+                          span 25%
+                        li(data-value="10")
+                          span ТВ и радио
+                          span 16,2%
+                        li(data-value="10")
+                          span Стационарная телефония
+                          span 10%
+                        li(data-value="8")
+                          span Возвращение из-за рубежа
+                          span 8%
+                        li(data-value="2")
+                          span Госуслуги и иные вопросы
+                          span 2%
                 .orb__grid-cell
                   h4 Источники поступления обращений граждан
-                    .pieID.pieID--education.pie-chart--wrapper
-                      .pie-chart
-                        .pie-chart__pie
-                        ul.pie-chart__legend
-                          li(data-value="68,9") 
-                            span Отдел по работе с обращениями граждан аппарата губернатора и Правительства области
-                            span 68,9%
-                          li(data-value="22,5")
-                            span Социальные сети
-                            span 21,5%
-                          li(data-value="7,3")
-                            span Интернет-приемная
-                            span 7,3%
-                          li(data-value="1,2")
-                            span Электронная почта
-                            span 1,2%
+                  .pie-chart--wrapper(data-id="citizens_requests_sources")
+                    .pie-chart
+                      .pie-chart__pie
+                      ul.pie-chart__legend
+                        li(data-value="68,9") 
+                          span Отдел по работе с обращениями граждан аппарата губернатора и Правительства области
+                          span 68,9%
+                        li(data-value="22,5")
+                          span Социальные сети
+                          span 21,5%
+                        li(data-value="7,3")
+                          span Интернет-приемная
+                          span 7,3%
+                        li(data-value="1,2")
+                          span Электронная почта
+                          span 1,2%
                           
 
 

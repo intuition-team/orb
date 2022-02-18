@@ -69,7 +69,6 @@ const ready = function() {
 
     $(dataElement + " li").each(function() {
       let value = $(this).data("value");
-      // debugger;
       listData.push(parseFloat(value));
     });
 
@@ -81,6 +80,13 @@ const ready = function() {
       let size = sliceSize(listData[i], listTotal);
 
       let currentColor = color[i];
+      if (listData.length < 6) {
+        currentColor = color[i + 1];
+      }
+      if (listData.length == 2) {
+        currentColor = color[i + i + 1];
+      }
+
       iterateSlices(id, size, pieElement, offset, i, 0, currentColor);
       $(dataElement + " li:nth-child(" + (i + 1) + ")").css(
         "border-color",
