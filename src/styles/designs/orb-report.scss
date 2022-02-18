@@ -394,7 +394,7 @@
     margin: 10px auto 35px;
 
     &::before {
-      content: "";
+      content: attr(data-total);
       display: block;
       position: absolute;
       z-index: 1;
@@ -404,6 +404,9 @@
       border-radius: 50%;
       top: 50px;
       left: 50px;
+      line-height: 100px;
+      text-align: center;
+      vertical-align: middle;
     }
   }
 }

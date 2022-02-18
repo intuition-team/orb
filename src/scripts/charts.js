@@ -58,11 +58,13 @@ const ready = function() {
     const dataElement = id + " .pie-chart__legend";
 
     const color = [
+      "rgb(38, 69, 130)",
       "rgb(35, 87, 197)",
       "rgb(73, 121, 209)",
       "rgb(118, 158, 229)",
       "rgb(170, 194, 240)",
-      "rgb(204, 217, 245)"
+      "rgb(204, 217, 245)",
+      "rgb(231, 238, 255)"
     ];
 
     $(dataElement + " li").each(function() {
@@ -77,31 +79,23 @@ const ready = function() {
 
     for (i = 0; i < listData.length; i++) {
       let size = sliceSize(listData[i], listTotal);
-      // debugger;
-      iterateSlices(id, size, pieElement, offset, i, 0, color[i]);
+
+      let currentColor = color[i];
+      iterateSlices(id, size, pieElement, offset, i, 0, currentColor);
       $(dataElement + " li:nth-child(" + (i + 1) + ")").css(
         "border-color",
-        color[i]
+        currentColor
       );
       offset += size;
     }
   }
 
-  // function shuffle(a) {
-  //     var j, x, i;
-  //     for (i = a.length; i; i--) {
-  //         j = Math.floor(Math.random() * i);
-  //         x = a[i - 1];
-  //         a[i - 1] = a[j];
-  //         a[j] = x;
-  //     }
-
-  //     return a;
-  // }
-
   function createPieCharts() {
     // debugger;
-    createPie(".pieID--education");
+    $(".pie-chart--wrapper").each(function() {
+      let id = $(this).data("id");
+      if (id) createPie('[data-id="' + $(this).data("id") + '"]');
+    });
   }
 
   createPieCharts();
