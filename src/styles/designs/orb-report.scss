@@ -466,24 +466,29 @@
     }
   }
 }
-.pie-conic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  // background: conic-gradient(#655 var(--p,50%), yellowgreen 0);
-  background: conic-gradient(
-    #2357c5 var(--p1, 10%),
-    #4979d1 0,
-    var(--p2, 20%),
-    #769ee5 0,
-    var(--p3, 0%),
-    #aac2f0 0,
-    var(--p4, 0%),
-    #ccd9f5 0
-  );
+.orb-report-table {
+  border-collapse: collapse;
+  font-size: 0.8em;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
 
-  @media print {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  thead {
+    background-color: rgba(var(--link-RGB), 0.1);
+  }
+  tr {
+    border-bottom: 1px solid rgba(var(--link-RGB), 0.2);
+  }
+  td,
+  th {
+    padding: 0.4em;
+    &.fix-width-centered {
+      width: 6em;
+      text-align: center;
+    }
+  }
+  th {
+    font-weight: 500;
+    text-transform: uppercase;
   }
 }
