@@ -351,7 +351,7 @@ block content
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell
                 h4 Возраст
-                .pie-chart--wrapper(data-id="age")
+                .pie-chart--wrapper(data-id="age MCR")
                   .pie-chart
                     .pie-chart__pie
                     ul.pie-chart__legend
@@ -404,7 +404,7 @@ block content
                         span Иное
                         span 5%
               .orb__grid-cell
-                h4 Cтаж в ГКУ ГКУ«ЦИТ»
+                h4 Cтаж в ГКУ«ЦИТ»
                 .pie-chart--wrapper(data-id="experience_CIT")
                   .pie-chart
                     .pie-chart__pie
@@ -1037,6 +1037,7 @@ block content
             
             section
               h3 Популярные услуги
+              .orb__top-space-M.print__new-page-break
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell
                   h4 Топ-3 популярных услуг
@@ -1061,63 +1062,66 @@ block content
                   .pie-chart--wrapper(data-id="types_and_sum_details")
                     .pie-chart
                       .pie-chart__pie(data-total="483,5 млн ₽")
-                        ul.pie-chart__legend
-                          li(data-value="245") 
-                            span Судебные задолженности
-                            span 245,1 млн ₽
-                          li(data-value="123")
-                            span Штрафы
-                            span 123,1 млн ₽
-                          li(data-value="110")
-                            span Госпошлины
-                            span 110,4 млн ₽
-                          li(data-value="89")
-                            span Налоги
-                            span 89,1 млн ₽
-                          li(data-value="25")
-                            span Другие
-                            span 25,4 млн ₽
-
+                      ul.pie-chart__legend
+                        li(data-value="245") 
+                          span Судебные задолженности
+                          span 245,1 млн ₽
+                        li(data-value="123")
+                          span Штрафы
+                          span 123,1 млн ₽
+                        li(data-value="110")
+                          span Госпошлины
+                          span 110,4 млн ₽
+                        li(data-value="89")
+                          span Налоги
+                          span 89,1 млн ₽
+                        li(data-value="25")
+                          span Другие
+                          span 25,4 млн ₽
+                            
            
             section
               h3 Портрет посетителя
+              .orb__top-space-M.print__new-page-break
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell
                   h4 Возраст
-                  .pie-chart--wrapper(data-id="age")
+                  .pie-chart--wrapper(data-id="age customer portal")
                     .pie-chart
                       .pie-chart__pie
-                        ul.pie-chart__legend
-                          li(data-value="9") 
-                            span 18-24 
-                            span 9%
-                          li(data-value="40")
-                            span 25-34
-                            span 40%
-                          li(data-value="29")
-                            span 35-44
-                            span 29%
-                          li(data-value="13")
-                            span 45-54
-                            span 13%
-                          li(data-value="9")
-                            span 55+
-                            span 9%
+                      ul.pie-chart__legend
+                        li(data-value="9") 
+                          span 18-24 
+                          span 9%
+                        li(data-value="40")
+                          span 25-34
+                          span 40%
+                        li(data-value="29")
+                          span 34-44
+                          span 29%
+                        li(data-value="13")
+                          span 45-54
+                          span 13%
+                        li(data-value="9")
+                          span 55+
+                          span 9%
+
+
                 .orb__grid-cell
                   h4 Пол
-                  .pie-chart--wrapper(data-id="amount_of_visits")
+                  .pie-chart--wrapper(data-id="pol")
                     .pie-chart
                       .pie-chart__pie(data-total="2,2 млн")
                       ul.pie-chart__legend
                         li(data-value="53") 
                           span женщины
-                          span 1,2 млн
+                          span 1,2 млн заявлений
                         li(data-value="27")
                           span мужчины
-                          span 594,7 тыс.
+                          span 594,7 тыс. заявлений
                         li(data-value="20")
                           span пол не указан
-                          span 436,7 тыс.
+                          span 436,7 тыс. заявлений
               
 
                               
@@ -1181,10 +1185,10 @@ block content
             
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
                 .orb__grid-cell
-                  h5 Общее количество участников взаимодействия, подключенных к СМЭВ (всего 113 участников)
+                  h5 Общее количество участников взаимодействия, подключенных к СМЭВ
                   .pie-chart--wrapper(data-id="SMEV_members")
                     .pie-chart
-                      .pie-chart__pie
+                      .pie-chart__pie(data-total="113")
                       ul.pie-chart__legend
                         li(data-value="58") 
                           span СМЭВ 3.х
@@ -1193,10 +1197,10 @@ block content
                           span СМЭВ 2.х
                           span 55 участников
                 .orb__grid-cell
-                  h5 Общее количество запросов, предоставляемых через СМЭВ (всего 108,8 млн запросов)
+                  h5 Общее количество запросов, предоставляемых через СМЭВ 
                   .pie-chart--wrapper(data-id="SMEV_requests")
                     .pie-chart
-                      .pie-chart__pie
+                      .pie-chart__pie(data-total="108,8 млн")
                       ul.pie-chart__legend
                         li(data-value="110") 
                           span Запросы федеральный сведений
@@ -1210,7 +1214,7 @@ block content
                   h5 Сведения, находящиеся в распоряжении федеральных органов исполнительной власти 
                   .pie-chart--wrapper(data-id="SMEV_federal")
                     .pie-chart
-                      .pie-chart__pie
+                      .pie-chart__pie(data-total="303 вида")
                       ul.pie-chart__legend
                         li(data-value="255") 
                           span СМЭВ 3.х
@@ -1218,12 +1222,12 @@ block content
                         li(data-value="48")
                           span СМЭВ 2.х
                           span 48 видов
-                  p * всего 303 вида сведений
+                  
                 .orb__grid-cell
                   h5 Сведения, находящиеся в распоряжении региональных органов исполнительной власти
                   .pie-chart--wrapper(data-id="SMEV_regional")
                     .pie-chart
-                      .pie-chart__pie
+                      .pie-chart__pie(data-total="33 вида")
                       ul.pie-chart__legend
                         li(data-value="3") 
                           span СМЭВ 3.х
@@ -1231,13 +1235,48 @@ block content
                         li(data-value="30")
                           span СМЭВ 2.х
                           span 30 видов
-                  p * всего 33 вида сведений     
+                       
 
               .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/SMEV 3.jpg")
-                .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/SMEV 4.jpg")
+                .orb__grid-cell
+                  h4 ТОП 3 поставщиков сведений в СМЭВ из ФОИВ
+                  .pie-chart--wrapper(data-id="top_3_information provider_FOIV")
+                    .pie-chart
+                      .pie-chart__pie(data-total="108,8")
+                      ul.pie-chart__legend
+                        li(data-value="15") 
+                          span Федеральная служба государственной регистрации кадастра и картографии
+                          span 16,1 млн
+                        li(data-value="6")
+                          span Акционерное общество Почта России
+                          span 5,9 млн
+                        li(data-value="4")
+                          span Федеральное казначейство
+                          span 5,1 млн
+                        li(data-value="75")
+                          span Иные 
+                          span 81,7 млн
+
+                .orb__grid-cell
+                  h4 ТОП 3 потребителей сведений в СМЭВ из ОИВ
+                  .pie-chart--wrapper(data-id="top_3_information consumers_OIV")
+                    .pie-chart
+                      .pie-chart__pie(data-total="108,8")
+                      ul.pie-chart__legend
+                        li(data-value="27") 
+                          span Минцифра Оренбургской области 
+                          span 24,6 млн
+                        li(data-value="10")
+                          span АО «БАНК ОРЕНБУРГ»
+                          span 8,9 млн
+                        li(data-value="1")
+                          span Министерство сельского хозяйства, пищевой и перерабатывающей промышленности Оренбургской области
+                          span 1,1 млн
+                        li(data-value="81")
+                          span Иные 
+                          span 74,2 млн  
+                
+                
           section.orb__top-space-L.print__new-page-break
             .orb-report-picture-heading
               img(src="/images/orb-report/MFC.jpg")
@@ -1263,8 +1302,28 @@ block content
                 .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                   span.number 233,8 млн ₽
                   p.orb__text госпошлины оплачено через МФЦ
+              
+              
               .orb-report-report-50-percent-width-illustration
-                  img(src="/images/orb-report/MFC diagram.jpg")
+                  h4 ТОП 3 популярных услуг по количеству принятых заявлений за 2021 год по всем МФЦ Оренбургской области
+                  .pie-chart--wrapper(data-id="services_top_3 MFC")
+                    .pie-chart
+                      .pie-chart__pie(data-total="1,2 млн")
+                      ul.pie-chart__legend
+                        li(data-value="32") 
+                          span Государственная услуга по государственному кадастровому учету недвижимого имущества и (или) государственной регистрации прав на недвижимое имущество и сделок с ним  
+                          span 380,7 тыс.
+                        li(data-value="7")
+                          span Предоставление сведений, содержащихся в Едином государственном реестре недвижимости  
+                          span 78,7 тыс.
+                        li(data-value="6")
+                          span Регистрация по месту жительства граждан РФ на территории РФ
+                          span 71,2 тыс.
+                        li(data-value="56")
+                          span Иные 
+                          span 677,3 тыс. 
+
+
           section.orb__top-space-L.print__new-page-break
             .orb-report-picture-heading
               img(src="/images/orb-report/SED cover.jpg")
@@ -1276,7 +1335,7 @@ block content
             p Министерство определено государственным заказчиком системы. ГКУ «ЦИТ» — оператор системы, на базе которого создана служба технической поддержки.
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 14 140 
+                span.number 14,1 
                 p.orb__text пользователей СЭД
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                 span.number 458
@@ -1444,29 +1503,26 @@ block content
             
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 12 421 176 
-                p.orb__text Обращений к электронному дневнику 
+                span.number 12,4 млн 
+                p.orb__text обращений к электронному дневнику 
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 10 515 
+                span.number 10,5 тыс. 
                 p.orb__text заявлений подано на предоставление доступа к электронному дневнику
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 8 593 
+                span.number 8,6 тыс. 
                 p.orb__text ответов о текущей успеваемости учащегося предоставлено через единый портал Госуслуг
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 23 778 
-                p.orb__text количество учителей
+                span.number 23,8 тыс. 
+                p.orb__text учителей
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 17 432 
-                p.orb__text количество электронных журналов
+                span.number 17,4 тыс. 
+                p.orb__text электронных журналов
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 239 676 
-                p.orb__text количество обучающихся
+                span.number 239,7 тыс. 
+                p.orb__text обучающихся
             .orb__grid.orb__grid-size-XXL.orb__grid-inset-L
-              .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
-                span.number 17 432 
-                p.orb__text количество электронных журналов
               .orb__grid-cell.orb__right-inner-space-M.orb-report-factoid
                 span.number 509 
                 p.orb__text образовательных организаций, использующих электронные журналы в АИС «Цифровое образование Оренбуржья»
