@@ -25,7 +25,7 @@
   border-radius: 0.8em;
   overflow: hidden;
 
-  background-image: url("/images/orb-report/future-bg-1.png");
+  background-image: url("/images/orb-report/future-bg-11.png");
   background-size: contain;
 
   @media print {
@@ -80,8 +80,9 @@
     }
   }
 }
+
 .orb-report-person-block {
-  height: 8em;
+  min-height: 8em;
   color: white;
   display: flex;
   flex-direction: row;
@@ -154,6 +155,16 @@
   }
 }
 
+.orb-report-heading {
+  display: flex;
+  width: 100%;
+  img {
+    width: 22%;
+    margin-top: -1.2em;
+    object-fit: contain;
+  }
+}
+
 .orb-report-picture-heading {
   position: relative;
   display: flex;
@@ -191,10 +202,9 @@
       print-color-adjust: exact;
     }
 
-    h2,
-    h3 {
+    h2 {
       color: white;
-      font-weight: 600;
+      font-weight: 500;
       margin: 0;
     }
   }
@@ -304,13 +314,23 @@
   }
 }
 
-.orb-report-full-img {
+.orb-report-img-75 {
   width: 75%;
   margin-bottom: 2.5em;
 }
+.orb-report-container-85 {
+  width: 85%;
+}
+.aside-shadow {
+  box-shadow: 0 0.5em 1.5em 0 rgba(var(--link-RGB), 0.1);
+  background: white;
+  padding: 1.8em 3em 2em 2em;
+  margin: 3em -2em;
+  border-radius: 0.5em;
+}
 
 .orb-report-fix-height-img {
-  height: 12em;
+  height: 5em;
   margin-bottom: 1em;
 
   img {
@@ -325,19 +345,36 @@
 }
 
 .orb-report-chapter-title {
-  height: 80vh;
   display: flex;
-  background: radial-gradient(
-      67.96% 70.03% at 56.85% 86.42%,
-      rgba(229, 237, 246, 0.8) 0%,
-      rgba(232, 230, 239, 0) 100%
-    ),
-    linear-gradient(317.51deg, #71a5ec 28.16%, #2564d2 83.83%);
-  border-radius: 50px;
-  padding: 4em 3em;
+  flex-direction: column;
+  background: #5c9cf6;
+  padding: 1.6em 2em 3em 2em;
   margin-bottom: 5em;
   color: white;
-  border-radius: 0.8em;
+  border-radius: 0.2em;
+
+  @media #{$mobile} {
+    padding: 1em 1.2em 2em 1.2em;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+
+    @media #{$mobile} {
+      font-size: 1.8em;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid rgba(var(--background-RGB), 0.2);
+    color: rgba(var(--background-RGB), 0.9);
+
+    &:hover {
+      border-bottom: 1px solid rgba(var(--background-RGB), 0.4);
+      color: rgba(var(--background-RGB), 1);
+    }
+  }
 
   @media print {
     -webkit-print-color-adjust: exact;
