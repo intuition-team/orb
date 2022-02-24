@@ -162,6 +162,10 @@
     width: 22%;
     margin-top: -1.2em;
     object-fit: contain;
+
+    &.bigger {
+      width: 35%;
+    }
   }
 }
 
@@ -217,6 +221,10 @@
     font-size: 4em;
     line-height: 1em;
     font-weight: 600;
+
+    .less {
+      font-size: 0.8em;
+    }
 
     @media #{$mobile} {
       font-size: 2.2em;
@@ -419,6 +427,12 @@
 }
 
 .pie-chart {
+  &.horizontal {
+    display: flex;
+    .pie-chart__legend {
+      margin-left: 2em;
+    }
+  }
   &__pie,
   &__legend {
     display: inline-block;
