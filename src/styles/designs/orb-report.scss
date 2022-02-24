@@ -80,6 +80,11 @@
     }
   }
 }
+.orb-report-scroll-top {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
 
 .orb-report-person-block {
   min-height: 8em;
@@ -158,6 +163,8 @@
 .orb-report-heading {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+
   img {
     width: 22%;
     margin-top: -1.2em;
@@ -165,6 +172,9 @@
 
     &.bigger {
       width: 35%;
+    }
+    &.no-margin-top {
+      margin-top: 0;
     }
   }
 }
@@ -328,6 +338,10 @@
 }
 .orb-report-container-85 {
   width: 85%;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
 }
 .aside-shadow {
   box-shadow: 0 0.5em 1.5em 0 rgba(var(--link-RGB), 0.1);
@@ -335,6 +349,10 @@
   padding: 1.8em 3em 2em 2em;
   margin: 3em -2em;
   border-radius: 0.5em;
+
+  @media #{$mobile} {
+    margin: 2em 0em;
+  }
 }
 
 .orb-report-fix-height-img {
@@ -429,8 +447,17 @@
 .pie-chart {
   &.horizontal {
     display: flex;
+
     .pie-chart__legend {
       margin-left: 2em;
+    }
+
+    @media #{$mobile} {
+      display: block;
+
+      .pie-chart__legend {
+        margin-left: 0;
+      }
     }
   }
   &__pie,
