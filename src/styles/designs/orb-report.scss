@@ -83,7 +83,11 @@
 .orb-report-scroll-top {
   position: fixed;
   bottom: 1em;
-  right: 1em;
+  right: 0.5em;
+  font-size: 0.8em;
+  background-color: rgba(var(--background-RGB), 1);
+  padding: 0.1em 1em;
+  border-radius: 1em;
 }
 
 .orb-report-container {
@@ -98,20 +102,19 @@
 .orb-report-side-menu {
   position: sticky;
   top: 0px;
-  left: 0;
   width: 12em;
-  margin-right: 2em;
-  // margin-left: calc(#{$orb__density} * -3.5);
+  margin-right: 3em;
+  margin-left: calc(#{$orb__density} * -3.5);
   flex-shrink: 0;
-  // opacity: .8;
-  // &:hover {
-  //   opacity: 1;
-  // }
   p,
   h5,
   h6 {
     font-size: 0.65em;
     line-height: 1.3em;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
   }
 
   @media #{$mobile} {
