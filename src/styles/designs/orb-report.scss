@@ -86,6 +86,32 @@
   right: 1em;
 }
 
+.orb-report-container {
+  display: flex;
+  align-items: flex-start;
+
+  @media #{$mobile} {
+    display: block;
+  }
+}
+
+.orb-report-side-menu {
+  position: sticky;
+  top: 0px;
+  width: 15em;
+  margin-right: 3em;
+  margin-left: calc(#{$orb__density} * -3.5);
+  flex-shrink: 0;
+
+  @media #{$mobile} {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+}
+.orb-report-body {
+}
+
 .orb-report-person-block {
   min-height: 8em;
   color: white;
@@ -373,7 +399,7 @@
 .orb-report-chapter-title {
   display: flex;
   flex-direction: column;
-  background: #5c9cf6;
+  background: #2457c5;
   padding: 1.6em 2em 3em 2em;
   margin-bottom: 5em;
   color: white;
@@ -384,11 +410,11 @@
   }
 
   h1 {
-    font-size: 3.5em;
-    font-weight: 600;
+    font-size: 4.2em;
+    font-weight: 500;
 
     @media #{$mobile} {
-      font-size: 1.8em;
+      font-size: 2.1em;
     }
   }
 
