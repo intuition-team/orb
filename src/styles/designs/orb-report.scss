@@ -527,6 +527,7 @@
 .pie-chart {
   &.horizontal {
     display: flex;
+    align-items: center;
 
     .pie-chart__legend {
       margin-left: 2em;
