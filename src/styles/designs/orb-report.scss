@@ -98,10 +98,21 @@
 .orb-report-side-menu {
   position: sticky;
   top: 0px;
-  width: 15em;
-  margin-right: 3em;
-  margin-left: calc(#{$orb__density} * -3.5);
+  left: 0;
+  width: 12em;
+  margin-right: 2em;
+  // margin-left: calc(#{$orb__density} * -3.5);
   flex-shrink: 0;
+  // opacity: .8;
+  // &:hover {
+  //   opacity: 1;
+  // }
+  p,
+  h5,
+  h6 {
+    font-size: 0.65em;
+    line-height: 1.3em;
+  }
 
   @media #{$mobile} {
     position: relative;
@@ -376,6 +387,14 @@
   margin: 3em -2em;
   border-radius: 0.5em;
 
+  &.small {
+    margin: 0;
+    padding: calc(1.3em * 0.75);
+    padding-top: calc(1.3em * 0.6);
+    padding-right: calc(1.3em * 2);
+    border-radius: 0.2em;
+  }
+
   @media #{$mobile} {
     margin: 2em 0em;
   }
@@ -410,11 +429,11 @@
   }
 
   h1 {
-    font-size: 4.2em;
+    font-size: 4em;
     font-weight: 500;
 
     @media #{$mobile} {
-      font-size: 2.1em;
+      font-size: 2em;
     }
   }
 
