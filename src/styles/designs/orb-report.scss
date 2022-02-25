@@ -221,17 +221,25 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: flex-start;
 
   img {
     width: 22%;
     margin-top: -1.2em;
     object-fit: contain;
 
-    &.bigger {
+    &.width-S {
+      width: 28%;
+    }
+    &.width-M {
       width: 35%;
     }
     &.no-margin-top {
       margin-top: 0;
+    }
+
+    @media #{$mobile} {
+      display: none;
     }
   }
 }
@@ -285,12 +293,12 @@
   color: var(--brand-color-2);
 
   .number {
-    font-size: 4em;
+    font-size: 3.8em;
     line-height: 1em;
     font-weight: 600;
 
     .less {
-      font-size: 0.8em;
+      font-size: 0.78em;
     }
 
     @media #{$mobile} {
