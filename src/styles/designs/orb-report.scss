@@ -651,3 +651,13 @@
     text-transform: uppercase;
   }
 }
+.orb-report-footer-socials {
+  img {
+    width: 2em;
+    object-fit: contain;
+  }
+  display: flex;
+  * + * {
+    margin-left: 0.5em;
+  }
+}
