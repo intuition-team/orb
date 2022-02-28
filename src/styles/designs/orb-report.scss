@@ -361,7 +361,7 @@
       &::before {
         position: absolute;
         left: 0;
-        content: " \2193";
+        content: " \2192";
         top: 0.1em;
       }
     }
@@ -652,7 +652,23 @@
     text-transform: uppercase;
   }
 }
+
+.orb-report-app-bage {
+  img {
+    margin: 0.4em;
+    height: 2.4em;
+    border-radius: 0.2em;
+    width: inherit;
+  }
+}
+
 .orb-report-footer-socials {
+  a {
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
   img {
     width: 2em;
     object-fit: contain;
