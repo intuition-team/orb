@@ -524,11 +524,11 @@
   }
 }
 
-@keyframes bake-pie {
-  from {
-    transform: rotate(0deg) translate3d(0, 0, 0);
-  }
-}
+// @keyframes bake-pie {
+//   from {
+//     transform: rotate(0deg) translate3d(0, 0, 0);
+//   }
+// }
 
 .pie-chart {
   &.horizontal {
@@ -570,7 +570,7 @@
       border-radius: 50%;
       top: 40px;
       left: 40px;
-      line-height: 100px;
+      // line-height: 100px;
       text-align: center;
       justify-content: center;
       align-items: center;
@@ -584,7 +584,7 @@
   width: 200px;
   height: 200px;
   clip: rect(0px, 200px, 200px, 100px);
-  animation: bake-pie 1s;
+  // animation: bake-pie 1s;
 
   @media print {
     animation: none;
@@ -614,7 +614,7 @@
   padding: 0.75em 0.75em 0.05em;
   font-size: 0.8em;
   text-align: left;
-  width: 65%;
+  width: 70%;
   list-style-type: none;
 
   li {
@@ -629,6 +629,7 @@
 
     span:last-child {
       flex-shrink: 0;
+      margin-left: 0.1em;
     }
   }
 }
