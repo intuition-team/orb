@@ -559,7 +559,7 @@
   @media screen and (max-width: 1200px) {
     width: 96%;
   }
-  @media #{$mobile} {
+  @media screen and #{$mobile} {
     width: 100%;
     padding: 0 0.9em 0 1em;
   }
