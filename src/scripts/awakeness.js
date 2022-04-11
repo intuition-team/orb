@@ -8,6 +8,14 @@ const ready = function() {
       windowHeight = window.innerHeight;
     });
 
+    $(window).bind("beforeprint", function() {
+      $(
+        ".report-infographics .bar, .poll-infographics .bar, .orb-report-infographics .bar, .report mark"
+      ).each(function() {
+        $(this).removeClass("sleep");
+      });
+    });
+
     $(
       ".report-infographics .bar, .poll-infographics .bar, .orb-report-infographics .bar, .report mark"
     ).each(function() {
