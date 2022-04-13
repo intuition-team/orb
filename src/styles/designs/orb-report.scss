@@ -326,6 +326,10 @@
 
       &.sleep {
         width: 10% !important;
+
+        @media print {
+          width: inherit !important;
+        }
       }
 
       &.planning {
@@ -516,10 +520,10 @@
     align-items: center;
 
     .pie-chart__legend {
-      margin-left: 2em;
+      margin-left: 3em;
     }
 
-    @media #{$mobile} {
+    @media screen and #{$mobile} {
       display: block;
 
       .pie-chart__legend {
@@ -680,6 +684,10 @@
   h5 {
     font-size: 1.5em;
     font-weight: 500;
+
+    @media print {
+      font-size: 1.3em;
+    }
   }
 
   p {
@@ -859,8 +867,13 @@
       position: relative;
       border-radius: 0 !important;
     }
-    &__text-width {
-      width: 85% !important;
+    &__almost-full-page {
+      height: calc(101.5vh - 2.8em);
+      position: relative;
+      border-radius: 0 !important;
+    }
+    &__text-width-90 {
+      width: 95% !important;
     }
   }
 }
