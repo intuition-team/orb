@@ -166,12 +166,6 @@
     }
   }
 
-  .qr-code {
-    @media print {
-      margin-left: $orb__density;
-    }
-  }
-
   img {
     object-fit: cover;
     width: 8em;
@@ -836,6 +830,9 @@
     }
   }
   @media print {
+    &__qr-code {
+      margin-left: 1em;
+    }
     &__first-page {
       height: calc(100vh - 65px);
       position: relative;

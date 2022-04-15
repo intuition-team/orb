@@ -282,31 +282,31 @@ block content
                 .orb-report-person-block.order__1.orb__bottom-space-S
                   img(src="/images/orb-report/person_pasler.jpg")
                   .info
-                    b Паслер Денис Владимирович 
+                    h5 Паслер Денис Владимирович 
                     p.orb__text-SM Губернатор — председатель правительства Оренбургской области
                     a.orb__text-SM.orb-report-link-inverted.print__hidden(href="https://orenburg-gov.ru/activity/1/", target="_blank", rel="noopener noreferrer")
                       .orb__link-text Узнать больше
-                  img(src="/images/orb-report/qr_code_1.png").qr-code.print__visible
+                  img(src="/images/orb-report/qr_code_1.png").print__qr-code.print__visible
                 .orb-report-person-block.order__2.orb__bottom-space-S
                   img(src="/images/orb-report/person_petuhov.jpg")
                   .info
-                    b Петухов Игнат Евгеньевич 
+                    h5 Петухов Игнат Евгеньевич 
                     p.orb__text-SM Вице-губернатор – заместитель председателя Правительства Оренбургской области по экономической и инвестиционной политике
                     a.orb__text-SM.orb-report-link-inverted.print__hidden(href="https://orenburg-gov.ru/activity/1933/", target="_blank", rel="noopener noreferrer")
                       .orb__link-text Узнать больше
-                  img(src="/images/orb-report/qr_code_2.png").qr-code.print__visible
+                  img(src="/images/orb-report/qr_code_2.png").print__qr-code.print__visible
                 .orb-report-person-block.order__3.orb__bottom-space-S
                   img(src="/images/orb-report/person_tolpeykin.jpg")
                   .info
-                    b Толпейкин Денис Владимирович 
+                    h5 Толпейкин Денис Владимирович 
                     p.orb__text-SM Министр цифрового развития и связи Оренбургской области
                     a.orb__text-SM.orb-report-link-inverted.print__hidden(href="https://orenburg-gov.ru/activity/1960/", target="_blank", rel="noopener noreferrer")
                       .orb__link-text Узнать больше
-                  img(src="/images/orb-report/qr_code_3.png").qr-code.print__visible
+                  img(src="/images/orb-report/qr_code_3.png").print__qr-code.print__visible
                 .orb-report-person-block.order__4.orb__bottom-space-S
                   img(src="/images/orb-report/person_borisov.jpg")
                   .info
-                    b Борисов Ян Евгеньевич
+                    h5 Борисов Ян Евгеньевич
                     p.orb__text-SM Директор государственного казенного учреждения «Центр информационных технологий Оренбургской области»
                       
 
@@ -1157,12 +1157,31 @@ block content
                         span.number 11
                         p.orb__text операторов мобильной связи (интернета)
                 p Карты покрытия территории Оренбургской области операторами связи:
-                ul 
+                ul.print__hidden 
                   li <a class="orb-report-link-inverted" href="https://orenburg.mts.ru/business/podderzhka/nasha-set" target="_blank" rel="noopener noreferrer">МТС</a> 
                   li <a class="orb-report-link-inverted" href="https://orenburg.tele2.ru/coverage" target="_blank" rel="noopener noreferrer">TELE2</a> 
                   li <a class="orb-report-link-inverted" href="https://orenburg.beeline.ru/customers/beeline-map/?lat=51.77110000000157&lon=55.09809999999995&zoom=12" target="_blank" rel="noopener noreferrer">Билайн</a> 
                   li <a class="orb-report-link-inverted" href="https://orenburg.megafon.ru/help/offices/#coverageMap" target="_blank" rel="noopener noreferrer">МегаФон</a>
-              
+
+                .orb-report-container-90.print__visible
+                  .orb__grid.orb__grid-size-L.orb__grid-inset-L
+                    .orb__grid-cell
+                      p МТС
+                      .img-box
+                        img(src="/images/orb-report/map_mts.png")
+                    .orb__grid-cell
+                      p TELE2
+                      .img-box
+                        img(src="/images/orb-report/map_tele2.png")
+                    .orb__grid-cell
+                      p Билайн
+                      .img-box
+                        img(src="/images/orb-report/map_beeline.png")
+                    .orb__grid-cell
+                      p МегаФон
+                      .img-box
+                        img(src="/images/orb-report/map_megafon.png")
+
               section.print__almost-full-page.print__top-space.print__new-page-break#TV_radio
                 h3 ТВ и радио
                 .orb-report-container-85
@@ -1790,7 +1809,7 @@ block content
                         p Петухов Игнат Евгеньевич — вице-губернатор – заместитель председателя Правительства Оренбургской области по экономической и инвестиционной политике
                         a.print__hidden(href="https://digital.orb.ru/about/collegiate/2/", target="_blank", rel="noopener noreferrer")
                           .orb__link-text Узнать больше
-                    img(src="/images/orb-report/qr_code_7.jpg").qr-code.print__visible
+                    img(src="/images/orb-report/dd_committee.png").print__qr-code.print__visible
                 .aside-shadow 
                   .orb-report-organization-block
                     img.orb__right-space-S(src="/images/orb-report/person_seliverstov.jpg")
@@ -1804,7 +1823,9 @@ block content
                           .orb__link-text Об общественном совете
                         a.print__hidden(href="https://digital.orb.ru/about/collegiate/4/", target="_blank", rel="noopener noreferrer")
                           .orb__link-text О техническом совете
-                    img(src="/images/orb-report/qr_code_5.jpg").qr-code.print__visible
+                    div
+                      img(src="/images/orb-report/society_committee.png").print__qr-code.print__visible
+                      img.orb__top-space-S(src="/images/orb-report/tech_committee.png").print__qr-code.print__visible
 
               section.print__new-page-break
                 h3.print__visible Работа коллегиальных<br>и общественных органов 
