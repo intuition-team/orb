@@ -1,6 +1,9 @@
 $orb__density: 1.3em;
 
 .orb {
+  .orb__top-space-XS {
+    margin-top: calc(#{$orb__density} / 2);
+  }
   .orb__top-space-S {
     margin-top: $orb__density;
   }
