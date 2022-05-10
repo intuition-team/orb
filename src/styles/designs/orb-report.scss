@@ -817,6 +817,13 @@ body {
 }
 
 //print
+
+@media print {
+  .orb__text-S {
+    font-size: 0.85em !important;
+    line-height: 1.25em !important;
+  }
+}
 .orb-report-print {
   // @media print {
   //   margin: 0 2cm;
