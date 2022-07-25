@@ -423,11 +423,67 @@ a.vote-promo {
     }
     .orb__nav-card {
       height: 8.5em;
-      background-image: linear-gradient(
-        45deg,
-        rgba(60, 60, 60, 1),
-        rgba(30, 40, 50, 1)
-      );
+      // background-image: linear-gradient(
+      //   45deg,
+      //   rgba(60, 60, 60, 1),
+      //   rgba(30, 40, 50, 1)
+      // );
+    }
+  }
+  &.report-2021 {
+    .orb__grid-cell {
+      @media #{$desktop} {
+        &:nth-child(1) {
+          .orb__nav-card {
+            border-radius: 0.8em 0 0 0;
+          }
+        }
+        &:nth-child(4) {
+          .orb__nav-card {
+            border-radius: 0 0.8em 0 0;
+          }
+        }
+        &:nth-child(13) {
+          .orb__nav-card {
+            border-radius: 0 0 0 0.8em;
+          }
+        }
+        &:nth-child(16) {
+          .orb__nav-card {
+            border-radius: 0 0 0.8em 0;
+          }
+        }
+      }
+      @media #{$mobile} {
+        &:nth-child(1) {
+          .orb__nav-card {
+            border-radius: 0.8em 0 0 0;
+          }
+        }
+        &:nth-child(2) {
+          .orb__nav-card {
+            border-radius: 0 0.8em 0 0;
+          }
+        }
+        &:nth-child(11) {
+          .orb__nav-card {
+            border-radius: 0 0 0 0.8em;
+          }
+        }
+        &:nth-child(12) {
+          .orb__nav-card {
+            border-radius: 0 0 0.8em 0;
+          }
+        }
+      }
+    }
+    .orb__nav-card {
+      height: 8.5em;
+      // background-image: linear-gradient(
+      //   45deg,
+      //   rgba(60, 60, 60, 1),
+      //   rgba(30, 40, 50, 1)
+      // );
     }
   }
 }
