@@ -433,6 +433,9 @@ a.vote-promo {
   &.report-2021 {
     .orb__grid-cell {
       @media #{$desktop} {
+        &.half-width {
+          width: 50% !important;
+        }
         &:nth-child(1) {
           .orb__nav-card {
             border-radius: 0.8em 0 0 0;
@@ -448,7 +451,7 @@ a.vote-promo {
             border-radius: 0 0 0 0.8em;
           }
         }
-        &:nth-child(16) {
+        &:last-child {
           .orb__nav-card {
             border-radius: 0 0 0.8em 0;
           }
@@ -465,18 +468,19 @@ a.vote-promo {
             border-radius: 0 0.8em 0 0;
           }
         }
-        &:nth-child(11) {
+        &:nth-child(13) {
           .orb__nav-card {
             border-radius: 0 0 0 0.8em;
           }
         }
-        &:nth-child(12) {
+        &:nth-child(14) {
           .orb__nav-card {
             border-radius: 0 0 0.8em 0;
           }
         }
       }
     }
+
     .orb__nav-card {
       height: 8.5em;
       // background-image: linear-gradient(
