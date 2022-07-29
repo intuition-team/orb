@@ -1,38 +1,73 @@
-.orb__footer
-  a.orb__identity(href="/designs/ag-main")
-    .orb__identity-item
-      .orb-emblem
-        include /partials/emblem
-    .orb__identity-item
-      .orb-logo
-        img(src="/images/ORB_AG-logo-box.svg")
-
-  .orb__footer-nav
-    section
-      p Активный гражданин Оренбургской области
-    section
-      .orb__footer-nav-item
-        a(href="#") Новости
-      .orb__footer-nav-item
-        a(href="#") Голосования
-      .orb__footer-nav-item
-        a(href="/designs/ag-report") Итоги работы правительства
-      .orb__footer-nav-item
-        a(href="#") Открытые данные
-      .orb__footer-nav-item
-        a(href="#") О проекте
-    section
-      a.orb__button-link(href="/designs/ag-message")
-        .orb__link-text Сообщить о проблеме
-
-  .orb__footer-contact
-    section
-      p Скачать приложение:
-      a.orb__app-store-badge(href="#")
-        img(src="/images/tmp/App_Store_Badge_RU_RGB_blk_100317.svg")
-      a.orb__app-store-badge(href="#")
-        img(src="/images/tmp/google-play-badge.png")
-
-    section
+.orb__footer.ag-footer 
+  .ag-footer-content
+    .ag-footer-left
+      .ag-footer-nav
+          .ag-footer-nav-block
+            .ag-footer-nav-item
+              a(href="#") О проекте
+            .ag-footer-nav-item
+              a(href="#") Новости
+            .ag-footer-nav-item
+              a(href="#") FAQ
+          .ag-footer-nav-block
+            .ag-footer-nav-item
+              a(href="#") Сообщить о проблеме
+            .ag-footer-nav-item
+              a(href="#") Голосования
+          .ag-footer-nav-block
+            .ag-footer-nav-item
+              a(href="/designs/ag-report") Итоги работы правительства
+            .ag-footer-nav-item
+              a(href="#") COVID-19
+      
+    .ag-footer-right 
       p.orb__text-S C вопросами и предложениями обращайтесь по адресу<br><a href="mailto:ag@mail.orb.ru">ag@mail.orb.ru</a>
+      
+  .ag-footer-content
+    .ag-footer-left
+      p.orb__text-S Скачать приложение:
+      .ag-footer-badges
+        a.orb__app-store-badge(href="#")
+          img(src="/images/tmp/App_Store_Badge_RU_RGB_blk_100317.svg")
+        a.orb__app-store-badge(href="#")
+          img(src="/images/tmp/google-play-badge.png")
+        a.orb__app-store-badge(href="#")
+          img(src="/images/report/appGallery.svg")
+      .ag-footer-badges
+        a.orb__app-store-badge(href="#")
+          img(src="/images/report/NashStore.svg")
+        a.orb__app-store-badge(href="#")
+          img(src="/images/report/RuMarket.svg")
+        a.orb__app-store-badge(href="#")
+          img(src="/images/report/RuStore.svg")
+    
+    .ag-footer-right 
+      .ag-footer-socials 
+        .ag-footer-socials-item 
+          a(href="#")
+            img(src="/images/report/socials/OK.svg")
+        .ag-footer-socials-item 
+          a(href="#")
+            img(src="/images/report/socials/TG.svg")
+        .ag-footer-socials-item 
+          a(href="#")
+            img(src="/images/report/socials/VK.svg")
+        .ag-footer-socials-item 
+          a(href="#")
+            img(src="/images/report/socials/YZ.svg")
+        .ag-footer-socials-item 
+          a(href="#")
+            img(src="/images/report/socials/YT.svg")
 
+  .ag-footer-delimiter
+
+  .ag-footer-content
+    .ag-footer-left
+      a(href="#")
+        .ag-footer-logo
+          .ag-footer-emblem
+            include /partials/emblem
+          p.orb__text-S Минцифра <br>Оренбургской области
+    .ag-footer-right 
+      p.orb__text-S <a href=#>Написать</a> в техподдержку
+    
