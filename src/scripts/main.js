@@ -101,6 +101,17 @@ const ready = function() {
     if (pxInEm) setPxValues(pxInEm);
   }, 300);
 
+  // copy link
+  $(".copy-link").click(function(e) {
+    var $tmp = $("<textarea>");
+    $("body").append($tmp);
+    $tmp.val(window.location.href).select();
+    document.execCommand("copy");
+    $tmp.remove();
+    $(".orb-report-toast").addClass("visible");
+    setTimeout(() => $(".orb-report-toast").removeClass("visible"), 5000);
+  });
+
   // functions
 
   function setColorScheme(newColorScheme) {

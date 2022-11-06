@@ -88,6 +88,9 @@ body {
 .orb-report-options {
   display: flex;
   align-items: flex-start;
+  & > :not(:first-child) {
+    margin-left: 0.6em;
+  }
 }
 
 .orb-report-container {
@@ -800,6 +803,23 @@ body {
   padding: calc(#{$orb__density} * 0.75);
   border-radius: 0.2em;
   width: fit-content;
+}
+
+.orb-report-toast {
+  position: fixed;
+  bottom: 1.2em;
+  left: 1.2em;
+  opacity: 0;
+  background-color: rgba(var(--surface-RGB), 1);
+  color: rgba(var(--text-RGB), 1);
+  padding: 0.6em 1em;
+  border-radius: 0.4em;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
 // mobile
