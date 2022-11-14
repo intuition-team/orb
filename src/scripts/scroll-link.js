@@ -28,7 +28,7 @@ function scrollToElement(elementHash) {
     {
       scrollTop: $targetElement.offset().top + linkOffset
     },
-    500
+    600
   );
 }
 
