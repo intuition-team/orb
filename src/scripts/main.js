@@ -102,17 +102,44 @@ const ready = function() {
   }, 300);
 
   // copy link
-  $(".copy-link").click(function(e) {
-    var $tmp = $("<textarea>");
+  $(".copy-link-main").click(function(e) {
+    e.preventDefault();
+    const currentHash = location.hash;
+    const currentUrl = location.href;
+    if (currentHash) {
+      currentUrl = currentUrl.replace(currentHash, "");
+    }
+    copyLink(currentUrl);
+  });
+
+  // copy link
+  $(".copy-link-section").click(function(e) {
+    e.preventDefault();
+    let parentId = $(this)
+      .closest("section")
+      .attr("id");
+    let currentUrl = location.href;
+    let currentHash = location.hash;
+    if (currentHash) {
+      currentUrl = location.href.replace(location.hash, "");
+    }
+    if (parentId) {
+      currentUrl = currentUrl + "#" + parentId;
+    }
+    copyLink(currentUrl);
+  });
+
+  // functions
+
+  function copyLink(linkUrl) {
+    let $tmp = $("<textarea>");
     $("body").append($tmp);
-    $tmp.val(window.location.href).select();
+    $tmp.val(linkUrl).select();
     document.execCommand("copy");
     $tmp.remove();
     $(".orb-report-toast").addClass("visible");
     setTimeout(() => $(".orb-report-toast").removeClass("visible"), 5000);
-  });
-
-  // functions
+  }
 
   function setColorScheme(newColorScheme) {
     $("body").removeClass(currentColorScheme);

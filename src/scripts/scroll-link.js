@@ -1,21 +1,35 @@
 import $, { each } from "jquery";
 
 const ready = function() {
+  let currentHash = location.hash;
+  if (currentHash) {
+    scrollToElement(currentHash);
+  }
+
   $(".js-scroll-link").click(function(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
-    var linkOffset = -40;
-    if ($($.attr(this, "href")).data("scroll-link-offset")) {
-      linkOffset += $($.attr(this, "href")).data("scroll-link-offset");
+    let currentHash = $.attr(this, "href");
+
+    if (currentHash) {
+      scrollToElement(currentHash);
     }
-
-    $("html, body").animate(
-      {
-        scrollTop: $($.attr(this, "href")).offset().top + linkOffset
-      },
-      500
-    );
   });
 };
+
+function scrollToElement(elementHash) {
+  let linkOffset = -40;
+  let $targetElement = $(elementHash);
+  if ($targetElement.data("scroll-link-offset")) {
+    linkOffset += $targetElement.data("scroll-link-offset");
+  }
+
+  $("html, body").animate(
+    {
+      scrollTop: $targetElement.offset().top + linkOffset
+    },
+    500
+  );
+}
 
 $(document).ready(ready);
